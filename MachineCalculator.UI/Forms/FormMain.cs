@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MachineCalculator.UI
+namespace MachineCalculator.UI.Forms
 {
-	public partial class Form1 : Form
+	public partial class FormMain : Form
 	{
-		public Form1()
+		public FormMain()
 		{
 			InitializeComponent();
+		}
+
+		private void mItemNew_Click(object sender, EventArgs e)
+		{
+			FormNewProject frm = new FormNewProject();
+			frm.ShowDialog();
 		}
 	}
 }
