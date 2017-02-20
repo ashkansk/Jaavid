@@ -29,9 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+			this.nudDailyShifts = new System.Windows.Forms.NumericUpDown();
+			this.nudDailyActiveHours = new System.Windows.Forms.NumericUpDown();
 			this.lblDivider1 = new System.Windows.Forms.Label();
 			this.chkSiteMaaseh = new System.Windows.Forms.CheckBox();
 			this.chkSiteRos = new System.Windows.Forms.CheckBox();
@@ -48,8 +47,8 @@
 			this.label9 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-			this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+			this.nudActiveDaysInMonth = new System.Windows.Forms.NumericUpDown();
+			this.nudDailyHours = new System.Windows.Forms.NumericUpDown();
 			this.nudSangShekaste = new System.Windows.Forms.NumericUpDown();
 			this.label12 = new System.Windows.Forms.Label();
 			this.nudZaminTabiee = new System.Windows.Forms.NumericUpDown();
@@ -61,11 +60,10 @@
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnOK = new System.Windows.Forms.Button();
 			this.soilInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.tableLayoutPanel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudDailyShifts)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudDailyActiveHours)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudActiveDaysInMonth)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudDailyHours)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudSangShekaste)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudZaminTabiee)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudRos)).BeginInit();
@@ -73,100 +71,37 @@
 			((System.ComponentModel.ISupportInitialize)(this.soilInfoBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// tableLayoutPanel1
+			// nudDailyShifts
 			// 
-			this.tableLayoutPanel1.ColumnCount = 7;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 262F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-			this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 3, 2);
-			this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 3, 3);
-			this.tableLayoutPanel1.Controls.Add(this.lblDivider1, 2, 5);
-			this.tableLayoutPanel1.Controls.Add(this.chkSiteMaaseh, 1, 9);
-			this.tableLayoutPanel1.Controls.Add(this.chkSiteRos, 1, 8);
-			this.tableLayoutPanel1.Controls.Add(this.chkSiteZaminTabiee, 1, 7);
-			this.tableLayoutPanel1.Controls.Add(this.chkSiteSangShekaste, 1, 6);
-			this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
-			this.tableLayoutPanel1.Controls.Add(this.label1, 1, 2);
-			this.tableLayoutPanel1.Controls.Add(this.label5, 1, 5);
-			this.tableLayoutPanel1.Controls.Add(this.label6, 3, 6);
-			this.tableLayoutPanel1.Controls.Add(this.label10, 1, 1);
-			this.tableLayoutPanel1.Controls.Add(this.label11, 2, 1);
-			this.tableLayoutPanel1.Controls.Add(this.label7, 3, 7);
-			this.tableLayoutPanel1.Controls.Add(this.label8, 3, 8);
-			this.tableLayoutPanel1.Controls.Add(this.label9, 3, 9);
-			this.tableLayoutPanel1.Controls.Add(this.label3, 4, 2);
-			this.tableLayoutPanel1.Controls.Add(this.label4, 4, 3);
-			this.tableLayoutPanel1.Controls.Add(this.numericUpDown3, 5, 2);
-			this.tableLayoutPanel1.Controls.Add(this.numericUpDown5, 5, 3);
-			this.tableLayoutPanel1.Controls.Add(this.nudSangShekaste, 4, 6);
-			this.tableLayoutPanel1.Controls.Add(this.label12, 5, 6);
-			this.tableLayoutPanel1.Controls.Add(this.nudZaminTabiee, 4, 7);
-			this.tableLayoutPanel1.Controls.Add(this.nudRos, 4, 8);
-			this.tableLayoutPanel1.Controls.Add(this.nudMaaseh, 4, 9);
-			this.tableLayoutPanel1.Controls.Add(this.label13, 5, 7);
-			this.tableLayoutPanel1.Controls.Add(this.label14, 5, 8);
-			this.tableLayoutPanel1.Controls.Add(this.label15, 5, 9);
-			this.tableLayoutPanel1.Controls.Add(this.btnCancel, 6, 11);
-			this.tableLayoutPanel1.Controls.Add(this.btnOK, 5, 11);
-			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 13;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 154F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(660, 469);
-			this.tableLayoutPanel1.TabIndex = 0;
+			this.nudDailyShifts.Location = new System.Drawing.Point(369, 76);
+			this.nudDailyShifts.Name = "nudDailyShifts";
+			this.nudDailyShifts.Size = new System.Drawing.Size(39, 21);
+			this.nudDailyShifts.TabIndex = 5;
 			// 
-			// numericUpDown1
+			// nudDailyActiveHours
 			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(454, 48);
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(59, 21);
-			this.numericUpDown1.TabIndex = 5;
-			// 
-			// numericUpDown2
-			// 
-			this.numericUpDown2.Location = new System.Drawing.Point(454, 85);
-			this.numericUpDown2.Maximum = new decimal(new int[] {
+			this.nudDailyActiveHours.Location = new System.Drawing.Point(369, 41);
+			this.nudDailyActiveHours.Maximum = new decimal(new int[] {
             24,
             0,
             0,
             0});
-			this.numericUpDown2.Name = "numericUpDown2";
-			this.numericUpDown2.Size = new System.Drawing.Size(59, 21);
-			this.numericUpDown2.TabIndex = 6;
+			this.nudDailyActiveHours.Name = "nudDailyActiveHours";
+			this.nudDailyActiveHours.Size = new System.Drawing.Size(39, 21);
+			this.nudDailyActiveHours.TabIndex = 6;
 			// 
 			// lblDivider1
 			// 
-			this.lblDivider1.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.lblDivider1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tableLayoutPanel1.SetColumnSpan(this.lblDivider1, 5);
-			this.lblDivider1.Location = new System.Drawing.Point(10, 153);
+			this.lblDivider1.Location = new System.Drawing.Point(70, 124);
 			this.lblDivider1.Name = "lblDivider1";
-			this.lblDivider1.Size = new System.Drawing.Size(549, 2);
+			this.lblDivider1.Size = new System.Drawing.Size(415, 2);
 			this.lblDivider1.TabIndex = 13;
 			// 
 			// chkSiteMaaseh
 			// 
 			this.chkSiteMaaseh.AutoSize = true;
-			this.tableLayoutPanel1.SetColumnSpan(this.chkSiteMaaseh, 2);
-			this.chkSiteMaaseh.Location = new System.Drawing.Point(581, 257);
+			this.chkSiteMaaseh.Location = new System.Drawing.Point(49, 246);
 			this.chkSiteMaaseh.Name = "chkSiteMaaseh";
 			this.chkSiteMaaseh.Size = new System.Drawing.Size(56, 17);
 			this.chkSiteMaaseh.TabIndex = 12;
@@ -177,8 +112,7 @@
 			// chkSiteRos
 			// 
 			this.chkSiteRos.AutoSize = true;
-			this.tableLayoutPanel1.SetColumnSpan(this.chkSiteRos, 2);
-			this.chkSiteRos.Location = new System.Drawing.Point(590, 229);
+			this.chkSiteRos.Location = new System.Drawing.Point(49, 218);
 			this.chkSiteRos.Name = "chkSiteRos";
 			this.chkSiteRos.Size = new System.Drawing.Size(47, 17);
 			this.chkSiteRos.TabIndex = 11;
@@ -189,8 +123,7 @@
 			// chkSiteZaminTabiee
 			// 
 			this.chkSiteZaminTabiee.AutoSize = true;
-			this.tableLayoutPanel1.SetColumnSpan(this.chkSiteZaminTabiee, 2);
-			this.chkSiteZaminTabiee.Location = new System.Drawing.Point(550, 201);
+			this.chkSiteZaminTabiee.Location = new System.Drawing.Point(49, 190);
 			this.chkSiteZaminTabiee.Name = "chkSiteZaminTabiee";
 			this.chkSiteZaminTabiee.Size = new System.Drawing.Size(87, 17);
 			this.chkSiteZaminTabiee.TabIndex = 10;
@@ -203,8 +136,7 @@
 			this.chkSiteSangShekaste.AutoSize = true;
 			this.chkSiteSangShekaste.Checked = true;
 			this.chkSiteSangShekaste.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.tableLayoutPanel1.SetColumnSpan(this.chkSiteSangShekaste, 2);
-			this.chkSiteSangShekaste.Location = new System.Drawing.Point(539, 173);
+			this.chkSiteSangShekaste.Location = new System.Drawing.Point(49, 162);
 			this.chkSiteSangShekaste.Name = "chkSiteSangShekaste";
 			this.chkSiteSangShekaste.Size = new System.Drawing.Size(98, 17);
 			this.chkSiteSangShekaste.TabIndex = 9;
@@ -215,8 +147,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
-			this.label2.Location = new System.Drawing.Point(556, 82);
+			this.label2.Location = new System.Drawing.Point(28, 78);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(81, 13);
 			this.label2.TabIndex = 1;
@@ -225,8 +156,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
-			this.label1.Location = new System.Drawing.Point(538, 45);
+			this.label1.Location = new System.Drawing.Point(28, 43);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(99, 13);
 			this.label1.TabIndex = 0;
@@ -234,10 +164,9 @@
 			// 
 			// label5
 			// 
-			this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label5.Location = new System.Drawing.Point(565, 147);
+			this.label5.Location = new System.Drawing.Point(9, 116);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(59, 13);
 			this.label5.TabIndex = 14;
@@ -245,11 +174,10 @@
 			// 
 			// label6
 			// 
-			this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label6.ForeColor = System.Drawing.Color.Gray;
-			this.label6.Location = new System.Drawing.Point(445, 178);
+			this.label6.Location = new System.Drawing.Point(207, 168);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(23, 11);
 			this.label6.TabIndex = 15;
@@ -257,10 +185,9 @@
 			// 
 			// label10
 			// 
-			this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.label10.AutoSize = true;
 			this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label10.Location = new System.Drawing.Point(562, 26);
+			this.label10.Location = new System.Drawing.Point(9, 9);
 			this.label10.Margin = new System.Windows.Forms.Padding(0);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(74, 13);
@@ -270,21 +197,18 @@
 			// 
 			// label11
 			// 
-			this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tableLayoutPanel1.SetColumnSpan(this.label11, 5);
-			this.label11.Location = new System.Drawing.Point(10, 31);
+			this.label11.Location = new System.Drawing.Point(85, 17);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(549, 2);
+			this.label11.Size = new System.Drawing.Size(400, 2);
 			this.label11.TabIndex = 13;
 			// 
 			// label7
 			// 
-			this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label7.ForeColor = System.Drawing.Color.Gray;
-			this.label7.Location = new System.Drawing.Point(445, 206);
+			this.label7.Location = new System.Drawing.Point(207, 196);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(23, 11);
 			this.label7.TabIndex = 15;
@@ -292,11 +216,10 @@
 			// 
 			// label8
 			// 
-			this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label8.ForeColor = System.Drawing.Color.Gray;
-			this.label8.Location = new System.Drawing.Point(445, 234);
+			this.label8.Location = new System.Drawing.Point(207, 224);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(23, 11);
 			this.label8.TabIndex = 15;
@@ -304,11 +227,10 @@
 			// 
 			// label9
 			// 
-			this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label9.ForeColor = System.Drawing.Color.Gray;
-			this.label9.Location = new System.Drawing.Point(445, 262);
+			this.label9.Location = new System.Drawing.Point(207, 252);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(23, 11);
 			this.label9.TabIndex = 15;
@@ -317,38 +239,38 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(351, 45);
+			this.label3.Location = new System.Drawing.Point(221, 43);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(88, 26);
+			this.label3.Size = new System.Drawing.Size(134, 13);
 			this.label3.TabIndex = 2;
-			this.label3.Text = "میزان ساعت مفید کار در هر روز";
+			this.label3.Text = "میزان ساعت مفید کار روزانه";
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(350, 82);
+			this.label4.Location = new System.Drawing.Point(221, 78);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(89, 26);
+			this.label4.Size = new System.Drawing.Size(133, 13);
 			this.label4.TabIndex = 3;
 			this.label4.Text = "تعداد شیفت کاری در هر روز";
 			// 
-			// numericUpDown3
+			// nudActiveDaysInMonth
 			// 
-			this.numericUpDown3.Location = new System.Drawing.Point(289, 48);
-			this.numericUpDown3.Name = "numericUpDown3";
-			this.numericUpDown3.Size = new System.Drawing.Size(55, 21);
-			this.numericUpDown3.TabIndex = 7;
+			this.nudActiveDaysInMonth.Location = new System.Drawing.Point(136, 41);
+			this.nudActiveDaysInMonth.Name = "nudActiveDaysInMonth";
+			this.nudActiveDaysInMonth.Size = new System.Drawing.Size(39, 21);
+			this.nudActiveDaysInMonth.TabIndex = 7;
 			// 
-			// numericUpDown5
+			// nudDailyHours
 			// 
-			this.numericUpDown5.Location = new System.Drawing.Point(289, 85);
-			this.numericUpDown5.Name = "numericUpDown5";
-			this.numericUpDown5.Size = new System.Drawing.Size(55, 21);
-			this.numericUpDown5.TabIndex = 8;
+			this.nudDailyHours.Location = new System.Drawing.Point(136, 76);
+			this.nudDailyHours.Name = "nudDailyHours";
+			this.nudDailyHours.Size = new System.Drawing.Size(39, 21);
+			this.nudDailyHours.TabIndex = 8;
 			// 
 			// nudSangShekaste
 			// 
-			this.nudSangShekaste.Location = new System.Drawing.Point(350, 173);
+			this.nudSangShekaste.Location = new System.Drawing.Point(236, 161);
 			this.nudSangShekaste.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -361,11 +283,10 @@
 			// 
 			// label12
 			// 
-			this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.label12.AutoSize = true;
 			this.label12.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label12.ForeColor = System.Drawing.Color.Gray;
-			this.label12.Location = new System.Drawing.Point(301, 178);
+			this.label12.Location = new System.Drawing.Point(331, 168);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(43, 11);
 			this.label12.TabIndex = 15;
@@ -374,7 +295,7 @@
 			// nudZaminTabiee
 			// 
 			this.nudZaminTabiee.Enabled = false;
-			this.nudZaminTabiee.Location = new System.Drawing.Point(350, 201);
+			this.nudZaminTabiee.Location = new System.Drawing.Point(236, 189);
 			this.nudZaminTabiee.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -388,7 +309,7 @@
 			// nudRos
 			// 
 			this.nudRos.Enabled = false;
-			this.nudRos.Location = new System.Drawing.Point(350, 229);
+			this.nudRos.Location = new System.Drawing.Point(236, 217);
 			this.nudRos.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -402,7 +323,7 @@
 			// nudMaaseh
 			// 
 			this.nudMaaseh.Enabled = false;
-			this.nudMaaseh.Location = new System.Drawing.Point(350, 257);
+			this.nudMaaseh.Location = new System.Drawing.Point(236, 245);
 			this.nudMaaseh.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -415,11 +336,10 @@
 			// 
 			// label13
 			// 
-			this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.label13.AutoSize = true;
 			this.label13.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label13.ForeColor = System.Drawing.Color.Gray;
-			this.label13.Location = new System.Drawing.Point(301, 206);
+			this.label13.Location = new System.Drawing.Point(331, 196);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(43, 11);
 			this.label13.TabIndex = 15;
@@ -427,11 +347,10 @@
 			// 
 			// label14
 			// 
-			this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.label14.AutoSize = true;
 			this.label14.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label14.ForeColor = System.Drawing.Color.Gray;
-			this.label14.Location = new System.Drawing.Point(301, 234);
+			this.label14.Location = new System.Drawing.Point(331, 224);
 			this.label14.Name = "label14";
 			this.label14.Size = new System.Drawing.Size(43, 11);
 			this.label14.TabIndex = 15;
@@ -439,11 +358,10 @@
 			// 
 			// label15
 			// 
-			this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.label15.AutoSize = true;
 			this.label15.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label15.ForeColor = System.Drawing.Color.Gray;
-			this.label15.Location = new System.Drawing.Point(301, 262);
+			this.label15.Location = new System.Drawing.Point(331, 252);
 			this.label15.Name = "label15";
 			this.label15.Size = new System.Drawing.Size(43, 11);
 			this.label15.TabIndex = 15;
@@ -451,7 +369,7 @@
 			// 
 			// btnCancel
 			// 
-			this.btnCancel.Location = new System.Drawing.Point(7, 439);
+			this.btnCancel.Location = new System.Drawing.Point(410, 294);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(75, 23);
 			this.btnCancel.TabIndex = 16;
@@ -461,8 +379,7 @@
 			// 
 			// btnOK
 			// 
-			this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnOK.Location = new System.Drawing.Point(88, 439);
+			this.btnOK.Location = new System.Drawing.Point(329, 294);
 			this.btnOK.Name = "btnOK";
 			this.btnOK.Size = new System.Drawing.Size(75, 23);
 			this.btnOK.TabIndex = 17;
@@ -478,8 +395,37 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(660, 469);
-			this.Controls.Add(this.tableLayoutPanel1);
+			this.ClientSize = new System.Drawing.Size(492, 328);
+			this.Controls.Add(this.nudDailyShifts);
+			this.Controls.Add(this.nudDailyActiveHours);
+			this.Controls.Add(this.btnCancel);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lblDivider1);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.btnOK);
+			this.Controls.Add(this.label10);
+			this.Controls.Add(this.label11);
+			this.Controls.Add(this.chkSiteMaaseh);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.nudMaaseh);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.nudActiveDaysInMonth);
+			this.Controls.Add(this.chkSiteRos);
+			this.Controls.Add(this.nudDailyHours);
+			this.Controls.Add(this.label15);
+			this.Controls.Add(this.chkSiteZaminTabiee);
+			this.Controls.Add(this.label14);
+			this.Controls.Add(this.chkSiteSangShekaste);
+			this.Controls.Add(this.label13);
+			this.Controls.Add(this.nudRos);
+			this.Controls.Add(this.nudZaminTabiee);
+			this.Controls.Add(this.label12);
+			this.Controls.Add(this.label6);
+			this.Controls.Add(this.nudSangShekaste);
+			this.Controls.Add(this.label9);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.label7);
 			this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "FormNewKhaakriziProject";
@@ -488,31 +434,28 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "پروژه خاک‎ریزی";
 			this.Load += new System.EventHandler(this.FormNewKhaakriziProject_Load);
-			this.tableLayoutPanel1.ResumeLayout(false);
-			this.tableLayoutPanel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudDailyShifts)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudDailyActiveHours)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudActiveDaysInMonth)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudDailyHours)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudSangShekaste)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudZaminTabiee)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudRos)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudMaaseh)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.soilInfoBindingSource)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
-		private System.Windows.Forms.NumericUpDown numericUpDown2;
-		private System.Windows.Forms.NumericUpDown numericUpDown3;
+		private System.Windows.Forms.NumericUpDown nudDailyShifts;
+		private System.Windows.Forms.NumericUpDown nudDailyActiveHours;
+		private System.Windows.Forms.NumericUpDown nudActiveDaysInMonth;
 		private System.Windows.Forms.Label lblDivider1;
 		private System.Windows.Forms.CheckBox chkSiteMaaseh;
 		private System.Windows.Forms.CheckBox chkSiteRos;
@@ -520,7 +463,7 @@
 		private System.Windows.Forms.CheckBox chkSiteSangShekaste;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.NumericUpDown numericUpDown5;
+		private System.Windows.Forms.NumericUpDown nudDailyHours;
 		private System.Windows.Forms.NumericUpDown nudSangShekaste;
 		private System.Windows.Forms.BindingSource soilInfoBindingSource;
 		private System.Windows.Forms.Label label10;

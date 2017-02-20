@@ -13,16 +13,11 @@ namespace MachineCalculator.UI.Forms
 		public FormNewKhaakriziProject()
 		{
 			InitializeComponent();
-			_project = new Project();
 			_soilRepo = Factory.GetSoilRepository();
 		}
 
 		private void FormNewKhaakriziProject_Load(object sender, System.EventArgs e)
 		{
-			List<Soil> soilList = _soilRepo.Get();
-
-			//cmbSite1.DataSource = soilList;
-			//cmbSite2.DataSource = new List<Soil>(soilList);
 		}
 
 		private void chkSiteSangShekaste_CheckedChanged(object sender, System.EventArgs e)
@@ -47,6 +42,14 @@ namespace MachineCalculator.UI.Forms
 
 		private void btnOK_Click(object sender, System.EventArgs e)
 		{
+			_project = new Project
+			{
+				ActiveDaysPerMonth = (int) nudActiveDaysInMonth.Value,
+				HoursPerDay = (int) nudDailyHours.Value,
+				ActiveHoursPerDay = (int) nudDailyActiveHours.Value,
+				WorkShiftsPerDay = (int) nudDailyShifts.Value,
+
+			};
 			this.Close();
 			this.DialogResult = DialogResult.OK;
 		}
