@@ -27,37 +27,30 @@ namespace MachineCalculator.UI.Forms
 
 		private void chkSiteZaminTabiee_CheckedChanged(object sender, System.EventArgs e)
 		{
-			nudSangShekaste.Enabled = chkSiteSangShekaste.Checked;
+			nudZaminTabiee.Enabled = chkSiteZaminTabiee.Checked;
 		}
 
 		private void chkSiteRos_CheckedChanged(object sender, System.EventArgs e)
 		{
-			nudSangShekaste.Enabled = chkSiteSangShekaste.Checked;
+			nudRos.Enabled = chkSiteRos.Checked;
 		}
 
 		private void chkSiteMaaseh_CheckedChanged(object sender, System.EventArgs e)
 		{
-			nudSangShekaste.Enabled = chkSiteSangShekaste.Checked;
+			nudMaaseh.Enabled = chkSiteMaaseh.Checked;
 		}
 
 		private void btnOK_Click(object sender, System.EventArgs e)
 		{
 			_project = new Project
 			{
-				ActiveDaysPerMonth = (int) nudActiveDaysInMonth.Value,
-				HoursPerDay = (int) nudDailyHours.Value,
-				ActiveHoursPerDay = (int) nudDailyActiveHours.Value,
-				WorkShiftsPerDay = (int) nudDailyShifts.Value,
-
+				ActiveDaysPerMonth = (int)nudActiveDaysInMonth.Value,
+				HoursPerDay = (int)nudDailyHours.Value,
+				ActiveHoursPerDay = (int)nudDailyActiveHours.Value,
+				WorkShiftsPerDay = (int)nudDailyShifts.Value,
 			};
 			this.Close();
 			this.DialogResult = DialogResult.OK;
-		}
-
-		private void btnCancel_Click(object sender, System.EventArgs e)
-		{
-			this.Close();
-			this.DialogResult = DialogResult.Cancel;
 		}
 	}
 }

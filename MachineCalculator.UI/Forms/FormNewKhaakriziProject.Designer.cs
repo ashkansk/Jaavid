@@ -114,9 +114,9 @@
 			this.chkSiteRos.AutoSize = true;
 			this.chkSiteRos.Location = new System.Drawing.Point(49, 218);
 			this.chkSiteRos.Name = "chkSiteRos";
-			this.chkSiteRos.Size = new System.Drawing.Size(47, 17);
+			this.chkSiteRos.Size = new System.Drawing.Size(70, 17);
 			this.chkSiteRos.TabIndex = 11;
-			this.chkSiteRos.Text = "رس:";
+			this.chkSiteRos.Text = "خاک رس:";
 			this.chkSiteRos.UseVisualStyleBackColor = true;
 			this.chkSiteRos.CheckedChanged += new System.EventHandler(this.chkSiteRos_CheckedChanged);
 			// 
@@ -369,13 +369,13 @@
 			// 
 			// btnCancel
 			// 
+			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.btnCancel.Location = new System.Drawing.Point(410, 294);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(75, 23);
 			this.btnCancel.TabIndex = 16;
 			this.btnCancel.Text = "لغو";
 			this.btnCancel.UseVisualStyleBackColor = true;
-			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
 			// btnOK
 			// 
@@ -393,8 +393,10 @@
 			// 
 			// FormNewKhaakriziProject
 			// 
+			this.AcceptButton = this.btnOK;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.btnCancel;
 			this.ClientSize = new System.Drawing.Size(492, 328);
 			this.Controls.Add(this.nudDailyShifts);
 			this.Controls.Add(this.nudDailyActiveHours);

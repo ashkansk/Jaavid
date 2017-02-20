@@ -16,5 +16,10 @@ namespace MachineCalculator.UI.Forms
 		{
 			InitializeComponent();
 		}
+
+		private void SoilTypeButton_Click(object sender, EventArgs e)
+		{
+			grpBaargiriContainer.Text = (sender as RadioButton).Text;
+		}
 	}
 }
