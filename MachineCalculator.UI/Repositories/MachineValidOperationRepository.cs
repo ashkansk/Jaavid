@@ -1,11 +1,6 @@
 ﻿using MachineCalculator.UI.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MachineCalculator.UI.Reporistories
+namespace MachineCalculator.UI.Repositories
 {
 	public class MachineValidOperationRepository : RepositoryBase<MachineValidOperation>, IRepository<MachineValidOperation>
 	{

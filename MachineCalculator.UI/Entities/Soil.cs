@@ -1,7 +1,7 @@
 ﻿
 namespace MachineCalculator.UI.Entities
 {
-	public class SoilInfo : IEntity
+	public class Soil : IEntity
 	{
 		public int ID { get; set; }
 		public string Title { get; set; }

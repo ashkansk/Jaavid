@@ -31,9 +31,10 @@
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.mItemProject = new System.Windows.Forms.ToolStripMenuItem();
-			this.mItemClearForm = new System.Windows.Forms.ToolStripMenuItem();
 			this.mItemNew = new System.Windows.Forms.ToolStripMenuItem();
+			this.mItemKhaakriziProject = new System.Windows.Forms.ToolStripMenuItem();
 			this.mItemSave = new System.Windows.Forms.ToolStripMenuItem();
+			this.mItemClearForm = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -66,24 +67,32 @@
 			this.mItemProject.Size = new System.Drawing.Size(43, 20);
 			this.mItemProject.Text = "پروژه";
 			// 
-			// mItemClearForm
-			// 
-			this.mItemClearForm.Name = "mItemClearForm";
-			this.mItemClearForm.Size = new System.Drawing.Size(64, 20);
-			this.mItemClearForm.Text = "پاک کردن";
-			// 
 			// mItemNew
 			// 
+			this.mItemNew.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mItemKhaakriziProject});
 			this.mItemNew.Name = "mItemNew";
 			this.mItemNew.Size = new System.Drawing.Size(152, 22);
 			this.mItemNew.Text = "جدید";
-			this.mItemNew.Click += new System.EventHandler(this.mItemNew_Click);
+			// 
+			// mItemKhaakriziProject
+			// 
+			this.mItemKhaakriziProject.Name = "mItemKhaakriziProject";
+			this.mItemKhaakriziProject.Size = new System.Drawing.Size(152, 22);
+			this.mItemKhaakriziProject.Text = "خاکریزی";
+			this.mItemKhaakriziProject.Click += new System.EventHandler(this.mItemKhaakriziProject_Click);
 			// 
 			// mItemSave
 			// 
 			this.mItemSave.Name = "mItemSave";
 			this.mItemSave.Size = new System.Drawing.Size(152, 22);
 			this.mItemSave.Text = "ذخیره";
+			// 
+			// mItemClearForm
+			// 
+			this.mItemClearForm.Name = "mItemClearForm";
+			this.mItemClearForm.Size = new System.Drawing.Size(64, 20);
+			this.mItemClearForm.Text = "پاک کردن";
 			// 
 			// FormMain
 			// 
@@ -96,6 +105,7 @@
 			this.Name = "FormMain";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "FormMain";
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
@@ -112,5 +122,6 @@
 		private System.Windows.Forms.ToolStripMenuItem mItemClearForm;
 		private System.Windows.Forms.ToolStripMenuItem mItemNew;
 		private System.Windows.Forms.ToolStripMenuItem mItemSave;
+		private System.Windows.Forms.ToolStripMenuItem mItemKhaakriziProject;
 	}
 }

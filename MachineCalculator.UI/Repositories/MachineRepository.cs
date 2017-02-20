@@ -1,6 +1,6 @@
 ﻿using MachineCalculator.UI.Entities;
 
-namespace MachineCalculator.UI.Reporistories
+namespace MachineCalculator.UI.Repositories
 {
 	public class MachineRepository : RepositoryBase<Machine>, IRepository<Machine>
 	{

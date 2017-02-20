@@ -1,0 +1,541 @@
+﻿namespace MachineCalculator.UI.Forms
+{
+	partial class FormNewKhaakriziProject
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
+
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
+
+		#region Windows Form Designer generated code
+
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			this.components = new System.ComponentModel.Container();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+			this.lblDivider1 = new System.Windows.Forms.Label();
+			this.chkSiteMaaseh = new System.Windows.Forms.CheckBox();
+			this.chkSiteRos = new System.Windows.Forms.CheckBox();
+			this.chkSiteZaminTabiee = new System.Windows.Forms.CheckBox();
+			this.chkSiteSangShekaste = new System.Windows.Forms.CheckBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+			this.nudSangShekaste = new System.Windows.Forms.NumericUpDown();
+			this.label12 = new System.Windows.Forms.Label();
+			this.nudZaminTabiee = new System.Windows.Forms.NumericUpDown();
+			this.nudRos = new System.Windows.Forms.NumericUpDown();
+			this.nudMaaseh = new System.Windows.Forms.NumericUpDown();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.btnCancel = new System.Windows.Forms.Button();
+			this.btnOK = new System.Windows.Forms.Button();
+			this.soilInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.tableLayoutPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudSangShekaste)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudZaminTabiee)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudRos)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudMaaseh)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.soilInfoBindingSource)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.ColumnCount = 7;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 262F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+			this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 3, 2);
+			this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 3, 3);
+			this.tableLayoutPanel1.Controls.Add(this.lblDivider1, 2, 5);
+			this.tableLayoutPanel1.Controls.Add(this.chkSiteMaaseh, 1, 9);
+			this.tableLayoutPanel1.Controls.Add(this.chkSiteRos, 1, 8);
+			this.tableLayoutPanel1.Controls.Add(this.chkSiteZaminTabiee, 1, 7);
+			this.tableLayoutPanel1.Controls.Add(this.chkSiteSangShekaste, 1, 6);
+			this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
+			this.tableLayoutPanel1.Controls.Add(this.label1, 1, 2);
+			this.tableLayoutPanel1.Controls.Add(this.label5, 1, 5);
+			this.tableLayoutPanel1.Controls.Add(this.label6, 3, 6);
+			this.tableLayoutPanel1.Controls.Add(this.label10, 1, 1);
+			this.tableLayoutPanel1.Controls.Add(this.label11, 2, 1);
+			this.tableLayoutPanel1.Controls.Add(this.label7, 3, 7);
+			this.tableLayoutPanel1.Controls.Add(this.label8, 3, 8);
+			this.tableLayoutPanel1.Controls.Add(this.label9, 3, 9);
+			this.tableLayoutPanel1.Controls.Add(this.label3, 4, 2);
+			this.tableLayoutPanel1.Controls.Add(this.label4, 4, 3);
+			this.tableLayoutPanel1.Controls.Add(this.numericUpDown3, 5, 2);
+			this.tableLayoutPanel1.Controls.Add(this.numericUpDown5, 5, 3);
+			this.tableLayoutPanel1.Controls.Add(this.nudSangShekaste, 4, 6);
+			this.tableLayoutPanel1.Controls.Add(this.label12, 5, 6);
+			this.tableLayoutPanel1.Controls.Add(this.nudZaminTabiee, 4, 7);
+			this.tableLayoutPanel1.Controls.Add(this.nudRos, 4, 8);
+			this.tableLayoutPanel1.Controls.Add(this.nudMaaseh, 4, 9);
+			this.tableLayoutPanel1.Controls.Add(this.label13, 5, 7);
+			this.tableLayoutPanel1.Controls.Add(this.label14, 5, 8);
+			this.tableLayoutPanel1.Controls.Add(this.label15, 5, 9);
+			this.tableLayoutPanel1.Controls.Add(this.btnCancel, 6, 11);
+			this.tableLayoutPanel1.Controls.Add(this.btnOK, 5, 11);
+			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 13;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(660, 469);
+			this.tableLayoutPanel1.TabIndex = 0;
+			// 
+			// numericUpDown1
+			// 
+			this.numericUpDown1.Location = new System.Drawing.Point(454, 48);
+			this.numericUpDown1.Name = "numericUpDown1";
+			this.numericUpDown1.Size = new System.Drawing.Size(59, 21);
+			this.numericUpDown1.TabIndex = 5;
+			// 
+			// numericUpDown2
+			// 
+			this.numericUpDown2.Location = new System.Drawing.Point(454, 85);
+			this.numericUpDown2.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+			this.numericUpDown2.Name = "numericUpDown2";
+			this.numericUpDown2.Size = new System.Drawing.Size(59, 21);
+			this.numericUpDown2.TabIndex = 6;
+			// 
+			// lblDivider1
+			// 
+			this.lblDivider1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblDivider1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.tableLayoutPanel1.SetColumnSpan(this.lblDivider1, 5);
+			this.lblDivider1.Location = new System.Drawing.Point(10, 153);
+			this.lblDivider1.Name = "lblDivider1";
+			this.lblDivider1.Size = new System.Drawing.Size(549, 2);
+			this.lblDivider1.TabIndex = 13;
+			// 
+			// chkSiteMaaseh
+			// 
+			this.chkSiteMaaseh.AutoSize = true;
+			this.tableLayoutPanel1.SetColumnSpan(this.chkSiteMaaseh, 2);
+			this.chkSiteMaaseh.Location = new System.Drawing.Point(581, 257);
+			this.chkSiteMaaseh.Name = "chkSiteMaaseh";
+			this.chkSiteMaaseh.Size = new System.Drawing.Size(56, 17);
+			this.chkSiteMaaseh.TabIndex = 12;
+			this.chkSiteMaaseh.Text = "ماسه:";
+			this.chkSiteMaaseh.UseVisualStyleBackColor = true;
+			this.chkSiteMaaseh.CheckedChanged += new System.EventHandler(this.chkSiteMaaseh_CheckedChanged);
+			// 
+			// chkSiteRos
+			// 
+			this.chkSiteRos.AutoSize = true;
+			this.tableLayoutPanel1.SetColumnSpan(this.chkSiteRos, 2);
+			this.chkSiteRos.Location = new System.Drawing.Point(590, 229);
+			this.chkSiteRos.Name = "chkSiteRos";
+			this.chkSiteRos.Size = new System.Drawing.Size(47, 17);
+			this.chkSiteRos.TabIndex = 11;
+			this.chkSiteRos.Text = "رس:";
+			this.chkSiteRos.UseVisualStyleBackColor = true;
+			this.chkSiteRos.CheckedChanged += new System.EventHandler(this.chkSiteRos_CheckedChanged);
+			// 
+			// chkSiteZaminTabiee
+			// 
+			this.chkSiteZaminTabiee.AutoSize = true;
+			this.tableLayoutPanel1.SetColumnSpan(this.chkSiteZaminTabiee, 2);
+			this.chkSiteZaminTabiee.Location = new System.Drawing.Point(550, 201);
+			this.chkSiteZaminTabiee.Name = "chkSiteZaminTabiee";
+			this.chkSiteZaminTabiee.Size = new System.Drawing.Size(87, 17);
+			this.chkSiteZaminTabiee.TabIndex = 10;
+			this.chkSiteZaminTabiee.Text = "زمین طبیعی:";
+			this.chkSiteZaminTabiee.UseVisualStyleBackColor = true;
+			this.chkSiteZaminTabiee.CheckedChanged += new System.EventHandler(this.chkSiteZaminTabiee_CheckedChanged);
+			// 
+			// chkSiteSangShekaste
+			// 
+			this.chkSiteSangShekaste.AutoSize = true;
+			this.chkSiteSangShekaste.Checked = true;
+			this.chkSiteSangShekaste.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.tableLayoutPanel1.SetColumnSpan(this.chkSiteSangShekaste, 2);
+			this.chkSiteSangShekaste.Location = new System.Drawing.Point(539, 173);
+			this.chkSiteSangShekaste.Name = "chkSiteSangShekaste";
+			this.chkSiteSangShekaste.Size = new System.Drawing.Size(98, 17);
+			this.chkSiteSangShekaste.TabIndex = 9;
+			this.chkSiteSangShekaste.Text = "سنگ شکسته:";
+			this.chkSiteSangShekaste.UseVisualStyleBackColor = true;
+			this.chkSiteSangShekaste.CheckedChanged += new System.EventHandler(this.chkSiteSangShekaste_CheckedChanged);
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
+			this.label2.Location = new System.Drawing.Point(556, 82);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(81, 13);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "ساعت کار روزانه";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
+			this.label1.Location = new System.Drawing.Point(538, 45);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(99, 13);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "تعداد روز فعال در ماه";
+			// 
+			// label5
+			// 
+			this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label5.Location = new System.Drawing.Point(565, 147);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(59, 13);
+			this.label5.TabIndex = 14;
+			this.label5.Text = "انواع خاک";
+			// 
+			// label6
+			// 
+			this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label6.ForeColor = System.Drawing.Color.Gray;
+			this.label6.Location = new System.Drawing.Point(445, 178);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(23, 11);
+			this.label6.TabIndex = 15;
+			this.label6.Text = "حجم";
+			// 
+			// label10
+			// 
+			this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label10.Location = new System.Drawing.Point(562, 26);
+			this.label10.Margin = new System.Windows.Forms.Padding(0);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(74, 13);
+			this.label10.TabIndex = 14;
+			this.label10.Text = "اطلاعات کلی";
+			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label11
+			// 
+			this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.tableLayoutPanel1.SetColumnSpan(this.label11, 5);
+			this.label11.Location = new System.Drawing.Point(10, 31);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(549, 2);
+			this.label11.TabIndex = 13;
+			// 
+			// label7
+			// 
+			this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label7.ForeColor = System.Drawing.Color.Gray;
+			this.label7.Location = new System.Drawing.Point(445, 206);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(23, 11);
+			this.label7.TabIndex = 15;
+			this.label7.Text = "حجم";
+			// 
+			// label8
+			// 
+			this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label8.ForeColor = System.Drawing.Color.Gray;
+			this.label8.Location = new System.Drawing.Point(445, 234);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(23, 11);
+			this.label8.TabIndex = 15;
+			this.label8.Text = "حجم";
+			// 
+			// label9
+			// 
+			this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label9.ForeColor = System.Drawing.Color.Gray;
+			this.label9.Location = new System.Drawing.Point(445, 262);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(23, 11);
+			this.label9.TabIndex = 15;
+			this.label9.Text = "حجم";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(351, 45);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(88, 26);
+			this.label3.TabIndex = 2;
+			this.label3.Text = "میزان ساعت مفید کار در هر روز";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(350, 82);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(89, 26);
+			this.label4.TabIndex = 3;
+			this.label4.Text = "تعداد شیفت کاری در هر روز";
+			// 
+			// numericUpDown3
+			// 
+			this.numericUpDown3.Location = new System.Drawing.Point(289, 48);
+			this.numericUpDown3.Name = "numericUpDown3";
+			this.numericUpDown3.Size = new System.Drawing.Size(55, 21);
+			this.numericUpDown3.TabIndex = 7;
+			// 
+			// numericUpDown5
+			// 
+			this.numericUpDown5.Location = new System.Drawing.Point(289, 85);
+			this.numericUpDown5.Name = "numericUpDown5";
+			this.numericUpDown5.Size = new System.Drawing.Size(55, 21);
+			this.numericUpDown5.TabIndex = 8;
+			// 
+			// nudSangShekaste
+			// 
+			this.nudSangShekaste.Location = new System.Drawing.Point(350, 173);
+			this.nudSangShekaste.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+			this.nudSangShekaste.Name = "nudSangShekaste";
+			this.nudSangShekaste.Size = new System.Drawing.Size(89, 21);
+			this.nudSangShekaste.TabIndex = 8;
+			this.nudSangShekaste.ThousandsSeparator = true;
+			// 
+			// label12
+			// 
+			this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.label12.AutoSize = true;
+			this.label12.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label12.ForeColor = System.Drawing.Color.Gray;
+			this.label12.Location = new System.Drawing.Point(301, 178);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(43, 11);
+			this.label12.TabIndex = 15;
+			this.label12.Text = "متر مکعب";
+			// 
+			// nudZaminTabiee
+			// 
+			this.nudZaminTabiee.Enabled = false;
+			this.nudZaminTabiee.Location = new System.Drawing.Point(350, 201);
+			this.nudZaminTabiee.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+			this.nudZaminTabiee.Name = "nudZaminTabiee";
+			this.nudZaminTabiee.Size = new System.Drawing.Size(89, 21);
+			this.nudZaminTabiee.TabIndex = 8;
+			this.nudZaminTabiee.ThousandsSeparator = true;
+			// 
+			// nudRos
+			// 
+			this.nudRos.Enabled = false;
+			this.nudRos.Location = new System.Drawing.Point(350, 229);
+			this.nudRos.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+			this.nudRos.Name = "nudRos";
+			this.nudRos.Size = new System.Drawing.Size(89, 21);
+			this.nudRos.TabIndex = 8;
+			this.nudRos.ThousandsSeparator = true;
+			// 
+			// nudMaaseh
+			// 
+			this.nudMaaseh.Enabled = false;
+			this.nudMaaseh.Location = new System.Drawing.Point(350, 257);
+			this.nudMaaseh.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+			this.nudMaaseh.Name = "nudMaaseh";
+			this.nudMaaseh.Size = new System.Drawing.Size(89, 21);
+			this.nudMaaseh.TabIndex = 8;
+			this.nudMaaseh.ThousandsSeparator = true;
+			// 
+			// label13
+			// 
+			this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label13.ForeColor = System.Drawing.Color.Gray;
+			this.label13.Location = new System.Drawing.Point(301, 206);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(43, 11);
+			this.label13.TabIndex = 15;
+			this.label13.Text = "متر مکعب";
+			// 
+			// label14
+			// 
+			this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.label14.AutoSize = true;
+			this.label14.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label14.ForeColor = System.Drawing.Color.Gray;
+			this.label14.Location = new System.Drawing.Point(301, 234);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(43, 11);
+			this.label14.TabIndex = 15;
+			this.label14.Text = "متر مکعب";
+			// 
+			// label15
+			// 
+			this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.label15.AutoSize = true;
+			this.label15.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label15.ForeColor = System.Drawing.Color.Gray;
+			this.label15.Location = new System.Drawing.Point(301, 262);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(43, 11);
+			this.label15.TabIndex = 15;
+			this.label15.Text = "متر مکعب";
+			// 
+			// btnCancel
+			// 
+			this.btnCancel.Location = new System.Drawing.Point(7, 439);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(75, 23);
+			this.btnCancel.TabIndex = 16;
+			this.btnCancel.Text = "لغو";
+			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+			// 
+			// btnOK
+			// 
+			this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnOK.Location = new System.Drawing.Point(88, 439);
+			this.btnOK.Name = "btnOK";
+			this.btnOK.Size = new System.Drawing.Size(75, 23);
+			this.btnOK.TabIndex = 17;
+			this.btnOK.Text = "تأیید";
+			this.btnOK.UseVisualStyleBackColor = true;
+			this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+			// 
+			// soilInfoBindingSource
+			// 
+			this.soilInfoBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.Soil);
+			// 
+			// FormNewKhaakriziProject
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(660, 469);
+			this.Controls.Add(this.tableLayoutPanel1);
+			this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.Name = "FormNewKhaakriziProject";
+			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.RightToLeftLayout = true;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "پروژه خاک‎ریزی";
+			this.Load += new System.EventHandler(this.FormNewKhaakriziProject_Load);
+			this.tableLayoutPanel1.ResumeLayout(false);
+			this.tableLayoutPanel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudSangShekaste)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudZaminTabiee)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudRos)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudMaaseh)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.soilInfoBindingSource)).EndInit();
+			this.ResumeLayout(false);
+
+		}
+
+		#endregion
+
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.NumericUpDown numericUpDown1;
+		private System.Windows.Forms.NumericUpDown numericUpDown2;
+		private System.Windows.Forms.NumericUpDown numericUpDown3;
+		private System.Windows.Forms.Label lblDivider1;
+		private System.Windows.Forms.CheckBox chkSiteMaaseh;
+		private System.Windows.Forms.CheckBox chkSiteRos;
+		private System.Windows.Forms.CheckBox chkSiteZaminTabiee;
+		private System.Windows.Forms.CheckBox chkSiteSangShekaste;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.NumericUpDown numericUpDown5;
+		private System.Windows.Forms.NumericUpDown nudSangShekaste;
+		private System.Windows.Forms.BindingSource soilInfoBindingSource;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.NumericUpDown nudZaminTabiee;
+		private System.Windows.Forms.NumericUpDown nudRos;
+		private System.Windows.Forms.NumericUpDown nudMaaseh;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Button btnCancel;
+		private System.Windows.Forms.Button btnOK;
+	}
+}

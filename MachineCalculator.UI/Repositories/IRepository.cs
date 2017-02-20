@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace MachineCalculator.UI.Reporistories
+namespace MachineCalculator.UI.Repositories
 {
 	public interface IRepository<TEntity>
 		where TEntity: class, IEntity, new()
