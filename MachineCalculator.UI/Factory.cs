@@ -7,6 +7,7 @@ namespace MachineCalculator.UI
 		private static InMemoryDB _db = new InMemoryDB();
 		private static ProjectRepository _projectRepository;
 		private static ProjectSiteRepository _projectSiteRepository; 
+		private static ProjectStepRepository _projectStepRepository;
 		private static SoilRepository _soilRepository;
 		private static MachineRepository _machineRepository;
 		internal static InMemoryDB GetDB()
@@ -28,6 +29,13 @@ namespace MachineCalculator.UI
 			if (_projectSiteRepository == null)
 				_projectSiteRepository = new ProjectSiteRepository(GetDB());
 			return _projectSiteRepository;
+		}
+
+		internal static ProjectStepRepository GetProjectStepRepository()
+		{
+			if (_projectStepRepository == null)
+				_projectStepRepository = new ProjectStepRepository(GetDB());
+			return _projectStepRepository;
 		}
 
 		internal static SoilRepository GetSoilRepository()

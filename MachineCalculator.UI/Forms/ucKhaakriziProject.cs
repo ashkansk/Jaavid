@@ -12,12 +12,14 @@ namespace MachineCalculator.UI.Forms
 		private Project _project;
 		private ProjectRepository _projectRepo;
 		private ProjectSiteRepository _projectSiteRepo;
+		private ProjectStepRepository _projectStepRepo;
 		private MachineRepository _machingRepo;
-		private ProjectStep _step = new ProjectStep();
+		
 		public ucKhaakriziProject(int projectID)
 		{
 			_projectRepo = Factory.GetProjectRepository();
 			_projectSiteRepo = Factory.GetProjectSiteRepository();
+			_projectStepRepo = Factory.GetProjectStepRepository();
 			_project = _projectRepo.Get(p => p.ID == projectID).SingleOrDefault();
 			_machingRepo = Factory.GetMachineRepository();
 			if (_project == null)
@@ -32,13 +34,12 @@ namespace MachineCalculator.UI.Forms
 		{
 			var rdb = sender as RadioButton;
 			rdb.Parent.Controls.OfType<GroupBox>().First().Text = rdb.Text;
-
-			projectStepBindingSource.DataSource = _step;
+			if(rdb.Tag != null)
+				stepObjBindingSource.DataSource = rdb.Tag;
 		}
 
 		private void ucKhaakriziProject_Load(object sender, EventArgs e)
 		{
-
 			loadersBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Loader");
 			trucksBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Truck");
 			dozersBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Dozer");
@@ -48,9 +49,11 @@ namespace MachineCalculator.UI.Forms
 			bool fired = false;
 			for (int i = 0; i < _project.Sites.OrderBy(s => s.SoilTypeIndex).Count(); i++)
 			{
-				switch ((SoilType)_project.Sites[i].SoilTypeIndex)
+				ProjectSite site = _project.Sites[i];
+				switch ((SoilType)site.SoilTypeIndex)
 				{
 					case SoilType.SangShekaste:
+						rdbSangShekasteStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste };
 						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbSangShekasteStep1, rdbSangShekasteStep2, rdbSangShekasteStep3, rdbSangShekasteStep4);
 						if (!fired)
 						{
@@ -59,6 +62,8 @@ namespace MachineCalculator.UI.Forms
 						}
 						break;
 					case SoilType.ZaminTabiee:
+						rdbZaminTabieeStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste };
+
 						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbZaminTabieeStep1, rdbZaminTabieeStep2, rdbZaminTabieeStep3, rdbZaminTabieeStep4);
 						if (!fired)
 						{
