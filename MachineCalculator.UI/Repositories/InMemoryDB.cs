@@ -9,6 +9,8 @@ namespace MachineCalculator.UI.Repositories
 		public InMemoryDB()
 		{
 			Projects = new List<Project>();
+			ProjectSites = new List<ProjectSite>();
+			ProjectSteps = new List<ProjectStep>();
 			Soils = new List<Soil>()
 			{
 				new Soil { ID = 1, Title = "سنگ شکسته", TypeIndex=(int)SoilType.SangShekaste, InflationQuofficient=0.5, Code="", Description="..." },
@@ -164,6 +166,8 @@ namespace MachineCalculator.UI.Repositories
 			Type t = typeof(TEntity);
 			if (t == typeof(Project))
 				toReturn = Projects;
+			else if (t == typeof(ProjectSite))
+				toReturn = ProjectSites;
 			else if (t == typeof(ProjectStep))
 				toReturn = ProjectSteps;
 			else if (t == typeof(Soil))
@@ -178,6 +182,7 @@ namespace MachineCalculator.UI.Repositories
 
 		public List<Project> Projects { get; set; }
 		public List<ProjectStep> ProjectSteps { get; set; }
+		public List<ProjectSite> ProjectSites { get; set; }
 		public List<Soil> Soils { get; set; }
 		public List<Machine> Machines { get; set; }
 		public List<MachinePerformance> MachinePerformances { get; set; }

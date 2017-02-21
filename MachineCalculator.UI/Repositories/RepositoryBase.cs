@@ -36,7 +36,7 @@ namespace MachineCalculator.UI.Repositories
 		public void Insert(TEntity entity)
 		{
 			List<TEntity> entities = DB.Set<TEntity>();
-			int maxID = entities.Select(e => e.ID).Max();
+			int maxID = entities.Select(e => e.ID).DefaultIfEmpty(0).Max();
 			entity.ID = maxID + 1;
 			entities.Add(entity);
 		}

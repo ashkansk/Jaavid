@@ -18,9 +18,9 @@
 
 	public enum KhaakriziStepType
 	{
-		Baarbari = 1,
-		Baargiri = 2,
-		xxx = 3,
-		yyy = 4
+		Baargiri = 1,
+		Baarbari = 2,
+		Pakhsh = 3,
+		Tarakom = 4
 	}
 }

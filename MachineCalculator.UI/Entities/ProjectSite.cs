@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 
 namespace MachineCalculator.UI.Entities
 {
@@ -9,5 +10,6 @@ namespace MachineCalculator.UI.Entities
 		public int ProjectID { get; set; }
 		public int SoilTypeIndex { get; set; }
 		public double SoilVolume { get; set; }
+		public List<ProjectStep> Steps { get; set; }
 	}
 }

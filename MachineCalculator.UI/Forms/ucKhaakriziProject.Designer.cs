@@ -49,7 +49,7 @@
 			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
 			this.cmbLoaderType = new System.Windows.Forms.ComboBox();
-			this.machineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.loadersBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.label2 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
@@ -144,12 +144,16 @@
 			this.label49 = new System.Windows.Forms.Label();
 			this.label50 = new System.Windows.Forms.Label();
 			this.label51 = new System.Windows.Forms.Label();
+			this.trucksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dozersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.rollersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.projectStepBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tabCtrlSteps.SuspendLayout();
 			this.tabpgBaargiri.SuspendLayout();
 			this.grpBaargiriContainer.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.machineBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.loadersBindingSource)).BeginInit();
 			this.tabPage1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -164,6 +168,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.trucksBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dozersBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.rollersBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.projectStepBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabCtrlSteps
@@ -411,7 +419,8 @@
 			// cmbLoaderType
 			// 
 			this.cmbLoaderType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cmbLoaderType.DataSource = this.machineBindingSource;
+			this.cmbLoaderType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.projectStepBindingSource, "MachineID", true));
+			this.cmbLoaderType.DataSource = this.loadersBindingSource;
 			this.cmbLoaderType.DisplayMember = "Title";
 			this.cmbLoaderType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbLoaderType.FormattingEnabled = true;
@@ -420,10 +429,11 @@
 			this.cmbLoaderType.Size = new System.Drawing.Size(136, 21);
 			this.cmbLoaderType.TabIndex = 1;
 			this.cmbLoaderType.Tag = "";
+			this.cmbLoaderType.ValueMember = "ID";
 			// 
-			// machineBindingSource
+			// loadersBindingSource
 			// 
-			this.machineBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.Machine);
+			this.loadersBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.Machine);
 			// 
 			// label2
 			// 
@@ -731,7 +741,7 @@
 			// cmbTruckType
 			// 
 			this.cmbTruckType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cmbTruckType.DataSource = this.machineBindingSource;
+			this.cmbTruckType.DataSource = this.trucksBindingSource;
 			this.cmbTruckType.DisplayMember = "Title";
 			this.cmbTruckType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbTruckType.FormattingEnabled = true;
@@ -1079,7 +1089,7 @@
 			// cmbDozerType
 			// 
 			this.cmbDozerType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cmbDozerType.DataSource = this.machineBindingSource;
+			this.cmbDozerType.DataSource = this.dozersBindingSource;
 			this.cmbDozerType.DisplayMember = "Title";
 			this.cmbDozerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbDozerType.FormattingEnabled = true;
@@ -1420,7 +1430,7 @@
 			// cmbRollerType
 			// 
 			this.cmbRollerType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cmbRollerType.DataSource = this.machineBindingSource;
+			this.cmbRollerType.DataSource = this.rollersBindingSource;
 			this.cmbRollerType.DisplayMember = "Title";
 			this.cmbRollerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbRollerType.FormattingEnabled = true;
@@ -1518,6 +1528,22 @@
 			this.label51.TabIndex = 0;
 			this.label51.Text = "نوع غلطک";
 			// 
+			// trucksBindingSource
+			// 
+			this.trucksBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.Machine);
+			// 
+			// dozersBindingSource
+			// 
+			this.dozersBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.Machine);
+			// 
+			// rollersBindingSource
+			// 
+			this.rollersBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.Machine);
+			// 
+			// projectStepBindingSource
+			// 
+			this.projectStepBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStep);
+			// 
 			// ucKhaakriziProject
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1533,7 +1559,7 @@
 			this.grpBaargiriContainer.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.machineBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.loadersBindingSource)).EndInit();
 			this.tabPage1.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
@@ -1551,6 +1577,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.trucksBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dozersBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.rollersBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.projectStepBindingSource)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1671,6 +1701,10 @@
 		private System.Windows.Forms.Label label54;
 		private System.Windows.Forms.NumericUpDown numericUpDown10;
 		private System.Windows.Forms.Label label53;
-		private System.Windows.Forms.BindingSource machineBindingSource;
+		private System.Windows.Forms.BindingSource loadersBindingSource;
+		private System.Windows.Forms.BindingSource trucksBindingSource;
+		private System.Windows.Forms.BindingSource dozersBindingSource;
+		private System.Windows.Forms.BindingSource rollersBindingSource;
+		private System.Windows.Forms.BindingSource projectStepBindingSource;
 	}
 }

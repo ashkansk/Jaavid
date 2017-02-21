@@ -8,7 +8,6 @@ namespace MachineCalculator.UI.Entities
 		public string Title { get; set; }
 		public int MachineID { get; set; }
 		public int StepIndex { get; set; }
-		public int StepTypeIndex { get; set; } // translates to 'OperationType' enum
-
+		public int StepTypeIndex { get; set; }
 	}
 }

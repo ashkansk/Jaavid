@@ -114,6 +114,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\MachineCalculator.UI.Entities.Machine.datasource" />
+    <None Include="Properties\DataSources\MachineCalculator.UI.Entities.ProjectStep.datasource" />
     <None Include="Properties\DataSources\MachineCalculator.UI.Entities.SoilInfo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
