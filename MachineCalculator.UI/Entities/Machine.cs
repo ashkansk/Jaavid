@@ -1,4 +1,8 @@
 ﻿
+using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+
 namespace MachineCalculator.UI.Entities
 {
 	public class Machine : IEntity
@@ -9,6 +13,7 @@ namespace MachineCalculator.UI.Entities
 		public string Description { get; set; }
 		public string Category { get; set; }
 		public int TypeIndex { get; set; }
-		public double Performance { get; set; }
+
+		public List<MachinePerformance> Performances { get; set; }
 	}
 }

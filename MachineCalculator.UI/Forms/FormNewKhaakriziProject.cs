@@ -7,13 +7,15 @@ namespace MachineCalculator.UI.Forms
 {
 	public partial class FormNewKhaakriziProject : Form
 	{
-		private SoilRepository _soilRepo;
+		private ProjectRepository _projectRepo;
+		private ProjectSiteRepository _projectSiteRepo;
 		private Project _project;
-		public Project CreatedProject { get { return _project; } }
+		public int CreatedProjectID { get { return _project.ID; } }
 		public FormNewKhaakriziProject()
 		{
 			InitializeComponent();
-			_soilRepo = Factory.GetSoilRepository();
+			_projectRepo = Factory.GetProjectRepository();
+			_projectSiteRepo = Factory.GetProjectSiteRepository();
 		}
 
 		private void FormNewKhaakriziProject_Load(object sender, System.EventArgs e)
@@ -49,6 +51,40 @@ namespace MachineCalculator.UI.Forms
 				ActiveHoursPerDay = (int)nudDailyActiveHours.Value,
 				WorkShiftsPerDay = (int)nudDailyShifts.Value,
 			};
+			_projectRepo.Insert(_project);
+			if(chkSiteSangShekaste.Checked)
+				_projectSiteRepo.Insert(new ProjectSite
+				{
+					ProjectID = _project.ID,
+					SoilTypeIndex = (int)SoilType.SangShekaste,
+					SoilVolume = (int)nudSangShekaste.Value
+				});
+
+			if (chkSiteZaminTabiee.Checked)
+				_projectSiteRepo.Insert(new ProjectSite
+				{
+					ProjectID = _project.ID,
+					SoilTypeIndex = (int)SoilType.ZaminTabiee,
+					SoilVolume = (int)nudZaminTabiee.Value
+				});
+
+			if (chkSiteRos.Checked)
+				_projectSiteRepo.Insert(new ProjectSite
+				{
+					ProjectID = _project.ID,
+					SoilTypeIndex = (int)SoilType.Ros,
+					SoilVolume = (int)nudRos.Value
+				});
+
+			if (chkSiteMaaseh.Checked)
+				_projectSiteRepo.Insert(new ProjectSite
+				{
+					ProjectID = _project.ID,
+					SoilTypeIndex = (int)SoilType.Maaseh,
+					SoilVolume = (int)nudMaaseh.Value
+				});
+
+
 			this.Close();
 			this.DialogResult = DialogResult.OK;
 		}

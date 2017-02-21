@@ -49,6 +49,7 @@
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Entities\KhaakriziProject.cs" />
     <Compile Include="Entities\Machine.cs" />
+    <Compile Include="Entities\MachinePerformance.cs" />
     <Compile Include="Entities\MachineValidOperation.cs" />
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\ProjectSite.cs" />
@@ -112,6 +113,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\MachineCalculator.UI.Entities.Machine.datasource" />
     <None Include="Properties\DataSources\MachineCalculator.UI.Entities.SoilInfo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

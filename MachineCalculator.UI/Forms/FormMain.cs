@@ -19,7 +19,7 @@ namespace MachineCalculator.UI.Forms
 			if(result == DialogResult.OK)
 			{
 				lblUserGuide.Hide();
-				_currentUc = new ucKhaakriziProject
+				_currentUc = new ucKhaakriziProject(newForm.CreatedProjectID)
 				{
 					Dock = DockStyle.Fill,
 				};

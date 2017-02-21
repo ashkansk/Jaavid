@@ -7,13 +7,6 @@ namespace MachineCalculator.UI.Entities
 	{
 		public KhaakriziProject()
 		{
-			Steps = new List<ProjectStep>
-			{
-				new ProjectStep { ID=1,  },
-				new ProjectStep { },
-				new ProjectStep { },
-				new ProjectStep { },
-			};
 		}
 	}
 }
