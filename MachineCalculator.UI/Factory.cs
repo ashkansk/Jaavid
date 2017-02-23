@@ -10,6 +10,8 @@ namespace MachineCalculator.UI
 		private static ProjectStepRepository _projectStepRepository;
 		private static SoilRepository _soilRepository;
 		private static MachineRepository _machineRepository;
+		private static MachinePerformanceRepository _machinePerformanceRepository;
+
 		internal static InMemoryDB GetDB()
 		{
 			if (_db == null)
@@ -52,6 +54,12 @@ namespace MachineCalculator.UI
 			return _machineRepository;
 		}
 
+		internal static MachinePerformanceRepository GetMachinePerformanceRepository()
+		{
+			if (_machinePerformanceRepository == null)
+				_machinePerformanceRepository = new MachinePerformanceRepository(GetDB());
+			return _machinePerformanceRepository;
+		}
 
 	}
 }

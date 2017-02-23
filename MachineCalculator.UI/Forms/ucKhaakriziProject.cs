@@ -44,6 +44,11 @@ namespace MachineCalculator.UI.Forms
 			trucksBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Truck");
 			dozersBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Dozer");
 			rollersBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Roller");
+			doubleHelperClassBindingSource.DataSource = new List<DoubleHelperClass> {
+				new DoubleHelperClass { Title="صفر", Value = 0 },
+				new DoubleHelperClass { Title="ده", Value = 10 },
+				new DoubleHelperClass { Title="بیست", Value = 20 }
+			};
 
 			// this is to fire the checked change event (to make data binding take effect)
 			bool fired = false;
@@ -53,7 +58,11 @@ namespace MachineCalculator.UI.Forms
 				switch ((SoilType)site.SoilTypeIndex)
 				{
 					case SoilType.SangShekaste:
-						rdbSangShekasteStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste };
+						rdbSangShekasteStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste, WorkToDo = site.SoilVolume };
+						rdbSangShekasteStep2.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste, WorkToDo = site.SoilVolume };
+						rdbSangShekasteStep3.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste, WorkToDo = site.SoilVolume };
+						rdbSangShekasteStep4.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste, WorkToDo = site.SoilVolume };
+
 						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbSangShekasteStep1, rdbSangShekasteStep2, rdbSangShekasteStep3, rdbSangShekasteStep4);
 						if (!fired)
 						{
@@ -62,7 +71,10 @@ namespace MachineCalculator.UI.Forms
 						}
 						break;
 					case SoilType.ZaminTabiee:
-						rdbZaminTabieeStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste };
+						rdbZaminTabieeStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.ZaminTabiee, WorkToDo = site.SoilVolume };
+						rdbZaminTabieeStep2.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.ZaminTabiee, WorkToDo = site.SoilVolume };
+						rdbZaminTabieeStep3.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.ZaminTabiee, WorkToDo = site.SoilVolume };
+						rdbZaminTabieeStep4.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.ZaminTabiee, WorkToDo = site.SoilVolume };
 
 						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbZaminTabieeStep1, rdbZaminTabieeStep2, rdbZaminTabieeStep3, rdbZaminTabieeStep4);
 						if (!fired)
@@ -72,6 +84,11 @@ namespace MachineCalculator.UI.Forms
 						}
 						break;
 					case SoilType.Ros:
+						rdbRosStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Ros, WorkToDo = site.SoilVolume };
+						rdbRosStep2.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Ros, WorkToDo = site.SoilVolume };
+						rdbRosStep3.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Ros, WorkToDo = site.SoilVolume };
+						rdbRosStep4.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Ros, WorkToDo = site.SoilVolume };
+
 						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbRosStep1, rdbRosStep2, rdbRosStep3, rdbRosStep4);
 						if (!fired)
 						{
@@ -80,6 +97,11 @@ namespace MachineCalculator.UI.Forms
 						}
 						break;
 					case SoilType.Maaseh:
+						rdbMaasehStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Maaseh, WorkToDo = site.SoilVolume };
+						rdbMaasehStep2.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Maaseh, WorkToDo = site.SoilVolume };
+						rdbMaasehStep3.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Maaseh, WorkToDo = site.SoilVolume };
+						rdbMaasehStep4.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Maaseh, WorkToDo = site.SoilVolume };
+
 						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbMaasehStep1, rdbMaasehStep2, rdbMaasehStep3, rdbMaasehStep4);
 						if (!fired)
 						{
@@ -99,6 +121,25 @@ namespace MachineCalculator.UI.Forms
 			{
 				f(rdb);
 			}
+		}
+
+		private void tabCtrlSteps_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			RadioButton selectedSoilRdb = tabCtrlSteps.SelectedTab.Controls.OfType<RadioButton>().Where(rdb => rdb.Checked).First();
+			stepObjBindingSource.DataSource = selectedSoilRdb.Tag;
+		}
+
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			var step = stepObjBindingSource.DataSource as ProjectStep;
+			double factor = step.EnvironmentFactor;
+			MessageBox.Show(factor.ToString());
 		}
 	}
 }
