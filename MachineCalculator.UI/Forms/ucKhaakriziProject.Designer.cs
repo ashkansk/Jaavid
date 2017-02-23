@@ -445,7 +445,7 @@
 			// cmbRollerType
 			// 
 			this.cmbRollerType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cmbRollerType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "MachineID", true));
+			this.cmbRollerType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "MachineID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this.cmbRollerType.DataSource = this.rollersBindingSource;
 			this.cmbRollerType.DisplayMember = "Title";
 			this.cmbRollerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -646,7 +646,7 @@
 			// 
 			// cmbSheeb
 			// 
-			this.cmbSheeb.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "EnvironmentFactor", true));
+			this.cmbSheeb.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "EnvironmentFactor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this.cmbSheeb.DataSource = this.doubleHelperClassBindingSource;
 			this.cmbSheeb.DisplayMember = "Title";
 			this.cmbSheeb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -811,7 +811,7 @@
 			// cmbDozerType
 			// 
 			this.cmbDozerType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cmbDozerType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "MachineID", true));
+			this.cmbDozerType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "MachineID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this.cmbDozerType.DataSource = this.dozersBindingSource;
 			this.cmbDozerType.DisplayMember = "Title";
 			this.cmbDozerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1145,7 +1145,7 @@
 			// cmbTruckType
 			// 
 			this.cmbTruckType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cmbTruckType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "MachineID", true));
+			this.cmbTruckType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "MachineID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this.cmbTruckType.DataSource = this.trucksBindingSource;
 			this.cmbTruckType.DisplayMember = "Title";
 			this.cmbTruckType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
