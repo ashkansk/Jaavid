@@ -25,7 +25,7 @@ namespace MachineCalculator.UI.Repositories
 				{
 					ID = 1,
 					Category ="Loader",
-					Title ="بارگیر"
+					Title ="CAT D966"
 				},
 				new Machine
 				{
@@ -55,7 +55,7 @@ namespace MachineCalculator.UI.Repositories
 				{
 					ID = 6,
 					Category = "Roller",
-					Title = "غلطک"
+					Title = "HAMM"
 				},
 			};
 

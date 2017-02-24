@@ -8,9 +8,9 @@ namespace MachineCalculator.UI.Entities
 		public string Title { get; set; }
 		public int OperationTypeIndex { get; set; }
 		public int ActiveDaysPerMonth { get; set; }
-		public int HoursPerDay { get; set; }
-		public int ActiveHoursPerDay { get; set; }
 		public int WorkShiftsPerDay { get; set; }
+		public double HoursPerShift { get; set; }
+		public double ActiveHoursPerShift { get; set; }
 		public List<ProjectSite> Sites { get; set; }
 	}
 }

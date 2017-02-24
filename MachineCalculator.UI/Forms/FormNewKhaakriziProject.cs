@@ -47,12 +47,12 @@ namespace MachineCalculator.UI.Forms
 			_project = new Project
 			{
 				ActiveDaysPerMonth = (int)nudActiveDaysInMonth.Value,
-				HoursPerDay = (int)nudDailyHours.Value,
-				ActiveHoursPerDay = (int)nudDailyActiveHours.Value,
 				WorkShiftsPerDay = (int)nudDailyShifts.Value,
+				HoursPerShift = (double)nudDailyHours.Value,
+				ActiveHoursPerShift = (double)nudDailyActiveHours.Value,
 			};
 			_projectRepo.Insert(_project);
-			if(chkSiteSangShekaste.Checked)
+			if (chkSiteSangShekaste.Checked)
 				_projectSiteRepo.Insert(new ProjectSite
 				{
 					ProjectID = _project.ID,
@@ -84,9 +84,34 @@ namespace MachineCalculator.UI.Forms
 					SoilVolume = (int)nudMaaseh.Value
 				});
 
+			try
+			{
+				// validation
+				if (_project.ActiveDaysPerMonth <= 0 || _project.WorkShiftsPerDay <= 0 || _project.ActiveHoursPerShift <= 0)
+					ShowValidationError();
+				if (_project.ActiveHoursPerShift > _project.HoursPerShift)
+					ShowValidationError();
+				foreach (ProjectSite site in _project.Sites)
+				{
+					if (site.SoilVolume <= 0)
+						ShowValidationError();
+				}
+				// end validation
 
-			this.Close();
-			this.DialogResult = DialogResult.OK;
+				this.Close();
+				this.DialogResult = DialogResult.OK;
+			}
+			catch
+			{
+				// do nothing (if reaches here, the form is not closed)
+			}
+
+		}
+
+		private void ShowValidationError(bool silent = false)
+		{
+			MessageBox.Show("اطلاعات وارد شده نامعتبر است", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			throw new System.Exception();
 		}
 	}
 }

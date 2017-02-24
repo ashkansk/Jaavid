@@ -47,9 +47,7 @@
 			this.textBox19 = new System.Windows.Forms.TextBox();
 			this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
 			this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-			this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
 			this.label39 = new System.Windows.Forms.Label();
-			this.label40 = new System.Windows.Forms.Label();
 			this.label41 = new System.Windows.Forms.Label();
 			this.label42 = new System.Windows.Forms.Label();
 			this.label43 = new System.Windows.Forms.Label();
@@ -70,7 +68,7 @@
 			this.rdbSangShekasteStep3 = new System.Windows.Forms.RadioButton();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.cmbSheeb = new System.Windows.Forms.ComboBox();
-			this.doubleHelperClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.inclineBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.textBox10 = new System.Windows.Forms.TextBox();
 			this.textBox11 = new System.Windows.Forms.TextBox();
 			this.textBox12 = new System.Windows.Forms.TextBox();
@@ -79,7 +77,6 @@
 			this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
 			this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
 			this.label26 = new System.Windows.Forms.Label();
-			this.label27 = new System.Windows.Forms.Label();
 			this.label28 = new System.Windows.Forms.Label();
 			this.label29 = new System.Windows.Forms.Label();
 			this.label54 = new System.Windows.Forms.Label();
@@ -108,7 +105,6 @@
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
 			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
 			this.label13 = new System.Windows.Forms.Label();
-			this.label14 = new System.Windows.Forms.Label();
 			this.label15 = new System.Windows.Forms.Label();
 			this.label16 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
@@ -128,7 +124,6 @@
 			this.rdbSangShekasteStep1 = new System.Windows.Forms.RadioButton();
 			this.grpBaargiriContainer = new System.Windows.Forms.GroupBox();
 			this.lblDivider1 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
 			this.txtLoaderPerformanceValue = new System.Windows.Forms.TextBox();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox5 = new System.Windows.Forms.TextBox();
@@ -149,6 +144,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabCtrlSteps = new System.Windows.Forms.TabControl();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.loadersBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.trucksBindingSource)).BeginInit();
@@ -158,10 +154,9 @@
 			this.groupBox3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
 			this.tabPage2.SuspendLayout();
 			this.groupBox2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.doubleHelperClassBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.inclineBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
 			this.tabPage1.SuspendLayout();
@@ -263,6 +258,7 @@
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.comboBox1);
 			this.groupBox3.Controls.Add(this.textBox15);
 			this.groupBox3.Controls.Add(this.textBox16);
 			this.groupBox3.Controls.Add(this.textBox17);
@@ -270,9 +266,7 @@
 			this.groupBox3.Controls.Add(this.textBox19);
 			this.groupBox3.Controls.Add(this.numericUpDown6);
 			this.groupBox3.Controls.Add(this.numericUpDown9);
-			this.groupBox3.Controls.Add(this.numericUpDown7);
 			this.groupBox3.Controls.Add(this.label39);
-			this.groupBox3.Controls.Add(this.label40);
 			this.groupBox3.Controls.Add(this.label41);
 			this.groupBox3.Controls.Add(this.label42);
 			this.groupBox3.Controls.Add(this.label43);
@@ -364,7 +358,7 @@
 			// 
 			this.numericUpDown9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.numericUpDown9.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "EnvironmentFactor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N0"));
-			this.numericUpDown9.Location = new System.Drawing.Point(514, 101);
+			this.numericUpDown9.Location = new System.Drawing.Point(514, 64);
 			this.numericUpDown9.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -374,37 +368,13 @@
 			this.numericUpDown9.Size = new System.Drawing.Size(83, 21);
 			this.numericUpDown9.TabIndex = 21;
 			// 
-			// numericUpDown7
-			// 
-			this.numericUpDown7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.numericUpDown7.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "WorkQuantity", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "C0"));
-			this.numericUpDown7.Location = new System.Drawing.Point(514, 64);
-			this.numericUpDown7.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-			this.numericUpDown7.Name = "numericUpDown7";
-			this.numericUpDown7.Size = new System.Drawing.Size(83, 21);
-			this.numericUpDown7.TabIndex = 21;
-			// 
 			// label39
 			// 
 			this.label39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label39.Location = new System.Drawing.Point(34, 137);
+			this.label39.Location = new System.Drawing.Point(52, 133);
 			this.label39.Name = "label39";
 			this.label39.Size = new System.Drawing.Size(635, 2);
 			this.label39.TabIndex = 18;
-			// 
-			// label40
-			// 
-			this.label40.AutoSize = true;
-			this.label40.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label40.Location = new System.Drawing.Point(675, 129);
-			this.label40.Name = "label40";
-			this.label40.Size = new System.Drawing.Size(31, 13);
-			this.label40.TabIndex = 19;
-			this.label40.Text = "نتیجه";
 			// 
 			// label41
 			// 
@@ -436,7 +406,7 @@
 			this.label43.AutoSize = true;
 			this.label43.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label43.ForeColor = System.Drawing.Color.Gray;
-			this.label43.Location = new System.Drawing.Point(461, 71);
+			this.label43.Location = new System.Drawing.Point(461, 105);
 			this.label43.Name = "label43";
 			this.label43.Size = new System.Drawing.Size(47, 11);
 			this.label43.TabIndex = 16;
@@ -460,7 +430,7 @@
 			// 
 			this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label52.AutoSize = true;
-			this.label52.Location = new System.Drawing.Point(601, 103);
+			this.label52.Location = new System.Drawing.Point(605, 66);
 			this.label52.Name = "label52";
 			this.label52.Size = new System.Drawing.Size(85, 13);
 			this.label52.TabIndex = 0;
@@ -470,7 +440,7 @@
 			// 
 			this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label44.AutoSize = true;
-			this.label44.Location = new System.Drawing.Point(625, 69);
+			this.label44.Location = new System.Drawing.Point(629, 103);
 			this.label44.Name = "label44";
 			this.label44.Size = new System.Drawing.Size(61, 13);
 			this.label44.TabIndex = 0;
@@ -499,7 +469,7 @@
 			// 
 			this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label47.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label47.Location = new System.Drawing.Point(593, 155);
+			this.label47.Location = new System.Drawing.Point(597, 156);
 			this.label47.Name = "label47";
 			this.label47.Size = new System.Drawing.Size(93, 42);
 			this.label47.TabIndex = 0;
@@ -622,7 +592,6 @@
 			this.groupBox2.Controls.Add(this.numericUpDown4);
 			this.groupBox2.Controls.Add(this.numericUpDown5);
 			this.groupBox2.Controls.Add(this.label26);
-			this.groupBox2.Controls.Add(this.label27);
 			this.groupBox2.Controls.Add(this.label28);
 			this.groupBox2.Controls.Add(this.label29);
 			this.groupBox2.Controls.Add(this.label54);
@@ -647,7 +616,7 @@
 			// cmbSheeb
 			// 
 			this.cmbSheeb.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "EnvironmentFactor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-			this.cmbSheeb.DataSource = this.doubleHelperClassBindingSource;
+			this.cmbSheeb.DataSource = this.inclineBindingSource;
 			this.cmbSheeb.DisplayMember = "Title";
 			this.cmbSheeb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbSheeb.FormattingEnabled = true;
@@ -657,9 +626,9 @@
 			this.cmbSheeb.TabIndex = 27;
 			this.cmbSheeb.ValueMember = "Value";
 			// 
-			// doubleHelperClassBindingSource
+			// inclineBindingSource
 			// 
-			this.doubleHelperClassBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.DoubleHelperClass);
+			this.inclineBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.DoubleHelperClass);
 			// 
 			// textBox10
 			// 
@@ -745,20 +714,10 @@
 			// label26
 			// 
 			this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label26.Location = new System.Drawing.Point(34, 137);
+			this.label26.Location = new System.Drawing.Point(48, 133);
 			this.label26.Name = "label26";
 			this.label26.Size = new System.Drawing.Size(635, 2);
 			this.label26.TabIndex = 18;
-			// 
-			// label27
-			// 
-			this.label27.AutoSize = true;
-			this.label27.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label27.Location = new System.Drawing.Point(675, 129);
-			this.label27.Name = "label27";
-			this.label27.Size = new System.Drawing.Size(31, 13);
-			this.label27.TabIndex = 19;
-			this.label27.Text = "نتیجه";
 			// 
 			// label28
 			// 
@@ -865,7 +824,7 @@
 			// 
 			this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label34.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label34.Location = new System.Drawing.Point(593, 155);
+			this.label34.Location = new System.Drawing.Point(593, 156);
 			this.label34.Name = "label34";
 			this.label34.Size = new System.Drawing.Size(93, 42);
 			this.label34.TabIndex = 0;
@@ -987,7 +946,6 @@
 			this.groupBox1.Controls.Add(this.numericUpDown1);
 			this.groupBox1.Controls.Add(this.numericUpDown2);
 			this.groupBox1.Controls.Add(this.label13);
-			this.groupBox1.Controls.Add(this.label14);
 			this.groupBox1.Controls.Add(this.label15);
 			this.groupBox1.Controls.Add(this.label16);
 			this.groupBox1.Controls.Add(this.label17);
@@ -1091,20 +1049,10 @@
 			// label13
 			// 
 			this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label13.Location = new System.Drawing.Point(34, 133);
+			this.label13.Location = new System.Drawing.Point(48, 117);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(635, 2);
 			this.label13.TabIndex = 18;
-			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label14.Location = new System.Drawing.Point(675, 125);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(31, 13);
-			this.label14.TabIndex = 19;
-			this.label14.Text = "نتیجه";
 			// 
 			// label15
 			// 
@@ -1305,7 +1253,6 @@
 			// grpBaargiriContainer
 			// 
 			this.grpBaargiriContainer.Controls.Add(this.lblDivider1);
-			this.grpBaargiriContainer.Controls.Add(this.label9);
 			this.grpBaargiriContainer.Controls.Add(this.txtLoaderPerformanceValue);
 			this.grpBaargiriContainer.Controls.Add(this.textBox3);
 			this.grpBaargiriContainer.Controls.Add(this.textBox5);
@@ -1335,20 +1282,10 @@
 			// lblDivider1
 			// 
 			this.lblDivider1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblDivider1.Location = new System.Drawing.Point(34, 133);
+			this.lblDivider1.Location = new System.Drawing.Point(48, 117);
 			this.lblDivider1.Name = "lblDivider1";
 			this.lblDivider1.Size = new System.Drawing.Size(635, 2);
 			this.lblDivider1.TabIndex = 18;
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label9.Location = new System.Drawing.Point(675, 125);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(31, 13);
-			this.label9.TabIndex = 19;
-			this.label9.Text = "نتیجه";
 			// 
 			// txtLoaderPerformanceValue
 			// 
@@ -1579,6 +1516,19 @@
 			this.tabCtrlSteps.TabIndex = 0;
 			this.tabCtrlSteps.SelectedIndexChanged += new System.EventHandler(this.tabCtrlSteps_SelectedIndexChanged);
 			// 
+			// comboBox1
+			// 
+			this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "EnvironmentFactor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+			this.comboBox1.DataSource = this.inclineBindingSource;
+			this.comboBox1.DisplayMember = "Title";
+			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(514, 98);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(83, 21);
+			this.comboBox1.TabIndex = 28;
+			this.comboBox1.ValueMember = "Value";
+			// 
 			// ucKhaakriziProject
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1598,11 +1548,10 @@
 			this.groupBox3.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
 			this.tabPage2.ResumeLayout(false);
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.doubleHelperClassBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.inclineBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
 			this.tabPage1.ResumeLayout(false);
@@ -1633,7 +1582,6 @@
 		private System.Windows.Forms.RadioButton rdbSangShekasteStep4;
 		private System.Windows.Forms.GroupBox groupBox3;
 		private System.Windows.Forms.Label label39;
-		private System.Windows.Forms.Label label40;
 		private System.Windows.Forms.Label label41;
 		private System.Windows.Forms.Label label42;
 		private System.Windows.Forms.Label label43;
@@ -1654,7 +1602,6 @@
 		private System.Windows.Forms.RadioButton rdbSangShekasteStep3;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.Label label26;
-		private System.Windows.Forms.Label label27;
 		private System.Windows.Forms.Label label28;
 		private System.Windows.Forms.Label label29;
 		private System.Windows.Forms.Label label54;
@@ -1676,7 +1623,6 @@
 		private System.Windows.Forms.RadioButton rdbSangShekasteStep2;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Label label13;
-		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label label17;
@@ -1696,7 +1642,6 @@
 		private System.Windows.Forms.RadioButton rdbSangShekasteStep1;
 		private System.Windows.Forms.GroupBox grpBaargiriContainer;
 		private System.Windows.Forms.Label lblDivider1;
-		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.TextBox txtLoaderPerformanceValue;
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.TextBox textBox5;
@@ -1723,7 +1668,6 @@
 		private System.Windows.Forms.TextBox textBox18;
 		private System.Windows.Forms.TextBox textBox19;
 		private System.Windows.Forms.NumericUpDown numericUpDown6;
-		private System.Windows.Forms.NumericUpDown numericUpDown7;
 		private System.Windows.Forms.TextBox textBox10;
 		private System.Windows.Forms.TextBox textBox11;
 		private System.Windows.Forms.TextBox textBox12;
@@ -1740,6 +1684,7 @@
 		private System.Windows.Forms.NumericUpDown numericUpDown2;
 		private System.Windows.Forms.NumericUpDown numericUpDown9;
 		private System.Windows.Forms.ComboBox cmbSheeb;
-		private System.Windows.Forms.BindingSource doubleHelperClassBindingSource;
+		private System.Windows.Forms.BindingSource inclineBindingSource;
+		private System.Windows.Forms.ComboBox comboBox1;
 	}
 }

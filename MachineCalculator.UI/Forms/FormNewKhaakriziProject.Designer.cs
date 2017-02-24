@@ -73,21 +73,27 @@
 			// 
 			// nudDailyShifts
 			// 
-			this.nudDailyShifts.Location = new System.Drawing.Point(369, 76);
+			this.nudDailyShifts.Location = new System.Drawing.Point(399, 41);
+			this.nudDailyShifts.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
 			this.nudDailyShifts.Name = "nudDailyShifts";
-			this.nudDailyShifts.Size = new System.Drawing.Size(39, 21);
+			this.nudDailyShifts.Size = new System.Drawing.Size(46, 21);
 			this.nudDailyShifts.TabIndex = 5;
 			// 
 			// nudDailyActiveHours
 			// 
-			this.nudDailyActiveHours.Location = new System.Drawing.Point(369, 41);
+			this.nudDailyActiveHours.DecimalPlaces = 1;
+			this.nudDailyActiveHours.Location = new System.Drawing.Point(399, 78);
 			this.nudDailyActiveHours.Maximum = new decimal(new int[] {
             24,
             0,
             0,
             0});
 			this.nudDailyActiveHours.Name = "nudDailyActiveHours";
-			this.nudDailyActiveHours.Size = new System.Drawing.Size(39, 21);
+			this.nudDailyActiveHours.Size = new System.Drawing.Size(46, 21);
 			this.nudDailyActiveHours.TabIndex = 6;
 			// 
 			// lblDivider1
@@ -147,11 +153,11 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(28, 78);
+			this.label2.Location = new System.Drawing.Point(28, 80);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(81, 13);
+			this.label2.Size = new System.Drawing.Size(125, 13);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "ساعت کار روزانه";
+			this.label2.Text = "ساعت کاری در هر شیفت";
 			// 
 			// label1
 			// 
@@ -239,16 +245,16 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(221, 43);
+			this.label3.Location = new System.Drawing.Point(225, 80);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(134, 13);
+			this.label3.Size = new System.Drawing.Size(168, 13);
 			this.label3.TabIndex = 2;
-			this.label3.Text = "میزان ساعت مفید کار روزانه";
+			this.label3.Text = "میزان ساعت مفید کار در هر شیفت";
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(221, 78);
+			this.label4.Location = new System.Drawing.Point(225, 43);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(133, 13);
 			this.label4.TabIndex = 3;
@@ -256,16 +262,27 @@
 			// 
 			// nudActiveDaysInMonth
 			// 
-			this.nudActiveDaysInMonth.Location = new System.Drawing.Point(136, 41);
+			this.nudActiveDaysInMonth.Location = new System.Drawing.Point(161, 41);
+			this.nudActiveDaysInMonth.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
 			this.nudActiveDaysInMonth.Name = "nudActiveDaysInMonth";
-			this.nudActiveDaysInMonth.Size = new System.Drawing.Size(39, 21);
+			this.nudActiveDaysInMonth.Size = new System.Drawing.Size(50, 21);
 			this.nudActiveDaysInMonth.TabIndex = 7;
 			// 
 			// nudDailyHours
 			// 
-			this.nudDailyHours.Location = new System.Drawing.Point(136, 76);
+			this.nudDailyHours.DecimalPlaces = 1;
+			this.nudDailyHours.Location = new System.Drawing.Point(161, 78);
+			this.nudDailyHours.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
 			this.nudDailyHours.Name = "nudDailyHours";
-			this.nudDailyHours.Size = new System.Drawing.Size(39, 21);
+			this.nudDailyHours.Size = new System.Drawing.Size(50, 21);
 			this.nudDailyHours.TabIndex = 8;
 			// 
 			// nudSangShekaste
