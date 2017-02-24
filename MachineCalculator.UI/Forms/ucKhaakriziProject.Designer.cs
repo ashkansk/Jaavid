@@ -40,6 +40,8 @@
 			this.rdbZaminTabieeStep4 = new System.Windows.Forms.RadioButton();
 			this.rdbSangShekasteStep4 = new System.Windows.Forms.RadioButton();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.inclineBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.textBox15 = new System.Windows.Forms.TextBox();
 			this.textBox16 = new System.Windows.Forms.TextBox();
 			this.textBox17 = new System.Windows.Forms.TextBox();
@@ -68,7 +70,6 @@
 			this.rdbSangShekasteStep3 = new System.Windows.Forms.RadioButton();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.cmbSheeb = new System.Windows.Forms.ComboBox();
-			this.inclineBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.textBox10 = new System.Windows.Forms.TextBox();
 			this.textBox11 = new System.Windows.Forms.TextBox();
 			this.textBox12 = new System.Windows.Forms.TextBox();
@@ -144,7 +145,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabCtrlSteps = new System.Windows.Forms.TabControl();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.loadersBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.trucksBindingSource)).BeginInit();
@@ -152,11 +152,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.rollersBindingSource)).BeginInit();
 			this.tabPage3.SuspendLayout();
 			this.groupBox3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.inclineBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
 			this.tabPage2.SuspendLayout();
 			this.groupBox2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.inclineBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
 			this.tabPage1.SuspendLayout();
@@ -285,7 +285,24 @@
 			this.groupBox3.Size = new System.Drawing.Size(712, 273);
 			this.groupBox3.TabIndex = 8;
 			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "سنگ شکسته";
+			this.groupBox3.Text = "d";
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "EnvironmentFactor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+			this.comboBox1.DataSource = this.inclineBindingSource;
+			this.comboBox1.DisplayMember = "Title";
+			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(514, 98);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(83, 21);
+			this.comboBox1.TabIndex = 28;
+			this.comboBox1.ValueMember = "Value";
+			// 
+			// inclineBindingSource
+			// 
+			this.inclineBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.DoubleHelperClass);
 			// 
 			// textBox15
 			// 
@@ -625,10 +642,6 @@
 			this.cmbSheeb.Size = new System.Drawing.Size(96, 21);
 			this.cmbSheeb.TabIndex = 27;
 			this.cmbSheeb.ValueMember = "Value";
-			// 
-			// inclineBindingSource
-			// 
-			this.inclineBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.DoubleHelperClass);
 			// 
 			// textBox10
 			// 
@@ -1516,19 +1529,6 @@
 			this.tabCtrlSteps.TabIndex = 0;
 			this.tabCtrlSteps.SelectedIndexChanged += new System.EventHandler(this.tabCtrlSteps_SelectedIndexChanged);
 			// 
-			// comboBox1
-			// 
-			this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "EnvironmentFactor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-			this.comboBox1.DataSource = this.inclineBindingSource;
-			this.comboBox1.DisplayMember = "Title";
-			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(514, 98);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(83, 21);
-			this.comboBox1.TabIndex = 28;
-			this.comboBox1.ValueMember = "Value";
-			// 
 			// ucKhaakriziProject
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1546,12 +1546,12 @@
 			this.tabPage3.ResumeLayout(false);
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.inclineBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
 			this.tabPage2.ResumeLayout(false);
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.inclineBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
 			this.tabPage1.ResumeLayout(false);

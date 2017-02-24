@@ -4,6 +4,10 @@ namespace MachineCalculator.UI.Entities
 {
 	public class Project : IEntity
 	{
+		public Project()
+		{
+			Sites = new List<ProjectSite>();
+		}
 		public int ID { get; set; }
 		public string Title { get; set; }
 		public int OperationTypeIndex { get; set; }

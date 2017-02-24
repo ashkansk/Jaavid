@@ -51,35 +51,30 @@ namespace MachineCalculator.UI.Forms
 				HoursPerShift = (double)nudDailyHours.Value,
 				ActiveHoursPerShift = (double)nudDailyActiveHours.Value,
 			};
-			_projectRepo.Insert(_project);
 			if (chkSiteSangShekaste.Checked)
-				_projectSiteRepo.Insert(new ProjectSite
+				_project.Sites.Add(new ProjectSite
 				{
-					ProjectID = _project.ID,
 					SoilTypeIndex = (int)SoilType.SangShekaste,
 					SoilVolume = (int)nudSangShekaste.Value
 				});
 
 			if (chkSiteZaminTabiee.Checked)
-				_projectSiteRepo.Insert(new ProjectSite
+				_project.Sites.Add(new ProjectSite
 				{
-					ProjectID = _project.ID,
 					SoilTypeIndex = (int)SoilType.ZaminTabiee,
 					SoilVolume = (int)nudZaminTabiee.Value
 				});
 
 			if (chkSiteRos.Checked)
-				_projectSiteRepo.Insert(new ProjectSite
+				_project.Sites.Add(new ProjectSite
 				{
-					ProjectID = _project.ID,
 					SoilTypeIndex = (int)SoilType.Ros,
 					SoilVolume = (int)nudRos.Value
 				});
 
 			if (chkSiteMaaseh.Checked)
-				_projectSiteRepo.Insert(new ProjectSite
+				_project.Sites.Add(new ProjectSite
 				{
-					ProjectID = _project.ID,
 					SoilTypeIndex = (int)SoilType.Maaseh,
 					SoilVolume = (int)nudMaaseh.Value
 				});
@@ -97,13 +92,21 @@ namespace MachineCalculator.UI.Forms
 						ShowValidationError();
 				}
 				// end validation
+				_projectRepo.Insert(_project);
+				foreach (ProjectSite site in _project.Sites)
+				{
+					site.ProjectID = _project.ID;
+					_projectSiteRepo.Insert(site);
+				}
 
-				this.Close();
+
+
+					this.Close();
 				this.DialogResult = DialogResult.OK;
 			}
 			catch
 			{
-				// do nothing (if reaches here, the form is not closed)
+				_project = null;
 			}
 
 		}
