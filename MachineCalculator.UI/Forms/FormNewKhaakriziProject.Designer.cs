@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
 			this.nudDailyShifts = new System.Windows.Forms.NumericUpDown();
 			this.nudDailyActiveHours = new System.Windows.Forms.NumericUpDown();
 			this.lblDivider1 = new System.Windows.Forms.Label();
@@ -59,7 +58,6 @@
 			this.label15 = new System.Windows.Forms.Label();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnOK = new System.Windows.Forms.Button();
-			this.soilInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.nudDailyShifts)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudDailyActiveHours)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudActiveDaysInMonth)).BeginInit();
@@ -68,7 +66,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.nudZaminTabiee)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudRos)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudMaaseh)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.soilInfoBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// nudDailyShifts
@@ -404,17 +401,13 @@
 			this.btnOK.UseVisualStyleBackColor = true;
 			this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
 			// 
-			// soilInfoBindingSource
-			// 
-			this.soilInfoBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.Soil);
-			// 
 			// FormNewKhaakriziProject
 			// 
 			this.AcceptButton = this.btnOK;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.btnCancel;
-			this.ClientSize = new System.Drawing.Size(492, 328);
+			this.ClientSize = new System.Drawing.Size(490, 323);
 			this.Controls.Add(this.nudDailyShifts);
 			this.Controls.Add(this.nudDailyActiveHours);
 			this.Controls.Add(this.btnCancel);
@@ -447,6 +440,7 @@
 			this.Controls.Add(this.label7);
 			this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.MaximizeBox = false;
 			this.Name = "FormNewKhaakriziProject";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
@@ -461,7 +455,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.nudZaminTabiee)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudRos)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudMaaseh)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.soilInfoBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -484,7 +477,6 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.NumericUpDown nudDailyHours;
 		private System.Windows.Forms.NumericUpDown nudSangShekaste;
-		private System.Windows.Forms.BindingSource soilInfoBindingSource;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Label label7;

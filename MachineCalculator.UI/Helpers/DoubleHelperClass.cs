@@ -1,5 +1,5 @@
 ﻿
-namespace MachineCalculator.UI.Entities
+namespace MachineCalculator.UI.Helpers
 {
 	public class DoubleHelperClass
 	{

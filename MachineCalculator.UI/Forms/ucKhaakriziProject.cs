@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using MachineCalculator.UI.Repositories;
 using MachineCalculator.UI.Entities;
+using MachineCalculator.UI.Helpers;
 using System.Collections.Generic;
 
 namespace MachineCalculator.UI.Forms
@@ -32,14 +33,6 @@ namespace MachineCalculator.UI.Forms
 
 		}
 
-		private void SoilTypeButton_Click(object sender, EventArgs e)
-		{
-			var rdb = sender as RadioButton;
-			rdb.Parent.Controls.OfType<GroupBox>().First().Text = rdb.Text;
-			if(rdb.Tag != null)
-				stepObjBindingSource.DataSource = rdb.Tag;
-		}
-
 		private void ucKhaakriziProject_Load(object sender, EventArgs e)
 		{
 			loadersBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Loader");
@@ -64,6 +57,9 @@ namespace MachineCalculator.UI.Forms
 				new DoubleHelperClass { Title="20", Value = 20 },
 			};
 
+			tabCtrlSteps.TabPages[1].Controls.Add(new ucKhaakriziProjectStep { Dock = DockStyle.Fill });
+
+			/*
 			// this is to fire the checked change event (to make data binding take effect)
 			bool fired = false;
 			for (int i = 0; i < _project.Sites.OrderBy(s => s.SoilTypeIndex).Count(); i++)
@@ -127,6 +123,7 @@ namespace MachineCalculator.UI.Forms
 						break;
 				}
 			}
+			*/
 		}
 
 		private void RunFuncOnRdb(Func<RadioButton, object> f, params RadioButton[] rdbList)
@@ -140,8 +137,8 @@ namespace MachineCalculator.UI.Forms
 		private void tabCtrlSteps_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			
-			RadioButton selectedSoilRdb = tabCtrlSteps.SelectedTab.Controls.OfType<RadioButton>().Where(rdb => rdb.Checked).First();
-			stepObjBindingSource.DataSource = selectedSoilRdb.Tag;
+			//RadioButton selectedSoilRdb = tabCtrlSteps.SelectedTab.Controls.OfType<RadioButton>().Where(rdb => rdb.Checked).First();
+			//stepObjBindingSource.DataSource = selectedSoilRdb.Tag;
 		}
 	}
 }
