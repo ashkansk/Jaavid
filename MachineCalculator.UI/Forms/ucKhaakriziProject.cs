@@ -88,7 +88,7 @@ namespace MachineCalculator.UI.Forms
 
 		private void btnResult_Click(object sender, EventArgs e)
 		{
-			var form = new FormKhaakriziResult();
+			var form = new FormKhaakriziResult(_project.ID);
 			form.ShowDialog();
 		}
 	}

@@ -162,9 +162,9 @@
 			this.label2.AutoSize = true;
 			this.label2.Location = new System.Drawing.Point(28, 80);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(125, 13);
+			this.label2.Size = new System.Drawing.Size(113, 13);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "ساعت کاری در هر شیفت";
+			this.label2.Text = "ساعت کاری هر شیفت";
 			// 
 			// label1
 			// 
@@ -254,9 +254,9 @@
 			this.label3.AutoSize = true;
 			this.label3.Location = new System.Drawing.Point(225, 80);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(168, 13);
+			this.label3.Size = new System.Drawing.Size(138, 13);
 			this.label3.TabIndex = 2;
-			this.label3.Text = "میزان ساعت مفید کار در هر شیفت";
+			this.label3.Text = "ساعت کاری مفید هر شیفت";
 			// 
 			// label4
 			// 
@@ -484,7 +484,7 @@
 			this.Name = "FormNewKhaakriziProject";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "پروژه خاک‎ریزی";
 			this.Load += new System.EventHandler(this.FormNewKhaakriziProject_Load);
 			((System.ComponentModel.ISupportInitialize)(this.nudDailyShifts)).EndInit();
