@@ -3,8 +3,6 @@ using System.Linq;
 using System.Windows.Forms;
 using MachineCalculator.UI.Repositories;
 using MachineCalculator.UI.Entities;
-using MachineCalculator.UI.Helpers;
-using System.Collections.Generic;
 
 namespace MachineCalculator.UI.Forms
 {
@@ -12,22 +10,22 @@ namespace MachineCalculator.UI.Forms
 	{
 		private Project _project;
 		private ProjectRepository _projectRepo;
-		private ProjectSiteRepository _projectSiteRepo;
-		private ProjectStepRepository _projectStepRepo;
+		private ProjectStepRepository _projectSiteRepo;
+		private ProjectStepSoilRepository _projectStepRepo;
 		private MachineRepository _machingRepo;
-		private double _totalMonthlyWorkHours;
-		
+		private ucKhaakriziProjectStep[] _ucSteps;
+		private int _lastOpenTabPageIndex;
+
 		public ucKhaakriziProject(int projectID)
 		{
 			_projectRepo = Factory.GetProjectRepository();
-			_projectSiteRepo = Factory.GetProjectSiteRepository();
-			_projectStepRepo = Factory.GetProjectStepRepository();
+			_projectSiteRepo = Factory.GetProjectStepRepository();
+			_projectStepRepo = Factory.GetProjectStepSoilRepository();
 			_project = _projectRepo.Get(p => p.ID == projectID).SingleOrDefault();
 			_machingRepo = Factory.GetMachineRepository();
 			if (_project == null)
 				throw new ArgumentNullException();
-			_project.Sites = _projectSiteRepo.Get(ps => ps.ProjectID == projectID);
-			_totalMonthlyWorkHours = _project.ActiveDaysPerMonth * _project.WorkShiftsPerDay * _project.ActiveHoursPerShift;
+			_project.Steps = _projectSiteRepo.Get(ps => ps.ProjectID == projectID);
 
 			InitializeComponent();
 
@@ -35,95 +33,19 @@ namespace MachineCalculator.UI.Forms
 
 		private void ucKhaakriziProject_Load(object sender, EventArgs e)
 		{
-			loadersBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Loader");
-			trucksBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Truck");
-			dozersBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Dozer");
-			rollersBindingSource.DataSource = _machingRepo.Get(m => m.Category == "Roller");
-
-			inclineBindingSource.DataSource = new List<DoubleHelperClass> {
-				new DoubleHelperClass { Title="صفر", Value = 0 },
-				new DoubleHelperClass { Title="ده", Value = 10 },
-				new DoubleHelperClass { Title="بیست", Value = 20 }
-			};
-
-			inclineBindingSource.DataSource = new List<DoubleHelperClass> {
-				new DoubleHelperClass { Title="70", Value = 70 },
-				new DoubleHelperClass { Title="60", Value = 60 },
-				new DoubleHelperClass { Title="50", Value = 50 },
-				new DoubleHelperClass { Title="40", Value = 40 },
-				new DoubleHelperClass { Title="35", Value = 35 },
-				new DoubleHelperClass { Title="30", Value = 30 },
-				new DoubleHelperClass { Title="25", Value = 25 },
-				new DoubleHelperClass { Title="20", Value = 20 },
-			};
-
-			tabCtrlSteps.TabPages[1].Controls.Add(new ucKhaakriziProjectStep { Dock = DockStyle.Fill });
-
-			/*
-			// this is to fire the checked change event (to make data binding take effect)
-			bool fired = false;
-			for (int i = 0; i < _project.Sites.OrderBy(s => s.SoilTypeIndex).Count(); i++)
+			_lastOpenTabPageIndex = 0;
+			_ucSteps = new ucKhaakriziProjectStep[]
 			{
-				ProjectSite site = _project.Sites[i];
-				switch ((SoilType)site.SoilTypeIndex)
-				{
-					case SoilType.SangShekaste:
-						rdbSangShekasteStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbSangShekasteStep2.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbSangShekasteStep3.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbSangShekasteStep4.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.SangShekaste, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-
-						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbSangShekasteStep1, rdbSangShekasteStep2, rdbSangShekasteStep3, rdbSangShekasteStep4);
-						if (!fired)
-						{
-							RunFuncOnRdb(rdb => rdb.Checked = true, rdbSangShekasteStep1, rdbSangShekasteStep2, rdbSangShekasteStep3, rdbSangShekasteStep4);
-							fired = true;
-						}
-						break;
-					case SoilType.ZaminTabiee:
-						rdbZaminTabieeStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.ZaminTabiee, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbZaminTabieeStep2.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.ZaminTabiee, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbZaminTabieeStep3.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.ZaminTabiee, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbZaminTabieeStep4.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.ZaminTabiee, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-
-						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbZaminTabieeStep1, rdbZaminTabieeStep2, rdbZaminTabieeStep3, rdbZaminTabieeStep4);
-						if (!fired)
-						{
-							RunFuncOnRdb(rdb => rdb.Checked = true, rdbZaminTabieeStep1, rdbZaminTabieeStep2, rdbZaminTabieeStep3, rdbZaminTabieeStep4);
-							fired = true;
-						}
-						break;
-					case SoilType.Ros:
-						rdbRosStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Ros, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbRosStep2.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Ros, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbRosStep3.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Ros, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbRosStep4.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Ros, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-
-						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbRosStep1, rdbRosStep2, rdbRosStep3, rdbRosStep4);
-						if (!fired)
-						{
-							RunFuncOnRdb(rdb => rdb.Checked = true, rdbRosStep1, rdbRosStep2, rdbRosStep3, rdbRosStep4);
-							fired = true;
-						}
-						break;
-					case SoilType.Maaseh:
-						rdbMaasehStep1.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Maaseh, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbMaasehStep2.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Maaseh, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbMaasehStep3.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Maaseh, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-						rdbMaasehStep4.Tag = new ProjectStep { ProjectSiteID = site.ID, StepTypeIndex = (int)SoilType.Maaseh, WorkToDo = site.SoilVolume / _totalMonthlyWorkHours };
-
-						RunFuncOnRdb(rdb => rdb.Enabled = true, rdbMaasehStep1, rdbMaasehStep2, rdbMaasehStep3, rdbMaasehStep4);
-						if (!fired)
-						{
-							RunFuncOnRdb(rdb => rdb.Checked = true, rdbMaasehStep1, rdbMaasehStep2, rdbMaasehStep3, rdbMaasehStep4);
-							fired = true;
-						}
-						break;
-					default:
-						break;
-				}
+				new ucKhaakriziProjectStep(_project.Steps[0].ID, "بارگیر", "فاصله حمل", "متر", null),
+				new ucKhaakriziProjectStep(_project.Steps[1].ID, "باربر", "فاصله حمل", "کیلومتر", null),
+				new ucKhaakriziProjectStep(_project.Steps[2].ID, "بولدوزر", "فاصله حمل", "متر", "شیب"),
+				new ucKhaakriziProjectStep(_project.Steps[3].ID, "غلطک", "تعداد پاس عبوری", "", "ضخامت لایه"),
+			};
+			for (int i = 0; i < _ucSteps.Length; i++)
+			{
+				_ucSteps[i].Dock = DockStyle.Fill;
+				tabCtrlSteps.TabPages[i].Controls.Add(_ucSteps[i]);
 			}
-			*/
 		}
 
 		private void RunFuncOnRdb(Func<RadioButton, object> f, params RadioButton[] rdbList)
@@ -134,11 +56,40 @@ namespace MachineCalculator.UI.Forms
 			}
 		}
 
-		private void tabCtrlSteps_SelectedIndexChanged(object sender, EventArgs e)
+		private void tabCtrlSteps_Selecting(object sender, TabControlCancelEventArgs e)
 		{
-			
-			//RadioButton selectedSoilRdb = tabCtrlSteps.SelectedTab.Controls.OfType<RadioButton>().Where(rdb => rdb.Checked).First();
-			//stepObjBindingSource.DataSource = selectedSoilRdb.Tag;
+			if (e.TabPageIndex < _lastOpenTabPageIndex || (_ucSteps[_lastOpenTabPageIndex].Validate() && e.TabPageIndex == _lastOpenTabPageIndex + 1))
+			{
+				if(_lastOpenTabPageIndex == 0)
+				{
+					for (int i = 0; i < _project.Steps.Count; i++)
+					{
+						if (i == 0)
+							continue; // skip step one
+									  // else
+						ProjectStep step = _project.Steps[i];
+						for (int j = (int)SoilType.SangShekaste; j <= (int)SoilType.Maaseh; j++)
+						{
+							ProjectStepSoil stSoil = step.StepSoils.FirstOrDefault(soil => soil.SoilTypeIndex == j);
+							if (stSoil != null)
+							{
+								ProjectStepSoil originStSoil = _project.Steps[0].StepSoils.First(soil => soil.SoilTypeIndex == j);
+								stSoil.WorkToDo = originStSoil.RealRequiredMachineCount * originStSoil.CurrentMachineRealPerformance;
+							}
+						}
+						
+					}
+				}
+				_lastOpenTabPageIndex = e.TabPageIndex; // move on to next page (or previous pages)
+			}
+			else
+				e.Cancel = true;
+		}
+
+		private void btnResult_Click(object sender, EventArgs e)
+		{
+			var form = new FormKhaakriziResult();
+			form.ShowDialog();
 		}
 	}
 }

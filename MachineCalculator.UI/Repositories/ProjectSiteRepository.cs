@@ -2,9 +2,9 @@
 
 namespace MachineCalculator.UI.Repositories
 {
-	public class ProjectSiteRepository : RepositoryBase<ProjectSite>, IRepository<ProjectSite>
+	public class ProjectStepRepository : RepositoryBase<ProjectStep>, IRepository<ProjectStep>
 	{
-		public ProjectSiteRepository(InMemoryDB db)
+		public ProjectStepRepository(InMemoryDB db)
 			: base(db)
 		{ }
 	}

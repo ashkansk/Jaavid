@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FormKhaakriziResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormKhaakriziResult.Designer.cs">
+      <DependentUpon>FormKhaakriziResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\CaptionHelper.cs" />
     <Compile Include="Helpers\DoubleHelperClass.cs" />
     <Compile Include="Entities\IEntity.cs" />
@@ -67,9 +73,8 @@
     <Compile Include="Entities\MachinePerformance.cs" />
     <Compile Include="Entities\MachineValidOperation.cs" />
     <Compile Include="Entities\Project.cs" />
-    <Compile Include="Entities\ProjectSite.cs" />
     <Compile Include="Entities\ProjectStep.cs" />
-    <Compile Include="Entities\Soil.cs" />
+    <Compile Include="Entities\ProjectStepSoil.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Forms\FormMain.cs">
@@ -102,6 +107,7 @@
     <Compile Include="Forms\ucKhaakriziProjectStep.Designer.cs">
       <DependentUpon>ucKhaakriziProjectStep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Utility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\InMemoryDB.cs" />
@@ -111,9 +117,11 @@
     <Compile Include="Repositories\MachineValidOperationRepository.cs" />
     <Compile Include="Repositories\ProjectRepository.cs" />
     <Compile Include="Repositories\ProjectSiteRepository.cs" />
-    <Compile Include="Repositories\ProjectStepRepository.cs" />
+    <Compile Include="Repositories\ProjectStepSoilRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
-    <Compile Include="Repositories\SoilRepository.cs" />
+    <EmbeddedResource Include="Forms\FormKhaakriziResult.resx">
+      <DependentUpon>FormKhaakriziResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

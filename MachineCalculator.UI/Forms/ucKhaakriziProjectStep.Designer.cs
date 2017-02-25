@@ -34,8 +34,9 @@
 			this.grpContainer = new System.Windows.Forms.GroupBox();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.label1 = new System.Windows.Forms.Label();
+			this.captionHelperBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.stepObjBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.stepSoilObjBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
@@ -54,23 +55,22 @@
 			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
 			this.label12 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.lblEnvFactor = new System.Windows.Forms.Label();
+			this.cmbEnvFactor = new System.Windows.Forms.ComboBox();
 			this.envFactorBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.label4 = new System.Windows.Forms.Label();
 			this.rdbMaaseh = new System.Windows.Forms.RadioButton();
 			this.rdbZaminTabiee = new System.Windows.Forms.RadioButton();
 			this.rdbRos = new System.Windows.Forms.RadioButton();
-			this.captionHelperBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tableLayoutPanel1.SuspendLayout();
 			this.grpContainer.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.captionHelperBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.stepSoilObjBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.machineBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudWorkUnitQuantityStep1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.envFactorBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.captionHelperBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tableLayoutPanel1
@@ -151,8 +151,8 @@
 			this.tableLayoutPanel2.Controls.Add(this.numericUpDown3, 4, 2);
 			this.tableLayoutPanel2.Controls.Add(this.label12, 2, 2);
 			this.tableLayoutPanel2.Controls.Add(this.label11, 2, 5);
-			this.tableLayoutPanel2.Controls.Add(this.label9, 0, 3);
-			this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 3);
+			this.tableLayoutPanel2.Controls.Add(this.lblEnvFactor, 0, 3);
+			this.tableLayoutPanel2.Controls.Add(this.cmbEnvFactor, 1, 3);
 			this.tableLayoutPanel2.Controls.Add(this.label4, 5, 1);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 17);
@@ -161,10 +161,10 @@
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
 			this.tableLayoutPanel2.Size = new System.Drawing.Size(898, 546);
 			this.tableLayoutPanel2.TabIndex = 19;
@@ -179,28 +179,32 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "نوع xxxxxxx";
 			// 
+			// captionHelperBindingSource
+			// 
+			this.captionHelperBindingSource.DataSource = typeof(MachineCalculator.UI.Helpers.CaptionHelper);
+			// 
 			// textBox5
 			// 
-			this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "RealRequiredMachineCount", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N0"));
+			this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepSoilObjBindingSource, "RealRequiredMachineCount", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N0"));
 			this.textBox5.Dock = System.Windows.Forms.DockStyle.Top;
 			this.textBox5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.textBox5.Location = new System.Drawing.Point(228, 205);
+			this.textBox5.Location = new System.Drawing.Point(228, 185);
 			this.textBox5.Name = "textBox5";
 			this.textBox5.ReadOnly = true;
 			this.textBox5.Size = new System.Drawing.Size(162, 21);
 			this.textBox5.TabIndex = 17;
 			this.textBox5.Text = "0";
 			// 
-			// stepObjBindingSource
+			// stepSoilObjBindingSource
 			// 
-			this.stepObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStep);
+			this.stepSoilObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStepSoil);
 			// 
 			// textBox3
 			// 
-			this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "WorkToDo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+			this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepSoilObjBindingSource, "WorkToDo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.textBox3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.textBox3.Location = new System.Drawing.Point(638, 161);
+			this.textBox3.Location = new System.Drawing.Point(638, 147);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.ReadOnly = true;
 			this.textBox3.Size = new System.Drawing.Size(162, 21);
@@ -209,9 +213,9 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "CurrentMachineRealPerformance", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepSoilObjBindingSource, "CurrentMachineRealPerformance", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
 			this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.textBox1.Location = new System.Drawing.Point(228, 161);
+			this.textBox1.Location = new System.Drawing.Point(228, 147);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ReadOnly = true;
 			this.textBox1.Size = new System.Drawing.Size(162, 21);
@@ -220,9 +224,9 @@
 			// 
 			// textBox4
 			// 
-			this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "RequiredMachineCount", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepSoilObjBindingSource, "RequiredMachineCount", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
 			this.textBox4.Dock = System.Windows.Forms.DockStyle.Top;
-			this.textBox4.Location = new System.Drawing.Point(638, 205);
+			this.textBox4.Location = new System.Drawing.Point(638, 185);
 			this.textBox4.Name = "textBox4";
 			this.textBox4.ReadOnly = true;
 			this.textBox4.Size = new System.Drawing.Size(162, 21);
@@ -234,7 +238,7 @@
 			this.label10.AutoSize = true;
 			this.label10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.captionHelperBindingSource, "MachineRoundedRequiredCountLabel", true));
 			this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label10.Location = new System.Drawing.Point(407, 202);
+			this.label10.Location = new System.Drawing.Point(407, 182);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(85, 39);
 			this.label10.TabIndex = 0;
@@ -242,7 +246,7 @@
 			// 
 			// txtLoaderPerformanceValue
 			// 
-			this.txtLoaderPerformanceValue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "CurrentMachinePerformance", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.txtLoaderPerformanceValue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepSoilObjBindingSource, "CurrentMachinePerformance", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
 			this.txtLoaderPerformanceValue.Dock = System.Windows.Forms.DockStyle.Top;
 			this.txtLoaderPerformanceValue.Location = new System.Drawing.Point(228, 16);
 			this.txtLoaderPerformanceValue.Name = "txtLoaderPerformanceValue";
@@ -255,7 +259,7 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.captionHelperBindingSource, "MachineRealPerformanceLabel", true));
-			this.label6.Location = new System.Drawing.Point(434, 158);
+			this.label6.Location = new System.Drawing.Point(434, 144);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(58, 26);
 			this.label6.TabIndex = 0;
@@ -266,7 +270,7 @@
 			this.lblDivider1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.tableLayoutPanel2.SetColumnSpan(this.lblDivider1, 6);
 			this.lblDivider1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.lblDivider1.Location = new System.Drawing.Point(10, 146);
+			this.lblDivider1.Location = new System.Drawing.Point(10, 128);
 			this.lblDivider1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
 			this.lblDivider1.Name = "lblDivider1";
 			this.lblDivider1.Size = new System.Drawing.Size(878, 2);
@@ -276,7 +280,7 @@
 			// 
 			this.label8.AutoSize = true;
 			this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.captionHelperBindingSource, "MachineRequiredCountLabel", true));
-			this.label8.Location = new System.Drawing.Point(820, 202);
+			this.label8.Location = new System.Drawing.Point(820, 182);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(75, 26);
 			this.label8.TabIndex = 0;
@@ -285,15 +289,16 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(836, 50);
+			this.label2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.captionHelperBindingSource, "WorkQuantityLabel", true));
+			this.label2.Location = new System.Drawing.Point(834, 50);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(59, 13);
+			this.label2.Size = new System.Drawing.Size(61, 13);
 			this.label2.TabIndex = 0;
-			this.label2.Text = "فاصله حمل";
+			this.label2.Text = "xxxxxxxxx";
 			// 
 			// cmbLoaderType
 			// 
-			this.cmbLoaderType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "MachineID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+			this.cmbLoaderType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepSoilObjBindingSource, "MachineID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this.cmbLoaderType.DataSource = this.machineBindingSource;
 			this.cmbLoaderType.DisplayMember = "Title";
 			this.cmbLoaderType.Dock = System.Windows.Forms.DockStyle.Top;
@@ -312,7 +317,7 @@
 			// 
 			// nudWorkUnitQuantityStep1
 			// 
-			this.nudWorkUnitQuantityStep1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "WorkQuantity", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "C0"));
+			this.nudWorkUnitQuantityStep1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepSoilObjBindingSource, "WorkQuantity", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "C0"));
 			this.nudWorkUnitQuantityStep1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.nudWorkUnitQuantityStep1.Location = new System.Drawing.Point(638, 53);
 			this.nudWorkUnitQuantityStep1.Maximum = new decimal(new int[] {
@@ -328,7 +333,7 @@
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label7.Location = new System.Drawing.Point(810, 158);
+			this.label7.Location = new System.Drawing.Point(810, 144);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(85, 26);
 			this.label7.TabIndex = 0;
@@ -354,7 +359,7 @@
 			// 
 			// numericUpDown3
 			// 
-			this.numericUpDown3.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "ExpertJudgementQuofficient", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.numericUpDown3.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepSoilObjBindingSource, "ExpertJudgementQuofficient", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
 			this.numericUpDown3.DecimalPlaces = 2;
 			this.numericUpDown3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.numericUpDown3.Location = new System.Drawing.Point(228, 53);
@@ -368,7 +373,8 @@
 			this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.captionHelperBindingSource, "WorkMetricUnit", true));
 			this.label12.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label12.ForeColor = System.Drawing.Color.Gray;
-			this.label12.Location = new System.Drawing.Point(611, 50);
+			this.label12.Location = new System.Drawing.Point(611, 58);
+			this.label12.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(21, 11);
 			this.label12.TabIndex = 16;
@@ -379,36 +385,37 @@
 			this.label11.AutoSize = true;
 			this.label11.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label11.ForeColor = System.Drawing.Color.Gray;
-			this.label11.Location = new System.Drawing.Point(555, 158);
+			this.label11.Location = new System.Drawing.Point(555, 152);
+			this.label11.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(77, 11);
 			this.label11.TabIndex = 16;
 			this.label11.Text = "متر مکعب / ساعت";
 			// 
-			// label9
+			// lblEnvFactor
 			// 
-			this.label9.AutoSize = true;
-			this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.captionHelperBindingSource, "EnvFactorLabel", true));
-			this.label9.Location = new System.Drawing.Point(834, 83);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(61, 13);
-			this.label9.TabIndex = 0;
-			this.label9.Text = "xxxxxxxxx";
+			this.lblEnvFactor.AutoSize = true;
+			this.lblEnvFactor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.captionHelperBindingSource, "EnvFactorLabel", true));
+			this.lblEnvFactor.Location = new System.Drawing.Point(834, 83);
+			this.lblEnvFactor.Name = "lblEnvFactor";
+			this.lblEnvFactor.Size = new System.Drawing.Size(61, 13);
+			this.lblEnvFactor.TabIndex = 0;
+			this.lblEnvFactor.Text = "xxxxxxxxx";
 			// 
-			// comboBox1
+			// cmbEnvFactor
 			// 
-			this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepObjBindingSource, "EnvironmentFactor", true));
-			this.comboBox1.DataSource = this.envFactorBindingSource;
-			this.comboBox1.DisplayMember = "Title";
-			this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(638, 86);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(162, 21);
-			this.comboBox1.TabIndex = 19;
-			this.comboBox1.Tag = "";
-			this.comboBox1.ValueMember = "Value";
+			this.cmbEnvFactor.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stepSoilObjBindingSource, "EnvironmentFactor", true));
+			this.cmbEnvFactor.DataSource = this.envFactorBindingSource;
+			this.cmbEnvFactor.DisplayMember = "Title";
+			this.cmbEnvFactor.Dock = System.Windows.Forms.DockStyle.Top;
+			this.cmbEnvFactor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cmbEnvFactor.FormattingEnabled = true;
+			this.cmbEnvFactor.Location = new System.Drawing.Point(638, 86);
+			this.cmbEnvFactor.Name = "cmbEnvFactor";
+			this.cmbEnvFactor.Size = new System.Drawing.Size(162, 21);
+			this.cmbEnvFactor.TabIndex = 19;
+			this.cmbEnvFactor.Tag = "";
+			this.cmbEnvFactor.ValueMember = "Value";
 			// 
 			// envFactorBindingSource
 			// 
@@ -419,7 +426,8 @@
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label4.ForeColor = System.Drawing.Color.Gray;
-			this.label4.Location = new System.Drawing.Point(145, 13);
+			this.label4.Location = new System.Drawing.Point(145, 21);
+			this.label4.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(77, 11);
 			this.label4.TabIndex = 16;
@@ -464,10 +472,6 @@
 			this.rdbRos.UseVisualStyleBackColor = true;
 			this.rdbRos.CheckedChanged += new System.EventHandler(this.SoilTypeButton_Click);
 			// 
-			// captionHelperBindingSource
-			// 
-			this.captionHelperBindingSource.DataSource = typeof(MachineCalculator.UI.Helpers.CaptionHelper);
-			// 
 			// ucKhaakriziProjectStep
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,17 +481,18 @@
 			this.Name = "ucKhaakriziProjectStep";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.Size = new System.Drawing.Size(1001, 572);
+			this.Load += new System.EventHandler(this.ucKhaakriziProjectStep_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.grpContainer.ResumeLayout(false);
 			this.grpContainer.PerformLayout();
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.tableLayoutPanel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.captionHelperBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.stepSoilObjBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.machineBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudWorkUnitQuantityStep1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.envFactorBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.captionHelperBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -500,7 +505,7 @@
 		private System.Windows.Forms.GroupBox grpContainer;
 		private System.Windows.Forms.Label lblDivider1;
 		private System.Windows.Forms.TextBox txtLoaderPerformanceValue;
-		private System.Windows.Forms.BindingSource stepObjBindingSource;
+		private System.Windows.Forms.BindingSource stepSoilObjBindingSource;
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.TextBox textBox5;
 		private System.Windows.Forms.TextBox textBox4;
@@ -523,8 +528,8 @@
 		private System.Windows.Forms.ComboBox cmbLoaderType;
 		private System.Windows.Forms.BindingSource machineBindingSource;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.Label lblEnvFactor;
+		private System.Windows.Forms.ComboBox cmbEnvFactor;
 		private System.Windows.Forms.BindingSource envFactorBindingSource;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.BindingSource captionHelperBindingSource;

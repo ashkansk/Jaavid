@@ -6,7 +6,7 @@ namespace MachineCalculator.UI.Entities
 	{
 		public Project()
 		{
-			Sites = new List<ProjectSite>();
+			Steps = new List<ProjectStep>();
 		}
 		public int ID { get; set; }
 		public string Title { get; set; }
@@ -15,6 +15,13 @@ namespace MachineCalculator.UI.Entities
 		public int WorkShiftsPerDay { get; set; }
 		public double HoursPerShift { get; set; }
 		public double ActiveHoursPerShift { get; set; }
-		public List<ProjectSite> Sites { get; set; }
+		public double TotalActiveHoursPerMonth
+		{
+			get
+			{
+				return ActiveDaysPerMonth * WorkShiftsPerDay * ActiveHoursPerShift;
+			}
+		}
+		public List<ProjectStep> Steps { get; set; }
 	}
 }

@@ -79,6 +79,11 @@
 			this.nudDailyShifts.Name = "nudDailyShifts";
 			this.nudDailyShifts.Size = new System.Drawing.Size(46, 21);
 			this.nudDailyShifts.TabIndex = 5;
+			this.nudDailyShifts.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
 			// 
 			// nudDailyActiveHours
 			// 
@@ -92,6 +97,11 @@
 			this.nudDailyActiveHours.Name = "nudDailyActiveHours";
 			this.nudDailyActiveHours.Size = new System.Drawing.Size(46, 21);
 			this.nudDailyActiveHours.TabIndex = 6;
+			this.nudDailyActiveHours.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
 			// 
 			// lblDivider1
 			// 
@@ -268,6 +278,11 @@
 			this.nudActiveDaysInMonth.Name = "nudActiveDaysInMonth";
 			this.nudActiveDaysInMonth.Size = new System.Drawing.Size(50, 21);
 			this.nudActiveDaysInMonth.TabIndex = 7;
+			this.nudActiveDaysInMonth.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
 			// 
 			// nudDailyHours
 			// 
@@ -281,6 +296,11 @@
 			this.nudDailyHours.Name = "nudDailyHours";
 			this.nudDailyHours.Size = new System.Drawing.Size(50, 21);
 			this.nudDailyHours.TabIndex = 8;
+			this.nudDailyHours.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
 			// 
 			// nudSangShekaste
 			// 
@@ -294,6 +314,11 @@
 			this.nudSangShekaste.Size = new System.Drawing.Size(89, 21);
 			this.nudSangShekaste.TabIndex = 8;
 			this.nudSangShekaste.ThousandsSeparator = true;
+			this.nudSangShekaste.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
 			// 
 			// label12
 			// 
@@ -319,6 +344,11 @@
 			this.nudZaminTabiee.Size = new System.Drawing.Size(89, 21);
 			this.nudZaminTabiee.TabIndex = 8;
 			this.nudZaminTabiee.ThousandsSeparator = true;
+			this.nudZaminTabiee.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
 			// 
 			// nudRos
 			// 
@@ -333,6 +363,11 @@
 			this.nudRos.Size = new System.Drawing.Size(89, 21);
 			this.nudRos.TabIndex = 8;
 			this.nudRos.ThousandsSeparator = true;
+			this.nudRos.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
 			// 
 			// nudMaaseh
 			// 
@@ -347,6 +382,11 @@
 			this.nudMaaseh.Size = new System.Drawing.Size(89, 21);
 			this.nudMaaseh.TabIndex = 8;
 			this.nudMaaseh.ThousandsSeparator = true;
+			this.nudMaaseh.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
 			// 
 			// label13
 			// 

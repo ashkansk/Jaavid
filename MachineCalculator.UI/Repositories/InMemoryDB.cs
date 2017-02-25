@@ -9,15 +9,8 @@ namespace MachineCalculator.UI.Repositories
 		public InMemoryDB()
 		{
 			Projects = new List<Project>();
-			ProjectSites = new List<ProjectSite>();
-			ProjectSteps = new List<ProjectStep>();
-			Soils = new List<Soil>()
-			{
-				new Soil { ID = 1, Title = "سنگ شکسته", TypeIndex=(int)SoilType.SangShekaste, InflationQuofficient=0.5, Code="", Description="..." },
-				new Soil { ID = 2, Title = "زمین طبیعی", TypeIndex=(int)SoilType.ZaminTabiee, InflationQuofficient=0.5, Code="", Description="..." },
-				new Soil { ID = 3, Title = "رس", TypeIndex=(int)SoilType.Ros, InflationQuofficient=0.5, Code="", Description="..." },
-				new Soil { ID = 4, Title = "ماسه", TypeIndex=(int)SoilType.Maaseh, InflationQuofficient=0.5, Code="", Description="..." },
-			};
+			ProjectSites = new List<ProjectStep>();
+			ProjectSteps = new List<ProjectStepSoil>();
 
 			Machines = new List<Machine>
 			{
@@ -139,21 +132,21 @@ namespace MachineCalculator.UI.Repositories
 				new MachinePerformance { MachineID=5, Indicator=20, SoilTypeIndex=(int)SoilType.Maaseh,
 					PerformanceFormula = (x => 0.00001 * Math.Pow(x, 4) - 0.0025 * Math.Pow(x, 3) +  0.2093 * Math.Pow(x, 2) - 8.4384 * x + 180.86) },
 				// machine id = 6
-				new MachinePerformance { MachineID=6, Indicator=70, SoilTypeIndex=(int)SoilType.SangShekaste,
+				new MachinePerformance { MachineID=6, Indicator=70, SoilTypeIndex=0,
 					PerformanceFormula = (x => 0.1348 * Math.Pow(x, 4) - 5.6495 * Math.Pow(x, 3) +  91.203 * Math.Pow(x, 2) - 706.13 * x + 2612.6) },
-				new MachinePerformance { MachineID=6, Indicator=60, SoilTypeIndex=(int)SoilType.ZaminTabiee,
+				new MachinePerformance { MachineID=6, Indicator=60, SoilTypeIndex=0,
 					PerformanceFormula = (x => 0.1155 * Math.Pow(x, 4) - 4.8424 * Math.Pow(x, 3) +  78.174 * Math.Pow(x, 2) - 605.26 * x + 2239.3) },
-				new MachinePerformance { MachineID=6, Indicator=50, SoilTypeIndex=(int)SoilType.Ros,
+				new MachinePerformance { MachineID=6, Indicator=50, SoilTypeIndex=0,
 					PerformanceFormula = (x => 0.0963 * Math.Pow(x, 4) - 4.0353 * Math.Pow(x, 3) +  65.145 * Math.Pow(x, 2) - 504.38 * x + 1866.1) },
-				new MachinePerformance { MachineID=6, Indicator=40, SoilTypeIndex=(int)SoilType.Maaseh,
+				new MachinePerformance { MachineID=6, Indicator=40, SoilTypeIndex=0,
 					PerformanceFormula = (x => 0.077 * Math.Pow(x, 4) - 3.2283 * Math.Pow(x, 3) +  52.116 * Math.Pow(x, 2) - 403.5 * x + 1492.9) },
-				new MachinePerformance { MachineID=6, Indicator=35, SoilTypeIndex=(int)SoilType.SangShekaste,
+				new MachinePerformance { MachineID=6, Indicator=35, SoilTypeIndex=0,
 					PerformanceFormula = (x => 0.0674 * Math.Pow(x, 4) - 2.8247 * Math.Pow(x, 3) +  45.601 * Math.Pow(x, 2) - 353.07 * x + 1306.3) },
-				new MachinePerformance { MachineID=6, Indicator=30, SoilTypeIndex=(int)SoilType.ZaminTabiee,
+				new MachinePerformance { MachineID=6, Indicator=30, SoilTypeIndex=0,
 					PerformanceFormula = (x => 0.0578 * Math.Pow(x, 4) - 2.4212 * Math.Pow(x, 3) +  39.087 * Math.Pow(x, 2) - 302.63 * x + 1119.7) },
-				new MachinePerformance { MachineID=6, Indicator=25, SoilTypeIndex=(int)SoilType.Ros,
+				new MachinePerformance { MachineID=6, Indicator=25, SoilTypeIndex=0,
 					PerformanceFormula = (x => 0.0481 * Math.Pow(x, 4) - 2.0177 * Math.Pow(x, 3) +  32.572 * Math.Pow(x, 2) - 252.19 * x + 933.05) },
-				new MachinePerformance { MachineID=6, Indicator=20, SoilTypeIndex=(int)SoilType.Maaseh,
+				new MachinePerformance { MachineID=6, Indicator=20, SoilTypeIndex=0,
 					PerformanceFormula = (x => 0.0385 * Math.Pow(x, 4) - 1.6141 * Math.Pow(x, 3) +  26.058 * Math.Pow(x, 2) - 201.75 * x + 746.44) },
 			};
 		}
@@ -165,12 +158,10 @@ namespace MachineCalculator.UI.Repositories
 			Type t = typeof(TEntity);
 			if (t == typeof(Project))
 				toReturn = Projects;
-			else if (t == typeof(ProjectSite))
-				toReturn = ProjectSites;
 			else if (t == typeof(ProjectStep))
+				toReturn = ProjectSites;
+			else if (t == typeof(ProjectStepSoil))
 				toReturn = ProjectSteps;
-			else if (t == typeof(Soil))
-				toReturn = Soils;
 			else if (t == typeof(Machine))
 				toReturn = Machines;
 			else if (t == typeof(MachinePerformance))
@@ -180,9 +171,8 @@ namespace MachineCalculator.UI.Repositories
 		}
 
 		public List<Project> Projects { get; set; }
-		public List<ProjectStep> ProjectSteps { get; set; }
-		public List<ProjectSite> ProjectSites { get; set; }
-		public List<Soil> Soils { get; set; }
+		public List<ProjectStepSoil> ProjectSteps { get; set; }
+		public List<ProjectStep> ProjectSites { get; set; }
 		public List<Machine> Machines { get; set; }
 		public List<MachinePerformance> MachinePerformances { get; set; }
 	}

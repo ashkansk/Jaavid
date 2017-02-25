@@ -6,6 +6,7 @@ namespace MachineCalculator.UI.Helpers
 	public class CaptionHelper
 	{
 		public string MachineName { get; set; }
+		public string WorkQuantityLabel { get; set; }
 		public string WorkMetricUnit { get; set; }
 		public string EnvFactorLabel { get; set; }
 
