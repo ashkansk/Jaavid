@@ -28,7 +28,6 @@ namespace MachineCalculator.UI.Forms
 			_project.Steps = _projectSiteRepo.Get(ps => ps.ProjectID == projectID);
 
 			InitializeComponent();
-
 		}
 
 		private void ucKhaakriziProject_Load(object sender, EventArgs e)
@@ -58,7 +57,7 @@ namespace MachineCalculator.UI.Forms
 
 		private void tabCtrlSteps_Selecting(object sender, TabControlCancelEventArgs e)
 		{
-			if (e.TabPageIndex < _lastOpenTabPageIndex || (_ucSteps[_lastOpenTabPageIndex].Validate() && e.TabPageIndex == _lastOpenTabPageIndex + 1))
+			if (_ucSteps[_lastOpenTabPageIndex].Validate())
 			{
 				if(_lastOpenTabPageIndex == 0)
 				{
@@ -66,7 +65,7 @@ namespace MachineCalculator.UI.Forms
 					{
 						if (i == 0)
 							continue; // skip step one
-									  // else
+						// else
 						ProjectStep step = _project.Steps[i];
 						for (int j = (int)SoilType.SangShekaste; j <= (int)SoilType.Maaseh; j++)
 						{
