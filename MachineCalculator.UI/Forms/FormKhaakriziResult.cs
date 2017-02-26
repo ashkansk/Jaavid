@@ -9,6 +9,7 @@ namespace MachineCalculator.UI.Forms
 	{
 		private ProjectRepository _projectRepo;
 		private Project _project;
+		private bool _secondTabLoaded;
 		public FormKhaakriziResult(int projectID)
 		{
 			_projectRepo = Factory.GetProjectRepository();
@@ -64,6 +65,14 @@ namespace MachineCalculator.UI.Forms
 			txtMaasehRealRequiredTruck.Text = _project.Steps[1].StepSoils.Where(s => s.SoilTypeIndex == (int)SoilType.Maaseh).FirstOrDefault()?.RealRequiredMachineCount.ToString();
 
 			//Math.Ceiling(_project.Steps.SelectMany(p => p.StepSoils).Where(ss => ss.SoilTypeIndex == (int)SoilType.ZaminTabiee).Sum(ss => ss.RequiredMachineCount)).ToString();
+		}
+
+		private void tabCtrlResult_Selecting(object sender, TabControlCancelEventArgs e)
+		{
+			if (_secondTabLoaded)
+				return;
+			// else: calculate and load the values
+
 		}
 	}
 }

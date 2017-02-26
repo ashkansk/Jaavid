@@ -279,7 +279,7 @@
 			this.nudActiveDaysInMonth.Size = new System.Drawing.Size(50, 21);
 			this.nudActiveDaysInMonth.TabIndex = 7;
 			this.nudActiveDaysInMonth.Value = new decimal(new int[] {
-            30,
+            28,
             0,
             0,
             0});
