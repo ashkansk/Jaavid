@@ -112,35 +112,35 @@
 			this.lblDivider10 = new System.Windows.Forms.Label();
 			this.label41 = new System.Windows.Forms.Label();
 			this.label40 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtLoaderCATD966Count = new System.Windows.Forms.TextBox();
 			this.label42 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.txtLoadingOperatorCount = new System.Windows.Forms.TextBox();
 			this.label43 = new System.Windows.Forms.Label();
 			this.label44 = new System.Windows.Forms.Label();
 			this.label45 = new System.Windows.Forms.Label();
 			this.label46 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.txtTruck10TonCount = new System.Windows.Forms.TextBox();
+			this.txtTruck12TonCount = new System.Windows.Forms.TextBox();
 			this.label47 = new System.Windows.Forms.Label();
-			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.txtTruckOperatorCount = new System.Windows.Forms.TextBox();
 			this.label48 = new System.Windows.Forms.Label();
 			this.label49 = new System.Windows.Forms.Label();
 			this.label50 = new System.Windows.Forms.Label();
 			this.label51 = new System.Windows.Forms.Label();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.textBox7 = new System.Windows.Forms.TextBox();
-			this.textBox8 = new System.Windows.Forms.TextBox();
+			this.txtDozerType = new System.Windows.Forms.TextBox();
+			this.txtDozerRealCount = new System.Windows.Forms.TextBox();
 			this.label53 = new System.Windows.Forms.Label();
 			this.label54 = new System.Windows.Forms.Label();
 			this.label55 = new System.Windows.Forms.Label();
-			this.textBox9 = new System.Windows.Forms.TextBox();
-			this.textBox11 = new System.Windows.Forms.TextBox();
-			this.label57 = new System.Windows.Forms.Label();
+			this.txtRollerHAMMCount = new System.Windows.Forms.TextBox();
 			this.label58 = new System.Windows.Forms.Label();
-			this.textBox12 = new System.Windows.Forms.TextBox();
+			this.txtDozerOperatorCount = new System.Windows.Forms.TextBox();
+			this.txtDozerTotalCount = new System.Windows.Forms.TextBox();
 			this.label52 = new System.Windows.Forms.Label();
+			this.label57 = new System.Windows.Forms.Label();
+			this.txtRollerOperatorCount = new System.Windows.Forms.TextBox();
 			this.label56 = new System.Windows.Forms.Label();
-			this.textBox10 = new System.Windows.Forms.TextBox();
+			this.txtRollerHAMMRealCount = new System.Windows.Forms.TextBox();
 			this.tabCtrlResult.SuspendLayout();
 			this.tabpgBasedOnSoilType.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
@@ -1021,35 +1021,35 @@
 			this.tableLayoutPanel2.Controls.Add(this.lblDivider10, 1, 1);
 			this.tableLayoutPanel2.Controls.Add(this.label41, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.label40, 0, 2);
-			this.tableLayoutPanel2.Controls.Add(this.textBox1, 2, 2);
+			this.tableLayoutPanel2.Controls.Add(this.txtLoaderCATD966Count, 2, 2);
 			this.tableLayoutPanel2.Controls.Add(this.label42, 3, 2);
-			this.tableLayoutPanel2.Controls.Add(this.textBox2, 4, 2);
+			this.tableLayoutPanel2.Controls.Add(this.txtLoadingOperatorCount, 4, 2);
 			this.tableLayoutPanel2.Controls.Add(this.label43, 0, 3);
 			this.tableLayoutPanel2.Controls.Add(this.label44, 1, 3);
 			this.tableLayoutPanel2.Controls.Add(this.label45, 0, 4);
 			this.tableLayoutPanel2.Controls.Add(this.label46, 0, 5);
-			this.tableLayoutPanel2.Controls.Add(this.textBox3, 2, 4);
-			this.tableLayoutPanel2.Controls.Add(this.textBox4, 2, 5);
+			this.tableLayoutPanel2.Controls.Add(this.txtTruck10TonCount, 2, 4);
+			this.tableLayoutPanel2.Controls.Add(this.txtTruck12TonCount, 2, 5);
 			this.tableLayoutPanel2.Controls.Add(this.label47, 3, 5);
-			this.tableLayoutPanel2.Controls.Add(this.textBox5, 4, 5);
+			this.tableLayoutPanel2.Controls.Add(this.txtTruckOperatorCount, 4, 5);
 			this.tableLayoutPanel2.Controls.Add(this.label48, 0, 6);
 			this.tableLayoutPanel2.Controls.Add(this.label49, 1, 6);
 			this.tableLayoutPanel2.Controls.Add(this.label50, 0, 7);
 			this.tableLayoutPanel2.Controls.Add(this.label51, 0, 8);
-			this.tableLayoutPanel2.Controls.Add(this.textBox6, 2, 7);
-			this.tableLayoutPanel2.Controls.Add(this.textBox7, 2, 8);
+			this.tableLayoutPanel2.Controls.Add(this.txtDozerType, 2, 7);
+			this.tableLayoutPanel2.Controls.Add(this.txtDozerRealCount, 2, 8);
 			this.tableLayoutPanel2.Controls.Add(this.label53, 0, 9);
 			this.tableLayoutPanel2.Controls.Add(this.label54, 1, 9);
 			this.tableLayoutPanel2.Controls.Add(this.label55, 0, 10);
-			this.tableLayoutPanel2.Controls.Add(this.textBox9, 2, 10);
+			this.tableLayoutPanel2.Controls.Add(this.txtRollerHAMMCount, 2, 10);
 			this.tableLayoutPanel2.Controls.Add(this.label58, 3, 8);
-			this.tableLayoutPanel2.Controls.Add(this.textBox8, 4, 8);
-			this.tableLayoutPanel2.Controls.Add(this.textBox12, 4, 7);
+			this.tableLayoutPanel2.Controls.Add(this.txtDozerOperatorCount, 4, 8);
+			this.tableLayoutPanel2.Controls.Add(this.txtDozerTotalCount, 4, 7);
 			this.tableLayoutPanel2.Controls.Add(this.label52, 3, 7);
 			this.tableLayoutPanel2.Controls.Add(this.label57, 3, 11);
-			this.tableLayoutPanel2.Controls.Add(this.textBox11, 4, 11);
+			this.tableLayoutPanel2.Controls.Add(this.txtRollerOperatorCount, 4, 11);
 			this.tableLayoutPanel2.Controls.Add(this.label56, 0, 11);
-			this.tableLayoutPanel2.Controls.Add(this.textBox10, 2, 11);
+			this.tableLayoutPanel2.Controls.Add(this.txtRollerHAMMRealCount, 2, 11);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -1102,15 +1102,15 @@
 			this.label40.TabIndex = 16;
 			this.label40.Text = "تعداد بارگیر CAT D966 مورد نیاز";
 			// 
-			// textBox1
+			// txtLoaderCATD966Count
 			// 
-			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtLoaderCATD966Count.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox1.Location = new System.Drawing.Point(377, 46);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.ReadOnly = true;
-			this.textBox1.Size = new System.Drawing.Size(170, 21);
-			this.textBox1.TabIndex = 17;
+			this.txtLoaderCATD966Count.Location = new System.Drawing.Point(377, 46);
+			this.txtLoaderCATD966Count.Name = "txtLoaderCATD966Count";
+			this.txtLoaderCATD966Count.ReadOnly = true;
+			this.txtLoaderCATD966Count.Size = new System.Drawing.Size(170, 21);
+			this.txtLoaderCATD966Count.TabIndex = 17;
 			// 
 			// label42
 			// 
@@ -1121,15 +1121,15 @@
 			this.label42.TabIndex = 16;
 			this.label42.Text = "تعداد اپراتور مورد نیاز";
 			// 
-			// textBox2
+			// txtLoadingOperatorCount
 			// 
-			this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtLoadingOperatorCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox2.Location = new System.Drawing.Point(92, 46);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.ReadOnly = true;
-			this.textBox2.Size = new System.Drawing.Size(170, 21);
-			this.textBox2.TabIndex = 17;
+			this.txtLoadingOperatorCount.Location = new System.Drawing.Point(92, 46);
+			this.txtLoadingOperatorCount.Name = "txtLoadingOperatorCount";
+			this.txtLoadingOperatorCount.ReadOnly = true;
+			this.txtLoadingOperatorCount.Size = new System.Drawing.Size(170, 21);
+			this.txtLoadingOperatorCount.TabIndex = 17;
 			// 
 			// label43
 			// 
@@ -1173,25 +1173,25 @@
 			this.label46.TabIndex = 16;
 			this.label46.Text = "تعداد کامیون 12 تن مورد نیاز";
 			// 
-			// textBox3
+			// txtTruck10TonCount
 			// 
-			this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtTruck10TonCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox3.Location = new System.Drawing.Point(377, 123);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.ReadOnly = true;
-			this.textBox3.Size = new System.Drawing.Size(170, 21);
-			this.textBox3.TabIndex = 17;
+			this.txtTruck10TonCount.Location = new System.Drawing.Point(377, 123);
+			this.txtTruck10TonCount.Name = "txtTruck10TonCount";
+			this.txtTruck10TonCount.ReadOnly = true;
+			this.txtTruck10TonCount.Size = new System.Drawing.Size(170, 21);
+			this.txtTruck10TonCount.TabIndex = 17;
 			// 
-			// textBox4
+			// txtTruck12TonCount
 			// 
-			this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtTruck12TonCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox4.Location = new System.Drawing.Point(377, 150);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.ReadOnly = true;
-			this.textBox4.Size = new System.Drawing.Size(170, 21);
-			this.textBox4.TabIndex = 17;
+			this.txtTruck12TonCount.Location = new System.Drawing.Point(377, 150);
+			this.txtTruck12TonCount.Name = "txtTruck12TonCount";
+			this.txtTruck12TonCount.ReadOnly = true;
+			this.txtTruck12TonCount.Size = new System.Drawing.Size(170, 21);
+			this.txtTruck12TonCount.TabIndex = 17;
 			// 
 			// label47
 			// 
@@ -1202,15 +1202,15 @@
 			this.label47.TabIndex = 16;
 			this.label47.Text = "تعداد اپراتور مورد نیاز";
 			// 
-			// textBox5
+			// txtTruckOperatorCount
 			// 
-			this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtTruckOperatorCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox5.Location = new System.Drawing.Point(92, 150);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.ReadOnly = true;
-			this.textBox5.Size = new System.Drawing.Size(170, 21);
-			this.textBox5.TabIndex = 17;
+			this.txtTruckOperatorCount.Location = new System.Drawing.Point(92, 150);
+			this.txtTruckOperatorCount.Name = "txtTruckOperatorCount";
+			this.txtTruckOperatorCount.ReadOnly = true;
+			this.txtTruckOperatorCount.Size = new System.Drawing.Size(170, 21);
+			this.txtTruckOperatorCount.TabIndex = 17;
 			// 
 			// label48
 			// 
@@ -1255,35 +1255,25 @@
 			this.label51.Text = "تعداد بولدوزر مورد نیاز اصلاح شده";
 			this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// textBox6
+			// txtDozerType
 			// 
-			this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtDozerType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox6.Location = new System.Drawing.Point(377, 227);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.ReadOnly = true;
-			this.textBox6.Size = new System.Drawing.Size(170, 21);
-			this.textBox6.TabIndex = 17;
+			this.txtDozerType.Location = new System.Drawing.Point(377, 227);
+			this.txtDozerType.Name = "txtDozerType";
+			this.txtDozerType.ReadOnly = true;
+			this.txtDozerType.Size = new System.Drawing.Size(170, 21);
+			this.txtDozerType.TabIndex = 17;
 			// 
-			// textBox7
+			// txtDozerRealCount
 			// 
-			this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtDozerRealCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox7.Location = new System.Drawing.Point(377, 254);
-			this.textBox7.Name = "textBox7";
-			this.textBox7.ReadOnly = true;
-			this.textBox7.Size = new System.Drawing.Size(170, 21);
-			this.textBox7.TabIndex = 17;
-			// 
-			// textBox8
-			// 
-			this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox8.Location = new System.Drawing.Point(92, 254);
-			this.textBox8.Name = "textBox8";
-			this.textBox8.ReadOnly = true;
-			this.textBox8.Size = new System.Drawing.Size(170, 21);
-			this.textBox8.TabIndex = 17;
+			this.txtDozerRealCount.Location = new System.Drawing.Point(377, 254);
+			this.txtDozerRealCount.Name = "txtDozerRealCount";
+			this.txtDozerRealCount.ReadOnly = true;
+			this.txtDozerRealCount.Size = new System.Drawing.Size(170, 21);
+			this.txtDozerRealCount.TabIndex = 17;
 			// 
 			// label53
 			// 
@@ -1317,34 +1307,15 @@
 			this.label55.TabIndex = 16;
 			this.label55.Text = "تعداد غلطک HAMM مورد نیاز";
 			// 
-			// textBox9
+			// txtRollerHAMMCount
 			// 
-			this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtRollerHAMMCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox9.Location = new System.Drawing.Point(377, 331);
-			this.textBox9.Name = "textBox9";
-			this.textBox9.ReadOnly = true;
-			this.textBox9.Size = new System.Drawing.Size(170, 21);
-			this.textBox9.TabIndex = 17;
-			// 
-			// textBox11
-			// 
-			this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox11.Location = new System.Drawing.Point(92, 358);
-			this.textBox11.Name = "textBox11";
-			this.textBox11.ReadOnly = true;
-			this.textBox11.Size = new System.Drawing.Size(170, 21);
-			this.textBox11.TabIndex = 17;
-			// 
-			// label57
-			// 
-			this.label57.AutoSize = true;
-			this.label57.Location = new System.Drawing.Point(272, 355);
-			this.label57.Name = "label57";
-			this.label57.Size = new System.Drawing.Size(99, 13);
-			this.label57.TabIndex = 16;
-			this.label57.Text = "تعداد اپراتور مورد نیاز";
+			this.txtRollerHAMMCount.Location = new System.Drawing.Point(377, 331);
+			this.txtRollerHAMMCount.Name = "txtRollerHAMMCount";
+			this.txtRollerHAMMCount.ReadOnly = true;
+			this.txtRollerHAMMCount.Size = new System.Drawing.Size(170, 21);
+			this.txtRollerHAMMCount.TabIndex = 17;
 			// 
 			// label58
 			// 
@@ -1355,15 +1326,25 @@
 			this.label58.TabIndex = 16;
 			this.label58.Text = "تعداد اپراتور مورد نیاز";
 			// 
-			// textBox12
+			// txtDozerOperatorCount
 			// 
-			this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtDozerOperatorCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox12.Location = new System.Drawing.Point(92, 227);
-			this.textBox12.Name = "textBox12";
-			this.textBox12.ReadOnly = true;
-			this.textBox12.Size = new System.Drawing.Size(170, 21);
-			this.textBox12.TabIndex = 17;
+			this.txtDozerOperatorCount.Location = new System.Drawing.Point(92, 254);
+			this.txtDozerOperatorCount.Name = "txtDozerOperatorCount";
+			this.txtDozerOperatorCount.ReadOnly = true;
+			this.txtDozerOperatorCount.Size = new System.Drawing.Size(170, 21);
+			this.txtDozerOperatorCount.TabIndex = 17;
+			// 
+			// txtDozerTotalCount
+			// 
+			this.txtDozerTotalCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtDozerTotalCount.Location = new System.Drawing.Point(92, 227);
+			this.txtDozerTotalCount.Name = "txtDozerTotalCount";
+			this.txtDozerTotalCount.ReadOnly = true;
+			this.txtDozerTotalCount.Size = new System.Drawing.Size(170, 21);
+			this.txtDozerTotalCount.TabIndex = 17;
 			// 
 			// label52
 			// 
@@ -1373,6 +1354,25 @@
 			this.label52.Size = new System.Drawing.Size(103, 13);
 			this.label52.TabIndex = 16;
 			this.label52.Text = "تعداد بولدوزر مورد نیاز";
+			// 
+			// label57
+			// 
+			this.label57.AutoSize = true;
+			this.label57.Location = new System.Drawing.Point(272, 355);
+			this.label57.Name = "label57";
+			this.label57.Size = new System.Drawing.Size(99, 13);
+			this.label57.TabIndex = 16;
+			this.label57.Text = "تعداد اپراتور مورد نیاز";
+			// 
+			// txtRollerOperatorCount
+			// 
+			this.txtRollerOperatorCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtRollerOperatorCount.Location = new System.Drawing.Point(92, 358);
+			this.txtRollerOperatorCount.Name = "txtRollerOperatorCount";
+			this.txtRollerOperatorCount.ReadOnly = true;
+			this.txtRollerOperatorCount.Size = new System.Drawing.Size(170, 21);
+			this.txtRollerOperatorCount.TabIndex = 17;
 			// 
 			// label56
 			// 
@@ -1385,15 +1385,15 @@
 			this.label56.Text = "تعداد غلطک HAMM مورد نیاز اصلاح شده";
 			this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// textBox10
+			// txtRollerHAMMRealCount
 			// 
-			this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtRollerHAMMRealCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox10.Location = new System.Drawing.Point(377, 358);
-			this.textBox10.Name = "textBox10";
-			this.textBox10.ReadOnly = true;
-			this.textBox10.Size = new System.Drawing.Size(170, 21);
-			this.textBox10.TabIndex = 17;
+			this.txtRollerHAMMRealCount.Location = new System.Drawing.Point(377, 358);
+			this.txtRollerHAMMRealCount.Name = "txtRollerHAMMRealCount";
+			this.txtRollerHAMMRealCount.ReadOnly = true;
+			this.txtRollerHAMMRealCount.Size = new System.Drawing.Size(170, 21);
+			this.txtRollerHAMMRealCount.TabIndex = 17;
 			// 
 			// FormKhaakriziResult
 			// 
@@ -1506,34 +1506,34 @@
 		private System.Windows.Forms.Label lblDivider10;
 		private System.Windows.Forms.Label label41;
 		private System.Windows.Forms.Label label40;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtLoaderCATD966Count;
 		private System.Windows.Forms.Label label42;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox txtLoadingOperatorCount;
 		private System.Windows.Forms.Label label43;
 		private System.Windows.Forms.Label label44;
 		private System.Windows.Forms.Label label45;
 		private System.Windows.Forms.Label label46;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox txtTruck10TonCount;
+		private System.Windows.Forms.TextBox txtTruck12TonCount;
 		private System.Windows.Forms.Label label47;
-		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox txtTruckOperatorCount;
 		private System.Windows.Forms.Label label48;
 		private System.Windows.Forms.Label label49;
 		private System.Windows.Forms.Label label50;
 		private System.Windows.Forms.Label label51;
-		private System.Windows.Forms.TextBox textBox6;
-		private System.Windows.Forms.TextBox textBox7;
-		private System.Windows.Forms.TextBox textBox8;
+		private System.Windows.Forms.TextBox txtDozerType;
+		private System.Windows.Forms.TextBox txtDozerRealCount;
+		private System.Windows.Forms.TextBox txtDozerOperatorCount;
 		private System.Windows.Forms.Label label53;
 		private System.Windows.Forms.Label label54;
 		private System.Windows.Forms.Label label55;
-		private System.Windows.Forms.TextBox textBox9;
-		private System.Windows.Forms.TextBox textBox11;
+		private System.Windows.Forms.TextBox txtRollerHAMMCount;
+		private System.Windows.Forms.TextBox txtRollerOperatorCount;
 		private System.Windows.Forms.Label label57;
 		private System.Windows.Forms.Label label58;
-		private System.Windows.Forms.TextBox textBox12;
+		private System.Windows.Forms.TextBox txtDozerTotalCount;
 		private System.Windows.Forms.Label label52;
 		private System.Windows.Forms.Label label56;
-		private System.Windows.Forms.TextBox textBox10;
+		private System.Windows.Forms.TextBox txtRollerHAMMRealCount;
 	}
 }

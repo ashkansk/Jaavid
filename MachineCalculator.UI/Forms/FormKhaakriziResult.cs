@@ -1,5 +1,6 @@
 ﻿using MachineCalculator.UI.Entities;
 using MachineCalculator.UI.Repositories;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -72,7 +73,21 @@ namespace MachineCalculator.UI.Forms
 			if (_secondTabLoaded)
 				return;
 			// else: calculate and load the values
-
+			// 1. Loader
+			txtLoadingOperatorCount.Text = txtLoaderCATD966Count.Text = _project.Steps[0].StepSoils.Sum(soil => soil.RealRequiredMachineCount).ToString();
+			// 2. Truck
+			txtTruck10TonCount.Text = _project.Steps[1].StepSoils.Where(soil => soil.CurrentMachine.Title == "کامیون 10 تن")
+														.Sum(soil => soil.RealRequiredMachineCount).ToString();
+			txtTruck12TonCount.Text = _project.Steps[1].StepSoils.Where(soil => soil.CurrentMachine.Title == "کامیون 12 تن")
+														.Sum(soil => soil.RealRequiredMachineCount).ToString();
+			txtTruckOperatorCount.Text = Convert.ToInt32(txtTruck10TonCount.Text) + Convert.ToInt32(txtTruck12TonCount.Text) + "";
+			// 3. Dozer
+			txtDozerType.Text = _project.Steps[2].StepSoils.First().CurrentMachine.Title;
+			txtDozerTotalCount.Text = _project.Steps[2].StepSoils.Sum(soil => soil.RequiredMachineCount).ToString();
+			txtDozerOperatorCount.Text = txtDozerRealCount.Text = Math.Ceiling(Convert.ToDouble(txtDozerTotalCount.Text)).ToString();
+			// 4. Roller
+			txtRollerHAMMCount.Text = _project.Steps[3].StepSoils.Sum(soil => soil.RequiredMachineCount).ToString();
+			txtRollerOperatorCount.Text = txtRollerHAMMRealCount.Text = Math.Ceiling(Convert.ToDouble(txtRollerHAMMCount.Text)).ToString();
 		}
 	}
 }
