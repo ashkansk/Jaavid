@@ -141,6 +141,10 @@
 			this.txtRollerOperatorCount = new System.Windows.Forms.TextBox();
 			this.label56 = new System.Windows.Forms.Label();
 			this.txtRollerHAMMRealCount = new System.Windows.Forms.TextBox();
+			this.label59 = new System.Windows.Forms.Label();
+			this.label60 = new System.Windows.Forms.Label();
+			this.label61 = new System.Windows.Forms.Label();
+			this.txtProjectRealDuration = new System.Windows.Forms.TextBox();
 			this.tabCtrlResult.SuspendLayout();
 			this.tabpgBasedOnSoilType.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
@@ -1013,7 +1017,7 @@
 			// 
 			this.tableLayoutPanel2.ColumnCount = 6;
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -1050,10 +1054,14 @@
 			this.tableLayoutPanel2.Controls.Add(this.txtRollerOperatorCount, 4, 11);
 			this.tableLayoutPanel2.Controls.Add(this.label56, 0, 11);
 			this.tableLayoutPanel2.Controls.Add(this.txtRollerHAMMRealCount, 2, 11);
+			this.tableLayoutPanel2.Controls.Add(this.label59, 0, 12);
+			this.tableLayoutPanel2.Controls.Add(this.label60, 1, 12);
+			this.tableLayoutPanel2.Controls.Add(this.label61, 0, 13);
+			this.tableLayoutPanel2.Controls.Add(this.txtProjectRealDuration, 2, 13);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-			this.tableLayoutPanel2.RowCount = 13;
+			this.tableLayoutPanel2.RowCount = 15;
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -1065,7 +1073,9 @@
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel2.Size = new System.Drawing.Size(708, 634);
 			this.tableLayoutPanel2.TabIndex = 0;
@@ -1106,16 +1116,18 @@
 			// 
 			this.txtLoaderCATD966Count.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtLoaderCATD966Count.Location = new System.Drawing.Point(377, 46);
+			this.txtLoaderCATD966Count.Location = new System.Drawing.Point(366, 46);
 			this.txtLoaderCATD966Count.Name = "txtLoaderCATD966Count";
 			this.txtLoaderCATD966Count.ReadOnly = true;
-			this.txtLoaderCATD966Count.Size = new System.Drawing.Size(170, 21);
+			this.txtLoaderCATD966Count.Size = new System.Drawing.Size(162, 21);
 			this.txtLoaderCATD966Count.TabIndex = 17;
 			// 
 			// label42
 			// 
 			this.label42.AutoSize = true;
-			this.label42.Location = new System.Drawing.Point(272, 43);
+			this.label42.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label42.ForeColor = System.Drawing.Color.Olive;
+			this.label42.Location = new System.Drawing.Point(261, 43);
 			this.label42.Name = "label42";
 			this.label42.Size = new System.Drawing.Size(99, 13);
 			this.label42.TabIndex = 16;
@@ -1125,10 +1137,11 @@
 			// 
 			this.txtLoadingOperatorCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtLoadingOperatorCount.Location = new System.Drawing.Point(92, 46);
+			this.txtLoadingOperatorCount.ForeColor = System.Drawing.Color.Olive;
+			this.txtLoadingOperatorCount.Location = new System.Drawing.Point(89, 46);
 			this.txtLoadingOperatorCount.Name = "txtLoadingOperatorCount";
 			this.txtLoadingOperatorCount.ReadOnly = true;
-			this.txtLoadingOperatorCount.Size = new System.Drawing.Size(170, 21);
+			this.txtLoadingOperatorCount.Size = new System.Drawing.Size(162, 21);
 			this.txtLoadingOperatorCount.TabIndex = 17;
 			// 
 			// label43
@@ -1177,26 +1190,28 @@
 			// 
 			this.txtTruck10TonCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtTruck10TonCount.Location = new System.Drawing.Point(377, 123);
+			this.txtTruck10TonCount.Location = new System.Drawing.Point(366, 123);
 			this.txtTruck10TonCount.Name = "txtTruck10TonCount";
 			this.txtTruck10TonCount.ReadOnly = true;
-			this.txtTruck10TonCount.Size = new System.Drawing.Size(170, 21);
+			this.txtTruck10TonCount.Size = new System.Drawing.Size(162, 21);
 			this.txtTruck10TonCount.TabIndex = 17;
 			// 
 			// txtTruck12TonCount
 			// 
 			this.txtTruck12TonCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtTruck12TonCount.Location = new System.Drawing.Point(377, 150);
+			this.txtTruck12TonCount.Location = new System.Drawing.Point(366, 150);
 			this.txtTruck12TonCount.Name = "txtTruck12TonCount";
 			this.txtTruck12TonCount.ReadOnly = true;
-			this.txtTruck12TonCount.Size = new System.Drawing.Size(170, 21);
+			this.txtTruck12TonCount.Size = new System.Drawing.Size(162, 21);
 			this.txtTruck12TonCount.TabIndex = 17;
 			// 
 			// label47
 			// 
 			this.label47.AutoSize = true;
-			this.label47.Location = new System.Drawing.Point(272, 147);
+			this.label47.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label47.ForeColor = System.Drawing.Color.Olive;
+			this.label47.Location = new System.Drawing.Point(261, 147);
 			this.label47.Name = "label47";
 			this.label47.Size = new System.Drawing.Size(99, 13);
 			this.label47.TabIndex = 16;
@@ -1206,10 +1221,11 @@
 			// 
 			this.txtTruckOperatorCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtTruckOperatorCount.Location = new System.Drawing.Point(92, 150);
+			this.txtTruckOperatorCount.ForeColor = System.Drawing.Color.Olive;
+			this.txtTruckOperatorCount.Location = new System.Drawing.Point(89, 150);
 			this.txtTruckOperatorCount.Name = "txtTruckOperatorCount";
 			this.txtTruckOperatorCount.ReadOnly = true;
-			this.txtTruckOperatorCount.Size = new System.Drawing.Size(170, 21);
+			this.txtTruckOperatorCount.Size = new System.Drawing.Size(162, 21);
 			this.txtTruckOperatorCount.TabIndex = 17;
 			// 
 			// label48
@@ -1248,9 +1264,9 @@
 			// 
 			this.label51.AutoSize = true;
 			this.tableLayoutPanel2.SetColumnSpan(this.label51, 2);
-			this.label51.Location = new System.Drawing.Point(572, 251);
+			this.label51.Location = new System.Drawing.Point(547, 251);
 			this.label51.Name = "label51";
-			this.label51.Size = new System.Drawing.Size(133, 26);
+			this.label51.Size = new System.Drawing.Size(158, 13);
 			this.label51.TabIndex = 16;
 			this.label51.Text = "تعداد بولدوزر مورد نیاز اصلاح شده";
 			this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1259,20 +1275,20 @@
 			// 
 			this.txtDozerType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtDozerType.Location = new System.Drawing.Point(377, 227);
+			this.txtDozerType.Location = new System.Drawing.Point(366, 227);
 			this.txtDozerType.Name = "txtDozerType";
 			this.txtDozerType.ReadOnly = true;
-			this.txtDozerType.Size = new System.Drawing.Size(170, 21);
+			this.txtDozerType.Size = new System.Drawing.Size(162, 21);
 			this.txtDozerType.TabIndex = 17;
 			// 
 			// txtDozerRealCount
 			// 
 			this.txtDozerRealCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtDozerRealCount.Location = new System.Drawing.Point(377, 254);
+			this.txtDozerRealCount.Location = new System.Drawing.Point(366, 254);
 			this.txtDozerRealCount.Name = "txtDozerRealCount";
 			this.txtDozerRealCount.ReadOnly = true;
-			this.txtDozerRealCount.Size = new System.Drawing.Size(170, 21);
+			this.txtDozerRealCount.Size = new System.Drawing.Size(162, 21);
 			this.txtDozerRealCount.TabIndex = 17;
 			// 
 			// label53
@@ -1311,16 +1327,18 @@
 			// 
 			this.txtRollerHAMMCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtRollerHAMMCount.Location = new System.Drawing.Point(377, 331);
+			this.txtRollerHAMMCount.Location = new System.Drawing.Point(366, 331);
 			this.txtRollerHAMMCount.Name = "txtRollerHAMMCount";
 			this.txtRollerHAMMCount.ReadOnly = true;
-			this.txtRollerHAMMCount.Size = new System.Drawing.Size(170, 21);
+			this.txtRollerHAMMCount.Size = new System.Drawing.Size(162, 21);
 			this.txtRollerHAMMCount.TabIndex = 17;
 			// 
 			// label58
 			// 
 			this.label58.AutoSize = true;
-			this.label58.Location = new System.Drawing.Point(272, 251);
+			this.label58.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label58.ForeColor = System.Drawing.Color.Olive;
+			this.label58.Location = new System.Drawing.Point(261, 251);
 			this.label58.Name = "label58";
 			this.label58.Size = new System.Drawing.Size(99, 13);
 			this.label58.TabIndex = 16;
@@ -1330,26 +1348,27 @@
 			// 
 			this.txtDozerOperatorCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtDozerOperatorCount.Location = new System.Drawing.Point(92, 254);
+			this.txtDozerOperatorCount.ForeColor = System.Drawing.Color.Olive;
+			this.txtDozerOperatorCount.Location = new System.Drawing.Point(89, 254);
 			this.txtDozerOperatorCount.Name = "txtDozerOperatorCount";
 			this.txtDozerOperatorCount.ReadOnly = true;
-			this.txtDozerOperatorCount.Size = new System.Drawing.Size(170, 21);
+			this.txtDozerOperatorCount.Size = new System.Drawing.Size(162, 21);
 			this.txtDozerOperatorCount.TabIndex = 17;
 			// 
 			// txtDozerTotalCount
 			// 
 			this.txtDozerTotalCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtDozerTotalCount.Location = new System.Drawing.Point(92, 227);
+			this.txtDozerTotalCount.Location = new System.Drawing.Point(89, 227);
 			this.txtDozerTotalCount.Name = "txtDozerTotalCount";
 			this.txtDozerTotalCount.ReadOnly = true;
-			this.txtDozerTotalCount.Size = new System.Drawing.Size(170, 21);
+			this.txtDozerTotalCount.Size = new System.Drawing.Size(162, 21);
 			this.txtDozerTotalCount.TabIndex = 17;
 			// 
 			// label52
 			// 
 			this.label52.AutoSize = true;
-			this.label52.Location = new System.Drawing.Point(268, 224);
+			this.label52.Location = new System.Drawing.Point(257, 224);
 			this.label52.Name = "label52";
 			this.label52.Size = new System.Drawing.Size(103, 13);
 			this.label52.TabIndex = 16;
@@ -1358,7 +1377,9 @@
 			// label57
 			// 
 			this.label57.AutoSize = true;
-			this.label57.Location = new System.Drawing.Point(272, 355);
+			this.label57.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label57.ForeColor = System.Drawing.Color.Olive;
+			this.label57.Location = new System.Drawing.Point(261, 355);
 			this.label57.Name = "label57";
 			this.label57.Size = new System.Drawing.Size(99, 13);
 			this.label57.TabIndex = 16;
@@ -1368,19 +1389,20 @@
 			// 
 			this.txtRollerOperatorCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtRollerOperatorCount.Location = new System.Drawing.Point(92, 358);
+			this.txtRollerOperatorCount.ForeColor = System.Drawing.Color.Olive;
+			this.txtRollerOperatorCount.Location = new System.Drawing.Point(89, 358);
 			this.txtRollerOperatorCount.Name = "txtRollerOperatorCount";
 			this.txtRollerOperatorCount.ReadOnly = true;
-			this.txtRollerOperatorCount.Size = new System.Drawing.Size(170, 21);
+			this.txtRollerOperatorCount.Size = new System.Drawing.Size(162, 21);
 			this.txtRollerOperatorCount.TabIndex = 17;
 			// 
 			// label56
 			// 
 			this.label56.AutoSize = true;
 			this.tableLayoutPanel2.SetColumnSpan(this.label56, 2);
-			this.label56.Location = new System.Drawing.Point(569, 355);
+			this.label56.Location = new System.Drawing.Point(539, 355);
 			this.label56.Name = "label56";
-			this.label56.Size = new System.Drawing.Size(136, 26);
+			this.label56.Size = new System.Drawing.Size(166, 26);
 			this.label56.TabIndex = 16;
 			this.label56.Text = "تعداد غلطک HAMM مورد نیاز اصلاح شده";
 			this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1389,11 +1411,56 @@
 			// 
 			this.txtRollerHAMMRealCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtRollerHAMMRealCount.Location = new System.Drawing.Point(377, 358);
+			this.txtRollerHAMMRealCount.Location = new System.Drawing.Point(366, 358);
 			this.txtRollerHAMMRealCount.Name = "txtRollerHAMMRealCount";
 			this.txtRollerHAMMRealCount.ReadOnly = true;
-			this.txtRollerHAMMRealCount.Size = new System.Drawing.Size(170, 21);
+			this.txtRollerHAMMRealCount.Size = new System.Drawing.Size(162, 21);
 			this.txtRollerHAMMRealCount.TabIndex = 17;
+			// 
+			// label59
+			// 
+			this.label59.AutoSize = true;
+			this.label59.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label59.Location = new System.Drawing.Point(647, 405);
+			this.label59.Name = "label59";
+			this.label59.Size = new System.Drawing.Size(58, 13);
+			this.label59.TabIndex = 15;
+			this.label59.Text = "مدت زمان";
+			// 
+			// label60
+			// 
+			this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label60.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.tableLayoutPanel2.SetColumnSpan(this.label60, 5);
+			this.label60.Location = new System.Drawing.Point(3, 412);
+			this.label60.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
+			this.label60.Name = "label60";
+			this.label60.Size = new System.Drawing.Size(614, 2);
+			this.label60.TabIndex = 14;
+			// 
+			// label61
+			// 
+			this.label61.AutoSize = true;
+			this.tableLayoutPanel2.SetColumnSpan(this.label61, 2);
+			this.label61.Location = new System.Drawing.Point(538, 432);
+			this.label61.Name = "label61";
+			this.label61.Size = new System.Drawing.Size(167, 13);
+			this.label61.TabIndex = 16;
+			this.label61.Text = "مدت زمان اصلاح شده‎ی انجام پروژه";
+			// 
+			// txtProjectRealDuration
+			// 
+			this.txtProjectRealDuration.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.tableLayoutPanel2.SetColumnSpan(this.txtProjectRealDuration, 3);
+			this.txtProjectRealDuration.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.txtProjectRealDuration.ForeColor = System.Drawing.Color.DarkBlue;
+			this.txtProjectRealDuration.Location = new System.Drawing.Point(89, 435);
+			this.txtProjectRealDuration.Name = "txtProjectRealDuration";
+			this.txtProjectRealDuration.ReadOnly = true;
+			this.txtProjectRealDuration.Size = new System.Drawing.Size(439, 21);
+			this.txtProjectRealDuration.TabIndex = 17;
 			// 
 			// FormKhaakriziResult
 			// 
@@ -1535,5 +1602,9 @@
 		private System.Windows.Forms.Label label52;
 		private System.Windows.Forms.Label label56;
 		private System.Windows.Forms.TextBox txtRollerHAMMRealCount;
+		private System.Windows.Forms.Label label59;
+		private System.Windows.Forms.Label label60;
+		private System.Windows.Forms.Label label61;
+		private System.Windows.Forms.TextBox txtProjectRealDuration;
 	}
 }
