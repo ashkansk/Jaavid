@@ -59,7 +59,7 @@ namespace MachineCalculator.UI.Forms
 		{
 			if (_ucSteps[_lastOpenTabPageIndex].Validate())
 			{
-				if(_lastOpenTabPageIndex == 0)
+				if(_lastOpenTabPageIndex == 0) // all steps are dependent on step 0, so when leaving step 0, we update all other steps' values
 				{
 					for (int i = 0; i < _project.Steps.Count; i++)
 					{
@@ -72,11 +72,10 @@ namespace MachineCalculator.UI.Forms
 							ProjectStepSoil stSoil = step.StepSoils.FirstOrDefault(soil => soil.SoilTypeIndex == j);
 							if (stSoil != null)
 							{
-								ProjectStepSoil originStSoil = _project.Steps[0].StepSoils.First(soil => soil.SoilTypeIndex == j);
-								stSoil.WorkToDo = originStSoil.RealRequiredMachineCount * originStSoil.CurrentMachineRealPerformance;
+								ProjectStepSoil originStSoil = _project.Steps[0].StepSoils.First(soil => soil.SoilTypeIndex == j); // get value from step 0, according to the soil type (j)
+								stSoil.WorkToDo = originStSoil.RealRequiredMachineCount * originStSoil.CurrentMachineRealPerformance; // calculate "WorkToDo" for other step
 							}
 						}
-						
 					}
 				}
 				_lastOpenTabPageIndex = e.TabPageIndex; // move on to next page (or previous pages)

@@ -52,6 +52,10 @@ namespace MachineCalculator.UI.Repositories
 				},
 			};
 
+			/* This performance trendline approximation formulas (using interpolation) are not required in version 2.
+			 * In this version the performance calculation is based on multiple parameters entered by an expert user.
+			 * Let it be comment for a while to remember me that night my eyes were so red for typing these exact numbers as precise as possible with my bloody fingers!!!
+			 
 			MachinePerformances = new List<MachinePerformance>
 			{
 				// machine id = 1
@@ -149,6 +153,7 @@ namespace MachineCalculator.UI.Repositories
 				new MachinePerformance { MachineID=6, Indicator=20, SoilTypeIndex=0,
 					PerformanceFormula = (x => 0.0385 * Math.Pow(x, 4) - 1.6141 * Math.Pow(x, 3) +  26.058 * Math.Pow(x, 2) - 201.75 * x + 746.44) },
 			};
+			*/
 		}
 
 		public List<TEntity> Set<TEntity>()

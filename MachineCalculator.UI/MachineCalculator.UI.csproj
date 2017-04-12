@@ -61,11 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\ProjectStepExtended.cs" />
+    <Compile Include="Entities\SoilInfo.cs" />
     <Compile Include="Forms\FormKhaakriziResult.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormKhaakriziResult.Designer.cs">
       <DependentUpon>FormKhaakriziResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ucKhaakriziBaargiriStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ucKhaakriziBaargiriStep.Designer.cs">
+      <DependentUpon>ucKhaakriziBaargiriStep.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CaptionHelper.cs" />
     <Compile Include="Helpers\DoubleHelperClass.cs" />
@@ -76,7 +84,6 @@
     <Compile Include="Entities\MachineValidOperation.cs" />
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\ProjectStep.cs" />
-    <Compile Include="Entities\ProjectStepSoil.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Forms\FormMain.cs">
@@ -90,12 +97,6 @@
     </Compile>
     <Compile Include="Forms\FormNewKhaakriziProject.Designer.cs">
       <DependentUpon>FormNewKhaakriziProject.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormNewProject.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormNewProject.Designer.cs">
-      <DependentUpon>FormNewProject.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ucKhaakriziProject.cs">
       <SubType>UserControl</SubType>
@@ -130,11 +131,11 @@
     <EmbeddedResource Include="Forms\FormNewKhaakriziProject.resx">
       <DependentUpon>FormNewKhaakriziProject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormNewProject.resx">
-      <DependentUpon>FormNewProject.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ucKhaakriziProject.resx">
       <DependentUpon>ucKhaakriziProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ucKhaakriziBaargiriStep.resx">
+      <DependentUpon>ucKhaakriziBaargiriStep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ucKhaakriziProjectStep.resx">
       <DependentUpon>ucKhaakriziProjectStep.cs</DependentUpon>
