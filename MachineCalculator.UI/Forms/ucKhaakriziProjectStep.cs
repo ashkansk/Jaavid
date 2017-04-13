@@ -39,6 +39,7 @@ namespace MachineCalculator.UI.Forms
 
 		private void ucKhaakriziProjectStep_Load(object sender, EventArgs e)
 		{
+			/*
 			if(_step.StepTypeIndex == (int)KhaakriziStepType.Baargiri)
 				foreach (ProjectStepSoil stSoil in _step.StepSoils)
 					stSoil.WorkToDo = stSoil.SoilVolume / _project.TotalActiveHoursPerMonth;
@@ -74,7 +75,7 @@ namespace MachineCalculator.UI.Forms
 			// set disabled or enabled and set checked=true for the first button which is enabled
 			RunFuncOnRdb(rdb => rdb.Checked = rdb.Enabled = rdb.Tag != null, rdbMaaseh, rdbRos, rdbZaminTabiee, rdbSangShekaste);
 
-
+	*/
 		}
 		private void SoilTypeButton_Click(object sender, EventArgs e)
 		{

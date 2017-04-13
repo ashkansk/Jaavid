@@ -197,7 +197,7 @@
 			// 
 			// stepSoilObjBindingSource
 			// 
-			this.stepSoilObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStepSoil);
+			this.stepSoilObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStep);
 			// 
 			// textBox3
 			// 

@@ -11,7 +11,6 @@ namespace MachineCalculator.UI.Forms
 		private Project _project;
 		private ProjectRepository _projectRepo;
 		private ProjectStepRepository _projectSiteRepo;
-		private ProjectStepSoilRepository _projectStepRepo;
 		private MachineRepository _machingRepo;
 		private ucKhaakriziProjectStep[] _ucSteps;
 		private int _lastOpenTabPageIndex;
@@ -20,7 +19,6 @@ namespace MachineCalculator.UI.Forms
 		{
 			_projectRepo = Factory.GetProjectRepository();
 			_projectSiteRepo = Factory.GetProjectStepRepository();
-			_projectStepRepo = Factory.GetProjectStepSoilRepository();
 			_project = _projectRepo.Get(p => p.ID == projectID).SingleOrDefault();
 			_machingRepo = Factory.GetMachineRepository();
 			if (_project == null)
@@ -57,25 +55,18 @@ namespace MachineCalculator.UI.Forms
 
 		private void tabCtrlSteps_Selecting(object sender, TabControlCancelEventArgs e)
 		{
-			if (_ucSteps[_lastOpenTabPageIndex].Validate())
+			if (_ucSteps[_lastOpenTabPageIndex].IsValid())
 			{
 				if(_lastOpenTabPageIndex == 0) // all steps are dependent on step 0, so when leaving step 0, we update all other steps' values
 				{
-					for (int i = 0; i < _project.Steps.Count; i++)
+					foreach (ProjectStep step in _project.Steps)
 					{
-						if (i == 0)
+						if (step.StepTypeIndex == (int)KhaakriziStepType.Baargiri)
 							continue; // skip step one
 						// else
-						ProjectStep step = _project.Steps[i];
-						for (int j = (int)SoilType.SangShekaste; j <= (int)SoilType.Maaseh; j++)
-						{
-							ProjectStepSoil stSoil = step.StepSoils.FirstOrDefault(soil => soil.SoilTypeIndex == j);
-							if (stSoil != null)
-							{
-								ProjectStepSoil originStSoil = _project.Steps[0].StepSoils.First(soil => soil.SoilTypeIndex == j); // get value from step 0, according to the soil type (j)
-								stSoil.WorkToDo = originStSoil.RealRequiredMachineCount * originStSoil.CurrentMachineRealPerformance; // calculate "WorkToDo" for other step
-							}
-						}
+						ProjectStep stepOne = _project.Steps.FirstOrDefault(s => 
+						s.StepTypeIndex == (int)KhaakriziStepType.Baargiri && s.SoilTypeIndex == step.SoilTypeIndex);
+						step.WorkToDo = stepOne.RequiredMachineCountReal * stepOne.MachinePowerReal; // calculate "WorkToDo" for other step
 					}
 				}
 				_lastOpenTabPageIndex = e.TabPageIndex; // move on to next page (or previous pages)

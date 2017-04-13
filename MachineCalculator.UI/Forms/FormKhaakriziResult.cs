@@ -24,7 +24,7 @@ namespace MachineCalculator.UI.Forms
 			txtShiftsPerDay.Text = _project.WorkShiftsPerDay.ToString();
 			txtHoursPerShift.Text = _project.HoursPerShift.ToString();
 			txtActiveHoursPerShift.Text = _project.ActiveHoursPerShift.ToString();
-
+			/*
 			ProjectStepSoil stSoil = _project.Steps[0].StepSoils.Where(s => s.SoilTypeIndex == (int)SoilType.SangShekaste).FirstOrDefault();
 			txtSangShekasteSoilVolume.Text = stSoil?.SoilVolume.ToString();
 			txtSangShekasteQuantity.Text = stSoil?.WorkQuantity.ToString();
@@ -66,6 +66,7 @@ namespace MachineCalculator.UI.Forms
 			txtMaasehRealRequiredTruck.Text = _project.Steps[1].StepSoils.Where(s => s.SoilTypeIndex == (int)SoilType.Maaseh).FirstOrDefault()?.RealRequiredMachineCount.ToString();
 
 			//Math.Ceiling(_project.Steps.SelectMany(p => p.StepSoils).Where(ss => ss.SoilTypeIndex == (int)SoilType.ZaminTabiee).Sum(ss => ss.RequiredMachineCount)).ToString();
+			*/
 		}
 
 		private void tabCtrlResult_Selecting(object sender, TabControlCancelEventArgs e)
@@ -75,6 +76,7 @@ namespace MachineCalculator.UI.Forms
 			// else: calculate and load the values
 			try
 			{
+				/*
 				// 1. Loader
 				txtLoadingOperatorCount.Text = txtLoaderCATD966Count.Text = _project.Steps[0].StepSoils.Sum(soil => soil.RealRequiredMachineCount).ToString();
 				// 2. Truck
@@ -102,6 +104,7 @@ namespace MachineCalculator.UI.Forms
 				int seconds = (int)(remainedMinutes - minutes) * 60;
 
 				txtProjectRealDuration.Text = string.Format("{0} روز و {1} ساعت و {2} دقیقه و {3} ثانیه", days, hours, minutes, seconds);
+				*/
 				_secondTabLoaded = true;
 			}
 			catch

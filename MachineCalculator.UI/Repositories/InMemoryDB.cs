@@ -9,8 +9,7 @@ namespace MachineCalculator.UI.Repositories
 		public InMemoryDB()
 		{
 			Projects = new List<Project>();
-			ProjectSites = new List<ProjectStep>();
-			ProjectSteps = new List<ProjectStepSoil>();
+			ProjectSteps = new List<ProjectStep>();
 
 			Machines = new List<Machine>
 			{
@@ -164,9 +163,8 @@ namespace MachineCalculator.UI.Repositories
 			if (t == typeof(Project))
 				toReturn = Projects;
 			else if (t == typeof(ProjectStep))
-				toReturn = ProjectSites;
-			else if (t == typeof(ProjectStepSoil))
 				toReturn = ProjectSteps;
+
 			else if (t == typeof(Machine))
 				toReturn = Machines;
 			else if (t == typeof(MachinePerformance))
@@ -176,8 +174,7 @@ namespace MachineCalculator.UI.Repositories
 		}
 
 		public List<Project> Projects { get; set; }
-		public List<ProjectStepSoil> ProjectSteps { get; set; }
-		public List<ProjectStep> ProjectSites { get; set; }
+		public List<ProjectStep> ProjectSteps { get; set; }
 		public List<Machine> Machines { get; set; }
 		public List<MachinePerformance> MachinePerformances { get; set; }
 	}

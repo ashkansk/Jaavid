@@ -1,4 +1,5 @@
 ﻿using PostSharp.Patterns.Model;
+using System;
 
 namespace MachineCalculator.UI.Entities
 {
@@ -47,9 +48,35 @@ namespace MachineCalculator.UI.Entities
 
 		// work info
 		public double TotalDistance { get; set; }
-		public double WorkQuantity { get; set; }
 		public double WorkToDo { get; set; }
 		public int PassCount { get; set; }
 		// work info - end
+
+		[IgnoreAutoChangeNotification]
+		public double RequiredMachineCount
+		{
+			get
+			{
+				if (MachinePowerReal <= 0)
+					return 0;
+				return (WorkToDo / MachinePowerReal);
+			}
+		}
+		[IgnoreAutoChangeNotification]
+		public double MachinePowerReal
+		{
+			get
+			{
+				return MachinePower * EnvironmentFactorQuof * OperatorFactorQuof * ExpertJudgementFactorQuof;
+			}
+		}
+
+		public int RequiredMachineCountReal
+		{
+			get
+			{
+				return (int)Math.Ceiling(RequiredMachineCount);
+			}
+		}
 	}
 }
