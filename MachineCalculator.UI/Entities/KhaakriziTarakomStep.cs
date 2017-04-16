@@ -13,7 +13,7 @@ namespace MachineCalculator.UI.Entities
 		{
 			get
 			{
-				// DepartureSpeed is S (roller speed), MachineCapacity is w (width of roller), TotalDistance is D (soil height)
+				// DepartureSpeed is S (roller speed), MachineCapacity is w (width of roller), TotalDistance is D (soil height), CustomParam1 is N
 				if (CustomParam1 == 0) // prevent divide by zero
 					return 0;
 				return 10 * DepartureSpeed * MachineCapacity * MachineEfficiency * TotalDistance / CustomParam1;
