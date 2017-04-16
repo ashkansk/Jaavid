@@ -34,7 +34,7 @@ namespace MachineCalculator.UI.Forms
 			_ucSteps = new UserControl[]
 			{
 				new ucKhaakriziBaargiriStep(_project.ID),
-				new ucKhaakriziProjectStep(_project.Steps[1].ID, "باربر", "فاصله حمل", "کیلومتر", null),
+				new ucKhaakriziBaabariStep(_project.ID),
 				new ucKhaakriziProjectStep(_project.Steps[2].ID, "بولدوزر", "فاصله حمل", "متر", "شیب"),
 				new ucKhaakriziProjectStep(_project.Steps[3].ID, "غلطک", "تعداد پاس عبوری", "", "ضخامت لایه"),
 			};
@@ -67,6 +67,8 @@ namespace MachineCalculator.UI.Forms
 						ProjectStep stepOne = _project.Steps.FirstOrDefault(s => 
 						s.StepTypeIndex == (int)KhaakriziStepType.Baargiri && s.SoilTypeIndex == step.SoilTypeIndex);
 						step.WorkToDo = stepOne.RequiredMachineCountReal * stepOne.MachinePowerReal; // calculate "WorkToDo" for other step
+						if (step.StepIndex == (int)KhaakriziStepType.Baarbari)
+							step.CustomParam2 = stepOne.MachinePower;
 					}
 				}
 				_lastOpenTabPageIndex = e.TabPageIndex; // move on to next page (or previous pages)

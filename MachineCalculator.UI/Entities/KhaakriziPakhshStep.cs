@@ -8,7 +8,7 @@ namespace MachineCalculator.UI.Entities
 		{
 			get
 			{
-				return (-2.3m) * Tilt + 1;
+				return (-2.3m) * Tilt / 100 + 1;
 			}
 
 			set

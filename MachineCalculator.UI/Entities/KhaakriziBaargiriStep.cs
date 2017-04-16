@@ -32,7 +32,7 @@ namespace MachineCalculator.UI.Entities
 		{
 			get
 			{
-				decimal retVal = (0.0015333m + (0.023333m * Tilt)) * TotalDistance;
+				decimal retVal = (0.0015333m + (0.023333m * Tilt / 100)) * TotalDistance;
 				return retVal;
 			}
 		}
@@ -40,7 +40,7 @@ namespace MachineCalculator.UI.Entities
 		{
 			get
 			{
-				decimal retVal = (0.00162222m + (0.28888m * Tilt)) * TotalDistance;
+				decimal retVal = (0.00162222m + (0.028888m * Tilt / 100)) * TotalDistance;
 				return retVal;
 			}
 		}
