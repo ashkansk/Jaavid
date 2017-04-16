@@ -65,7 +65,7 @@ namespace MachineCalculator.UI.Forms
 							continue; // skip step one
 						// else
 						ProjectStep stepOne = _project.Steps.FirstOrDefault(s => 
-						s.StepTypeIndex == (int)KhaakriziStepType.Baargiri && s.SoilTypeIndex == step.SoilTypeIndex);
+							s.StepTypeIndex == (int)KhaakriziStepType.Baargiri && s.SoilTypeIndex == step.SoilTypeIndex);
 						step.WorkToDo = stepOne.RequiredMachineCountReal * stepOne.MachinePowerReal; // calculate "WorkToDo" for other step
 						if (step.StepIndex == (int)KhaakriziStepType.Baarbari)
 							step.CustomParam2 = stepOne.MachinePower;
