@@ -4,6 +4,10 @@ namespace MachineCalculator.UI.Entities
 {
 	public class KhaakriziPakhshStep : ProjectStep
 	{
+		public KhaakriziPakhshStep()
+		{
+			FixedOverheadDuration = 0.3m;
+		}
 		public override decimal CustomParam1 // es (tilt quofficient)
 		{
 			get

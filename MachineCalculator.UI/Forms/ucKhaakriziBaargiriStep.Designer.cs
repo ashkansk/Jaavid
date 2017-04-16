@@ -35,7 +35,6 @@
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.stepObjBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
@@ -60,41 +59,42 @@
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
 			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
 			this.label5 = new System.Windows.Forms.Label();
-			this.label14 = new System.Windows.Forms.Label();
-			this.label21 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.txtLoaderPerformanceValue = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.label17 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
-			this.label22 = new System.Windows.Forms.Label();
-			this.label23 = new System.Windows.Forms.Label();
-			this.label24 = new System.Windows.Forms.Label();
-			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.label29 = new System.Windows.Forms.Label();
 			this.textBox8 = new System.Windows.Forms.TextBox();
-			this.textBox9 = new System.Windows.Forms.TextBox();
-			this.textBox10 = new System.Windows.Forms.TextBox();
-			this.textBox11 = new System.Windows.Forms.TextBox();
+			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.label21 = new System.Windows.Forms.Label();
+			this.label17 = new System.Windows.Forms.Label();
 			this.label25 = new System.Windows.Forms.Label();
 			this.label26 = new System.Windows.Forms.Label();
-			this.label29 = new System.Windows.Forms.Label();
+			this.textBox9 = new System.Windows.Forms.TextBox();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.txtLoaderPerformanceValue = new System.Windows.Forms.TextBox();
+			this.textBox10 = new System.Windows.Forms.TextBox();
+			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.textBox11 = new System.Windows.Forms.TextBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label24 = new System.Windows.Forms.Label();
+			this.label23 = new System.Windows.Forms.Label();
+			this.label22 = new System.Windows.Forms.Label();
+			this.label27 = new System.Windows.Forms.Label();
+			this.label28 = new System.Windows.Forms.Label();
 			this.rdbMaaseh = new System.Windows.Forms.RadioButton();
 			this.rdbZaminTabiee = new System.Windows.Forms.RadioButton();
 			this.rdbRos = new System.Windows.Forms.RadioButton();
-			this.label27 = new System.Windows.Forms.Label();
-			this.label28 = new System.Windows.Forms.Label();
+			this.stepObjBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tableLayoutPanel1.SuspendLayout();
 			this.grpContainer.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudTotalDistance)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tableLayoutPanel1
@@ -150,10 +150,10 @@
 			this.tableLayoutPanel2.AutoSize = true;
 			this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.tableLayoutPanel2.ColumnCount = 6;
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
 			this.tableLayoutPanel2.Controls.Add(this.label1, 0, 1);
@@ -238,27 +238,23 @@
 			this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "RequiredMachineCountReal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N0"));
 			this.textBox5.Dock = System.Windows.Forms.DockStyle.Top;
 			this.textBox5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.textBox5.Location = new System.Drawing.Point(178, 335);
+			this.textBox5.Location = new System.Drawing.Point(152, 335);
 			this.textBox5.Name = "textBox5";
 			this.textBox5.ReadOnly = true;
-			this.textBox5.Size = new System.Drawing.Size(125, 21);
+			this.textBox5.Size = new System.Drawing.Size(104, 21);
 			this.textBox5.TabIndex = 17;
 			this.textBox5.Text = "0";
 			this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// stepObjBindingSource
-			// 
-			this.stepObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStep);
 			// 
 			// textBox3
 			// 
 			this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "WorkToDo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
 			this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.textBox3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.textBox3.Location = new System.Drawing.Point(551, 297);
+			this.textBox3.Location = new System.Drawing.Point(537, 297);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.ReadOnly = true;
-			this.textBox3.Size = new System.Drawing.Size(125, 21);
+			this.textBox3.Size = new System.Drawing.Size(104, 21);
 			this.textBox3.TabIndex = 17;
 			this.textBox3.Text = "0";
 			this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -267,10 +263,10 @@
 			// 
 			this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "MachinePowerReal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N4"));
 			this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.textBox1.Location = new System.Drawing.Point(178, 297);
+			this.textBox1.Location = new System.Drawing.Point(152, 297);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ReadOnly = true;
-			this.textBox1.Size = new System.Drawing.Size(125, 21);
+			this.textBox1.Size = new System.Drawing.Size(104, 21);
 			this.textBox1.TabIndex = 17;
 			this.textBox1.Text = "0";
 			this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -279,10 +275,10 @@
 			// 
 			this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "RequiredMachineCount", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
 			this.textBox4.Dock = System.Windows.Forms.DockStyle.Top;
-			this.textBox4.Location = new System.Drawing.Point(551, 335);
+			this.textBox4.Location = new System.Drawing.Point(537, 335);
 			this.textBox4.Name = "textBox4";
 			this.textBox4.ReadOnly = true;
-			this.textBox4.Size = new System.Drawing.Size(125, 21);
+			this.textBox4.Size = new System.Drawing.Size(104, 21);
 			this.textBox4.TabIndex = 17;
 			this.textBox4.Text = "0";
 			this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -291,16 +287,16 @@
 			// 
 			this.label10.AutoSize = true;
 			this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label10.Location = new System.Drawing.Point(313, 332);
+			this.label10.Location = new System.Drawing.Point(279, 332);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(92, 26);
+			this.label10.Size = new System.Drawing.Size(112, 26);
 			this.label10.TabIndex = 0;
 			this.label10.Text = "تعداد بارگیر مورد نیاز اصلاح شده";
 			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(320, 294);
+			this.label6.Location = new System.Drawing.Point(306, 294);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(85, 13);
 			this.label6.TabIndex = 0;
@@ -309,9 +305,9 @@
 			// label8
 			// 
 			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(696, 332);
+			this.label8.Location = new System.Drawing.Point(679, 332);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(80, 26);
+			this.label8.Size = new System.Drawing.Size(97, 13);
 			this.label8.TabIndex = 0;
 			this.label8.Text = "تعداد بارگیر مورد نیاز";
 			// 
@@ -321,14 +317,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.nudTotalDistance.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "TotalDistance", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N0"));
 			this.nudTotalDistance.DecimalPlaces = 1;
-			this.nudTotalDistance.Location = new System.Drawing.Point(551, 51);
+			this.nudTotalDistance.Location = new System.Drawing.Point(537, 51);
 			this.nudTotalDistance.Maximum = new decimal(new int[] {
             1000000000,
             0,
             0,
             0});
 			this.nudTotalDistance.Name = "nudTotalDistance";
-			this.nudTotalDistance.Size = new System.Drawing.Size(125, 21);
+			this.nudTotalDistance.Size = new System.Drawing.Size(104, 21);
 			this.nudTotalDistance.TabIndex = 2;
 			this.nudTotalDistance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
@@ -336,9 +332,9 @@
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label7.Location = new System.Drawing.Point(691, 294);
+			this.label7.Location = new System.Drawing.Point(647, 294);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(85, 26);
+			this.label7.Size = new System.Drawing.Size(129, 26);
 			this.label7.TabIndex = 0;
 			this.label7.Text = "حجم عملیاتی که باید انجام شود";
 			// 
@@ -347,7 +343,7 @@
 			this.label12.AutoSize = true;
 			this.label12.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label12.ForeColor = System.Drawing.Color.Gray;
-			this.label12.Location = new System.Drawing.Point(528, 56);
+			this.label12.Location = new System.Drawing.Point(514, 56);
 			this.label12.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(17, 11);
@@ -359,7 +355,7 @@
 			this.label11.AutoSize = true;
 			this.label11.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label11.ForeColor = System.Drawing.Color.Gray;
-			this.label11.Location = new System.Drawing.Point(468, 302);
+			this.label11.Location = new System.Drawing.Point(454, 302);
 			this.label11.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(77, 11);
@@ -381,14 +377,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.numericUpDown4.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "MachineCapacity", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N0"));
 			this.numericUpDown4.DecimalPlaces = 1;
-			this.numericUpDown4.Location = new System.Drawing.Point(551, 16);
+			this.numericUpDown4.Location = new System.Drawing.Point(537, 16);
 			this.numericUpDown4.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
 			this.numericUpDown4.Name = "numericUpDown4";
-			this.numericUpDown4.Size = new System.Drawing.Size(125, 21);
+			this.numericUpDown4.Size = new System.Drawing.Size(104, 21);
 			this.numericUpDown4.TabIndex = 20;
 			this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
@@ -397,7 +393,7 @@
 			this.label18.AutoSize = true;
 			this.label18.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label18.ForeColor = System.Drawing.Color.Gray;
-			this.label18.Location = new System.Drawing.Point(505, 21);
+			this.label18.Location = new System.Drawing.Point(491, 21);
 			this.label18.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
 			this.label18.Name = "label18";
 			this.label18.Size = new System.Drawing.Size(40, 11);
@@ -442,9 +438,9 @@
 			this.numericUpDown5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.numericUpDown5.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "Tilt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N1"));
-			this.numericUpDown5.Location = new System.Drawing.Point(551, 86);
+			this.numericUpDown5.Location = new System.Drawing.Point(537, 86);
 			this.numericUpDown5.Name = "numericUpDown5";
-			this.numericUpDown5.Size = new System.Drawing.Size(125, 21);
+			this.numericUpDown5.Size = new System.Drawing.Size(104, 21);
 			this.numericUpDown5.TabIndex = 20;
 			this.numericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericUpDown5.ThousandsSeparator = true;
@@ -454,7 +450,7 @@
 			this.label20.AutoSize = true;
 			this.label20.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label20.ForeColor = System.Drawing.Color.Gray;
-			this.label20.Location = new System.Drawing.Point(520, 91);
+			this.label20.Location = new System.Drawing.Point(506, 91);
 			this.label20.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
 			this.label20.Name = "label20";
 			this.label20.Size = new System.Drawing.Size(25, 11);
@@ -463,9 +459,9 @@
 			// 
 			// label15
 			// 
-			this.label15.Location = new System.Drawing.Point(315, 13);
+			this.label15.Location = new System.Drawing.Point(262, 13);
 			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(90, 31);
+			this.label15.Size = new System.Drawing.Size(129, 31);
 			this.label15.TabIndex = 0;
 			this.label15.Text = "ضریب اصلاح شرایط جوی";
 			// 
@@ -480,22 +476,22 @@
             0,
             0,
             65536});
-			this.numericUpDown3.Location = new System.Drawing.Point(178, 16);
+			this.numericUpDown3.Location = new System.Drawing.Point(152, 16);
 			this.numericUpDown3.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
 			this.numericUpDown3.Name = "numericUpDown3";
-			this.numericUpDown3.Size = new System.Drawing.Size(125, 21);
+			this.numericUpDown3.Size = new System.Drawing.Size(104, 21);
 			this.numericUpDown3.TabIndex = 2;
 			this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// label13
 			// 
-			this.label13.Location = new System.Drawing.Point(315, 48);
+			this.label13.Location = new System.Drawing.Point(262, 48);
 			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(90, 31);
+			this.label13.Size = new System.Drawing.Size(129, 31);
 			this.label13.TabIndex = 0;
 			this.label13.Text = "ضریب اصلاح اپراتور";
 			// 
@@ -510,14 +506,14 @@
             0,
             0,
             65536});
-			this.numericUpDown1.Location = new System.Drawing.Point(178, 51);
+			this.numericUpDown1.Location = new System.Drawing.Point(152, 51);
 			this.numericUpDown1.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
 			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(125, 21);
+			this.numericUpDown1.Size = new System.Drawing.Size(104, 21);
 			this.numericUpDown1.TabIndex = 19;
 			this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
@@ -532,102 +528,71 @@
             0,
             0,
             65536});
-			this.numericUpDown2.Location = new System.Drawing.Point(178, 86);
+			this.numericUpDown2.Location = new System.Drawing.Point(152, 86);
 			this.numericUpDown2.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
 			this.numericUpDown2.Name = "numericUpDown2";
-			this.numericUpDown2.Size = new System.Drawing.Size(125, 21);
+			this.numericUpDown2.Size = new System.Drawing.Size(104, 21);
 			this.numericUpDown2.TabIndex = 19;
 			this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(315, 83);
+			this.label5.Location = new System.Drawing.Point(302, 83);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(90, 31);
+			this.label5.Size = new System.Drawing.Size(89, 31);
 			this.label5.TabIndex = 0;
 			this.label5.Text = "ضریب اصلاح قضاوت مهندسی";
 			// 
-			// label14
+			// label29
 			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(351, 173);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(54, 13);
-			this.label14.TabIndex = 0;
-			this.label14.Text = "بازده بارگیر";
+			this.label29.AutoSize = true;
+			this.label29.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label29.ForeColor = System.Drawing.Color.Gray;
+			this.label29.Location = new System.Drawing.Point(69, 302);
+			this.label29.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+			this.label29.Name = "label29";
+			this.label29.Size = new System.Drawing.Size(77, 11);
+			this.label29.TabIndex = 16;
+			this.label29.Text = "متر مکعب / ساعت";
 			// 
-			// label21
+			// textBox8
 			// 
-			this.label21.AutoSize = true;
-			this.label21.Location = new System.Drawing.Point(316, 138);
-			this.label21.Name = "label21";
-			this.label21.Size = new System.Drawing.Size(89, 13);
-			this.label21.TabIndex = 0;
-			this.label21.Text = "ضریب راندمان جام";
+			this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "DepartureDuration", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N4"));
+			this.textBox8.Location = new System.Drawing.Point(537, 141);
+			this.textBox8.Name = "textBox8";
+			this.textBox8.ReadOnly = true;
+			this.textBox8.Size = new System.Drawing.Size(104, 21);
+			this.textBox8.TabIndex = 17;
+			this.textBox8.Text = "0";
+			this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// textBox2
 			// 
 			this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "CustomParam1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
-			this.textBox2.Location = new System.Drawing.Point(178, 141);
+			this.textBox2.Location = new System.Drawing.Point(152, 141);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.ReadOnly = true;
-			this.textBox2.Size = new System.Drawing.Size(125, 21);
+			this.textBox2.Size = new System.Drawing.Size(104, 21);
 			this.textBox2.TabIndex = 17;
 			this.textBox2.Text = "0";
 			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// txtLoaderPerformanceValue
+			// label21
 			// 
-			this.txtLoaderPerformanceValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtLoaderPerformanceValue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "MachinePower", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
-			this.txtLoaderPerformanceValue.Location = new System.Drawing.Point(178, 246);
-			this.txtLoaderPerformanceValue.Name = "txtLoaderPerformanceValue";
-			this.txtLoaderPerformanceValue.ReadOnly = true;
-			this.txtLoaderPerformanceValue.Size = new System.Drawing.Size(125, 21);
-			this.txtLoaderPerformanceValue.TabIndex = 17;
-			this.txtLoaderPerformanceValue.Text = "0";
-			this.txtLoaderPerformanceValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(353, 243);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(52, 13);
-			this.label3.TabIndex = 0;
-			this.label3.Text = "توان بارگیر";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label4.ForeColor = System.Drawing.Color.Gray;
-			this.label4.Location = new System.Drawing.Point(95, 251);
-			this.label4.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(77, 11);
-			this.label4.TabIndex = 16;
-			this.label4.Text = "متر مکعب / ساعت";
-			// 
-			// textBox6
-			// 
-			this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "MachineEfficiency", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
-			this.textBox6.Location = new System.Drawing.Point(178, 176);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.ReadOnly = true;
-			this.textBox6.Size = new System.Drawing.Size(125, 21);
-			this.textBox6.TabIndex = 17;
-			this.textBox6.Text = "0";
-			this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.label21.AutoSize = true;
+			this.label21.Location = new System.Drawing.Point(302, 138);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(89, 13);
+			this.label21.TabIndex = 0;
+			this.label21.Text = "ضریب راندمان جام";
 			// 
 			// label17
 			// 
@@ -638,113 +603,12 @@
 			this.label17.TabIndex = 0;
 			this.label17.Text = "زمان سفر رفت";
 			// 
-			// label16
-			// 
-			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(686, 173);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(90, 13);
-			this.label16.TabIndex = 0;
-			this.label16.Text = "زمان سفر برگشت";
-			// 
-			// label22
-			// 
-			this.label22.AutoSize = true;
-			this.label22.Location = new System.Drawing.Point(702, 208);
-			this.label22.Name = "label22";
-			this.label22.Size = new System.Drawing.Size(74, 13);
-			this.label22.TabIndex = 0;
-			this.label22.Text = "زمان ثابت سفر";
-			// 
-			// label23
-			// 
-			this.label23.AutoSize = true;
-			this.label23.Location = new System.Drawing.Point(708, 243);
-			this.label23.Name = "label23";
-			this.label23.Size = new System.Drawing.Size(68, 13);
-			this.label23.TabIndex = 0;
-			this.label23.Text = "زمان کل سفر";
-			// 
-			// label24
-			// 
-			this.label24.AutoSize = true;
-			this.label24.Location = new System.Drawing.Point(326, 208);
-			this.label24.Name = "label24";
-			this.label24.Size = new System.Drawing.Size(79, 13);
-			this.label24.TabIndex = 0;
-			this.label24.Text = "ضریب تورم خاک";
-			// 
-			// textBox7
-			// 
-			this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "SoilInflationQuof", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
-			this.textBox7.Location = new System.Drawing.Point(178, 211);
-			this.textBox7.Name = "textBox7";
-			this.textBox7.ReadOnly = true;
-			this.textBox7.Size = new System.Drawing.Size(125, 21);
-			this.textBox7.TabIndex = 17;
-			this.textBox7.Text = "0";
-			this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// textBox8
-			// 
-			this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "DepartureDuration", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N4"));
-			this.textBox8.Location = new System.Drawing.Point(551, 141);
-			this.textBox8.Name = "textBox8";
-			this.textBox8.ReadOnly = true;
-			this.textBox8.Size = new System.Drawing.Size(125, 21);
-			this.textBox8.TabIndex = 17;
-			this.textBox8.Text = "0";
-			this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// textBox9
-			// 
-			this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "ReturnDuration", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N4"));
-			this.textBox9.Location = new System.Drawing.Point(551, 176);
-			this.textBox9.Name = "textBox9";
-			this.textBox9.ReadOnly = true;
-			this.textBox9.Size = new System.Drawing.Size(125, 21);
-			this.textBox9.TabIndex = 17;
-			this.textBox9.Text = "0";
-			this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// textBox10
-			// 
-			this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "FixedOverheadDuration", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N4"));
-			this.textBox10.Location = new System.Drawing.Point(551, 211);
-			this.textBox10.Name = "textBox10";
-			this.textBox10.ReadOnly = true;
-			this.textBox10.Size = new System.Drawing.Size(125, 21);
-			this.textBox10.TabIndex = 17;
-			this.textBox10.Text = "0";
-			this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// textBox11
-			// 
-			this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "TotalCycleDuration", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N4"));
-			this.textBox11.Location = new System.Drawing.Point(551, 246);
-			this.textBox11.Name = "textBox11";
-			this.textBox11.ReadOnly = true;
-			this.textBox11.Size = new System.Drawing.Size(125, 21);
-			this.textBox11.TabIndex = 17;
-			this.textBox11.Text = "0";
-			this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
 			// label25
 			// 
 			this.label25.AutoSize = true;
 			this.label25.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label25.ForeColor = System.Drawing.Color.Gray;
-			this.label25.Location = new System.Drawing.Point(519, 146);
+			this.label25.Location = new System.Drawing.Point(505, 146);
 			this.label25.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
 			this.label25.Name = "label25";
 			this.label25.Size = new System.Drawing.Size(26, 11);
@@ -756,24 +620,180 @@
 			this.label26.AutoSize = true;
 			this.label26.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label26.ForeColor = System.Drawing.Color.Gray;
-			this.label26.Location = new System.Drawing.Point(519, 181);
+			this.label26.Location = new System.Drawing.Point(505, 181);
 			this.label26.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
 			this.label26.Name = "label26";
 			this.label26.Size = new System.Drawing.Size(26, 11);
 			this.label26.TabIndex = 16;
 			this.label26.Text = "دقیقه";
 			// 
-			// label29
+			// textBox9
 			// 
-			this.label29.AutoSize = true;
-			this.label29.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label29.ForeColor = System.Drawing.Color.Gray;
-			this.label29.Location = new System.Drawing.Point(95, 302);
-			this.label29.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-			this.label29.Name = "label29";
-			this.label29.Size = new System.Drawing.Size(77, 11);
-			this.label29.TabIndex = 16;
-			this.label29.Text = "متر مکعب / ساعت";
+			this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "ReturnDuration", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N4"));
+			this.textBox9.Location = new System.Drawing.Point(537, 176);
+			this.textBox9.Name = "textBox9";
+			this.textBox9.ReadOnly = true;
+			this.textBox9.Size = new System.Drawing.Size(104, 21);
+			this.textBox9.TabIndex = 17;
+			this.textBox9.Text = "0";
+			this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// textBox6
+			// 
+			this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "MachineEfficiency", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.textBox6.Location = new System.Drawing.Point(152, 176);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.ReadOnly = true;
+			this.textBox6.Size = new System.Drawing.Size(104, 21);
+			this.textBox6.TabIndex = 17;
+			this.textBox6.Text = "0";
+			this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(686, 173);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(90, 13);
+			this.label16.TabIndex = 0;
+			this.label16.Text = "زمان سفر برگشت";
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(337, 173);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(54, 13);
+			this.label14.TabIndex = 0;
+			this.label14.Text = "بازده بارگیر";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label4.ForeColor = System.Drawing.Color.Gray;
+			this.label4.Location = new System.Drawing.Point(69, 251);
+			this.label4.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(77, 11);
+			this.label4.TabIndex = 16;
+			this.label4.Text = "متر مکعب / ساعت";
+			// 
+			// txtLoaderPerformanceValue
+			// 
+			this.txtLoaderPerformanceValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtLoaderPerformanceValue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "MachinePower", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.txtLoaderPerformanceValue.Location = new System.Drawing.Point(152, 246);
+			this.txtLoaderPerformanceValue.Name = "txtLoaderPerformanceValue";
+			this.txtLoaderPerformanceValue.ReadOnly = true;
+			this.txtLoaderPerformanceValue.Size = new System.Drawing.Size(104, 21);
+			this.txtLoaderPerformanceValue.TabIndex = 17;
+			this.txtLoaderPerformanceValue.Text = "0";
+			this.txtLoaderPerformanceValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// textBox10
+			// 
+			this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "FixedOverheadDuration", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N4"));
+			this.textBox10.Location = new System.Drawing.Point(537, 211);
+			this.textBox10.Name = "textBox10";
+			this.textBox10.ReadOnly = true;
+			this.textBox10.Size = new System.Drawing.Size(104, 21);
+			this.textBox10.TabIndex = 17;
+			this.textBox10.Text = "0";
+			this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// textBox7
+			// 
+			this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "SoilInflationQuof", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.textBox7.Location = new System.Drawing.Point(152, 211);
+			this.textBox7.Name = "textBox7";
+			this.textBox7.ReadOnly = true;
+			this.textBox7.Size = new System.Drawing.Size(104, 21);
+			this.textBox7.TabIndex = 17;
+			this.textBox7.Text = "0";
+			this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// textBox11
+			// 
+			this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "TotalCycleDuration", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N4"));
+			this.textBox11.Location = new System.Drawing.Point(537, 246);
+			this.textBox11.Name = "textBox11";
+			this.textBox11.ReadOnly = true;
+			this.textBox11.Size = new System.Drawing.Size(104, 21);
+			this.textBox11.TabIndex = 17;
+			this.textBox11.Text = "0";
+			this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(339, 243);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(52, 13);
+			this.label3.TabIndex = 0;
+			this.label3.Text = "توان بارگیر";
+			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.Location = new System.Drawing.Point(312, 208);
+			this.label24.Name = "label24";
+			this.label24.Size = new System.Drawing.Size(79, 13);
+			this.label24.TabIndex = 0;
+			this.label24.Text = "ضریب تورم خاک";
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Location = new System.Drawing.Point(708, 243);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(68, 13);
+			this.label23.TabIndex = 0;
+			this.label23.Text = "زمان کل سفر";
+			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.Location = new System.Drawing.Point(702, 208);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(74, 13);
+			this.label22.TabIndex = 0;
+			this.label22.Text = "زمان ثابت سفر";
+			// 
+			// label27
+			// 
+			this.label27.AutoSize = true;
+			this.label27.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label27.ForeColor = System.Drawing.Color.Gray;
+			this.label27.Location = new System.Drawing.Point(505, 216);
+			this.label27.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+			this.label27.Name = "label27";
+			this.label27.Size = new System.Drawing.Size(26, 11);
+			this.label27.TabIndex = 16;
+			this.label27.Text = "دقیقه";
+			// 
+			// label28
+			// 
+			this.label28.AutoSize = true;
+			this.label28.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label28.ForeColor = System.Drawing.Color.Gray;
+			this.label28.Location = new System.Drawing.Point(505, 251);
+			this.label28.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+			this.label28.Name = "label28";
+			this.label28.Size = new System.Drawing.Size(26, 11);
+			this.label28.TabIndex = 16;
+			this.label28.Text = "دقیقه";
 			// 
 			// rdbMaaseh
 			// 
@@ -814,29 +834,9 @@
 			this.rdbRos.UseVisualStyleBackColor = true;
 			this.rdbRos.CheckedChanged += new System.EventHandler(this.SoilTypeButton_Click);
 			// 
-			// label27
+			// stepObjBindingSource
 			// 
-			this.label27.AutoSize = true;
-			this.label27.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label27.ForeColor = System.Drawing.Color.Gray;
-			this.label27.Location = new System.Drawing.Point(519, 216);
-			this.label27.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-			this.label27.Name = "label27";
-			this.label27.Size = new System.Drawing.Size(26, 11);
-			this.label27.TabIndex = 16;
-			this.label27.Text = "دقیقه";
-			// 
-			// label28
-			// 
-			this.label28.AutoSize = true;
-			this.label28.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label28.ForeColor = System.Drawing.Color.Gray;
-			this.label28.Location = new System.Drawing.Point(519, 251);
-			this.label28.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-			this.label28.Name = "label28";
-			this.label28.Size = new System.Drawing.Size(26, 11);
-			this.label28.TabIndex = 16;
-			this.label28.Text = "دقیقه";
+			this.stepObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStep);
 			// 
 			// ucKhaakriziBaargiriStep
 			// 
@@ -853,13 +853,13 @@
 			this.grpContainer.PerformLayout();
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.tableLayoutPanel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudTotalDistance)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

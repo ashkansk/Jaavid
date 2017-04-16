@@ -72,6 +72,12 @@
     <Compile Include="Forms\FormKhaakriziResult.Designer.cs">
       <DependentUpon>FormKhaakriziResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ucKhaakriziPakhshStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ucKhaakriziPakhshStep.Designer.cs">
+      <DependentUpon>ucKhaakriziPakhshStep.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ucKhaakriziBaarbariStep.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormNewKhaakriziProject.resx">
       <DependentUpon>FormNewKhaakriziProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ucKhaakriziPakhshStep.resx">
+      <DependentUpon>ucKhaakriziPakhshStep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ucKhaakriziBaarbariStep.resx">
       <DependentUpon>ucKhaakriziBaarbariStep.cs</DependentUpon>

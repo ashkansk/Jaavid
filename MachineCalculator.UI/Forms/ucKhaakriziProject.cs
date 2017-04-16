@@ -35,7 +35,7 @@ namespace MachineCalculator.UI.Forms
 			{
 				new ucKhaakriziBaargiriStep(_project.ID),
 				new ucKhaakriziBaabariStep(_project.ID),
-				new ucKhaakriziProjectStep(_project.Steps[2].ID, "بولدوزر", "فاصله حمل", "متر", "شیب"),
+				new ucKhaakriziPakhshStep(_project.ID),
 				new ucKhaakriziProjectStep(_project.Steps[3].ID, "غلطک", "تعداد پاس عبوری", "", "ضخامت لایه"),
 			};
 			for (int i = 0; i < _ucSteps.Length; i++)
