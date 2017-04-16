@@ -60,6 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\KhaakriziBaarbariStep.cs" />
+    <Compile Include="Entities\KhaakriziBaargiriStep.cs" />
+    <Compile Include="Entities\KhaakriziPakhshStep.cs" />
+    <Compile Include="Entities\KhaakriziTarakomStep.cs" />
     <Compile Include="Entities\ProjectStepExtended.cs" />
     <Compile Include="Entities\SoilInfo.cs" />
     <Compile Include="Forms\FormKhaakriziResult.cs">
@@ -75,6 +79,7 @@
       <DependentUpon>ucKhaakriziBaargiriStep.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CaptionHelper.cs" />
+    <Compile Include="Helpers\ControlsPropertyHelper.cs" />
     <Compile Include="Helpers\DoubleHelperClass.cs" />
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Entities\KhaakriziProject.cs" />

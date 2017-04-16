@@ -156,7 +156,7 @@ namespace MachineCalculator.UI.Repositories
 		}
 
 		public List<TEntity> Set<TEntity>()
-			where TEntity : class, IEntity, new()
+			where TEntity : class, IEntity
 		{
 			object toReturn = null;
 			Type t = typeof(TEntity);

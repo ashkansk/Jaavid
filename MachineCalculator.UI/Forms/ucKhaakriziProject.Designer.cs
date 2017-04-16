@@ -71,7 +71,7 @@
 			this.tabpgBaargiri.Location = new System.Drawing.Point(4, 25);
 			this.tabpgBaargiri.Name = "tabpgBaargiri";
 			this.tabpgBaargiri.Padding = new System.Windows.Forms.Padding(3);
-			this.tabpgBaargiri.Size = new System.Drawing.Size(942, 343);
+			this.tabpgBaargiri.Size = new System.Drawing.Size(882, 359);
 			this.tabpgBaargiri.TabIndex = 1;
 			this.tabpgBaargiri.Text = "بارگیری";
 			this.tabpgBaargiri.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
 			this.tabCtrlSteps.Name = "tabCtrlSteps";
 			this.tabCtrlSteps.RightToLeftLayout = true;
 			this.tabCtrlSteps.SelectedIndex = 0;
-			this.tabCtrlSteps.Size = new System.Drawing.Size(950, 372);
+			this.tabCtrlSteps.Size = new System.Drawing.Size(890, 388);
 			this.tabCtrlSteps.TabIndex = 0;
 			this.tabCtrlSteps.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabCtrlSteps_Selecting);
 			// 
@@ -108,12 +108,12 @@
 			this.tableLayoutPanel1.RowCount = 2;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(956, 414);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(896, 430);
 			this.tableLayoutPanel1.TabIndex = 1;
 			// 
 			// btnShowResult
 			// 
-			this.btnShowResult.Location = new System.Drawing.Point(39, 381);
+			this.btnShowResult.Location = new System.Drawing.Point(39, 397);
 			this.btnShowResult.Name = "btnShowResult";
 			this.btnShowResult.Size = new System.Drawing.Size(113, 23);
 			this.btnShowResult.TabIndex = 1;
@@ -129,7 +129,7 @@
 			this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.Name = "ucKhaakriziProject";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.Size = new System.Drawing.Size(956, 414);
+			this.Size = new System.Drawing.Size(896, 430);
 			this.Load += new System.EventHandler(this.ucKhaakriziProject_Load);
 			this.tabCtrlSteps.ResumeLayout(false);
 			this.tableLayoutPanel1.ResumeLayout(false);

@@ -52,7 +52,7 @@
             this.mItemClearForm});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(990, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(954, 24);
 			this.menuStrip1.TabIndex = 1;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -121,7 +121,7 @@
 			this.lblUserGuide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblUserGuide.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.lblUserGuide.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.lblUserGuide.Location = new System.Drawing.Point(146, 24);
+			this.lblUserGuide.Location = new System.Drawing.Point(110, 24);
 			this.lblUserGuide.Name = "lblUserGuide";
 			this.lblUserGuide.Size = new System.Drawing.Size(829, 87);
 			this.lblUserGuide.TabIndex = 2;
@@ -135,7 +135,7 @@
 			this.grpContainer.Location = new System.Drawing.Point(3, 16);
 			this.grpContainer.Name = "grpContainer";
 			this.grpContainer.Padding = new System.Windows.Forms.Padding(3, 10, 3, 3);
-			this.grpContainer.Size = new System.Drawing.Size(984, 412);
+			this.grpContainer.Size = new System.Drawing.Size(948, 518);
 			this.grpContainer.TabIndex = 3;
 			this.grpContainer.TabStop = false;
 			this.grpContainer.Text = "راهنما";
@@ -152,19 +152,20 @@
 			this.tableLayoutPanel1.RowCount = 2;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(990, 431);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(954, 537);
 			this.tableLayoutPanel1.TabIndex = 4;
 			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(990, 455);
+			this.ClientSize = new System.Drawing.Size(954, 561);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.menuStrip1);
 			this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.MainMenuStrip = this.menuStrip1;
 			this.MaximizeBox = false;
+			this.MinimumSize = new System.Drawing.Size(970, 600);
 			this.Name = "FormMain";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;

@@ -1,7 +1,6 @@
 ﻿using MachineCalculator.UI.Entities;
 using MachineCalculator.UI.Repositories;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace MachineCalculator.UI.Forms
@@ -11,12 +10,21 @@ namespace MachineCalculator.UI.Forms
 		private ProjectRepository _projectRepo;
 		private ProjectStepRepository _projectStepRepo;
 		private Project _project;
+		private Dictionary<SoilType, CheckBox> _mapSoilTypeCheckBox;
 		public int CreatedProjectID { get { return _project.ID; } }
 		public FormNewKhaakriziProject()
 		{
 			InitializeComponent();
+
 			_projectRepo = Factory.GetProjectRepository();
 			_projectStepRepo = Factory.GetProjectStepRepository();
+			_mapSoilTypeCheckBox = new Dictionary<SoilType, CheckBox>
+			{
+				{ SoilType.SangShekaste, chkSiteSangShekaste },
+				{ SoilType.ZaminTabiee, chkSiteZaminTabiee },
+				{ SoilType.Ros, chkSiteRos },
+				{ SoilType.Maaseh, chkSiteMaaseh }
+			};
 		}
 
 		private void FormNewKhaakriziProject_Load(object sender, System.EventArgs e)
@@ -55,139 +63,43 @@ namespace MachineCalculator.UI.Forms
 
 			_project.Steps = new List<ProjectStep>();
 
-			// create steps' soil, but only the first step needs work to do, the next steps' work to do are calcualted
-			if (chkSiteSangShekaste.Checked)
-				_project.Steps.AddRange(new List<ProjectStep>
-				{
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Baargiri,
-						StepTypeIndex =(int)KhaakriziStepType.Baargiri,
-						SoilTypeIndex = (int)SoilType.SangShekaste,
-						SoilVolume = (int)nudSangShekaste.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Baarbari,
-						StepTypeIndex =(int)KhaakriziStepType.Baarbari,
-						SoilTypeIndex = (int)SoilType.SangShekaste,
-						SoilVolume = (int)nudSangShekaste.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Pakhsh,
-						StepTypeIndex =(int)KhaakriziStepType.Pakhsh,
-						SoilTypeIndex = (int)SoilType.SangShekaste,
-						SoilVolume = (int)nudSangShekaste.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Tarakom,
-						StepTypeIndex =(int)KhaakriziStepType.Tarakom,
-						SoilTypeIndex = (int)SoilType.SangShekaste,
-						SoilVolume = (int)nudSangShekaste.Value
-					},
-				});
+			// create steps for each type of soil (if checked), but only the first step needs work to do, the next steps' work to do are calcualted
 
-
-			if (chkSiteZaminTabiee.Checked)
-				_project.Steps.AddRange(new List<ProjectStep>
-				{
-					new ProjectStep
+			foreach (var soilAndCheckBox in _mapSoilTypeCheckBox)
+			{
+				if (soilAndCheckBox.Value.Checked)
+					_project.Steps.AddRange(new List<ProjectStep>
 					{
-						StepIndex =(int)KhaakriziStepType.Baargiri,
-						StepTypeIndex =(int)KhaakriziStepType.Baargiri,
-						SoilTypeIndex = (int)SoilType.ZaminTabiee,
-						SoilVolume = (int)nudZaminTabiee.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Baarbari,
-						StepTypeIndex =(int)KhaakriziStepType.Baarbari,
-						SoilTypeIndex = (int)SoilType.ZaminTabiee,
-						SoilVolume = (int)nudZaminTabiee.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Pakhsh,
-						StepTypeIndex =(int)KhaakriziStepType.Pakhsh,
-						SoilTypeIndex = (int)SoilType.ZaminTabiee,
-						SoilVolume = (int)nudZaminTabiee.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Tarakom,
-						StepTypeIndex =(int)KhaakriziStepType.Tarakom,
-						SoilTypeIndex = (int)SoilType.ZaminTabiee,
-						SoilVolume = (int)nudZaminTabiee.Value
-					},
-				});
-
-			if (chkSiteRos.Checked)
-				_project.Steps.AddRange(new List<ProjectStep>
-				{
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Baargiri,
-						StepTypeIndex =(int)KhaakriziStepType.Baargiri,
-						SoilTypeIndex = (int)SoilType.Ros,
-						SoilVolume = (int)nudRos.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Baarbari,
-						StepTypeIndex =(int)KhaakriziStepType.Baarbari,
-						SoilTypeIndex = (int)SoilType.Ros,
-						SoilVolume = (int)nudRos.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Pakhsh,
-						StepTypeIndex =(int)KhaakriziStepType.Pakhsh,
-						SoilTypeIndex = (int)SoilType.Ros,
-						SoilVolume = (int)nudRos.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Tarakom,
-						StepTypeIndex =(int)KhaakriziStepType.Tarakom,
-						SoilTypeIndex = (int)SoilType.Ros,
-						SoilVolume = (int)nudRos.Value
-					},
-				});
-
-			if (chkSiteMaaseh.Checked)
-				_project.Steps.AddRange(new List<ProjectStep>
-				{
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Baargiri,
-						StepTypeIndex =(int)KhaakriziStepType.Baargiri,
-						SoilTypeIndex = (int)SoilType.Maaseh,
-						SoilVolume = (int)nudMaaseh.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Baarbari,
-						StepTypeIndex =(int)KhaakriziStepType.Baarbari,
-						SoilTypeIndex = (int)SoilType.Maaseh,
-						SoilVolume = (int)nudMaaseh.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Pakhsh,
-						StepTypeIndex =(int)KhaakriziStepType.Pakhsh,
-						SoilTypeIndex = (int)SoilType.Maaseh,
-						SoilVolume = (int)nudMaaseh.Value
-					},
-					new ProjectStep
-					{
-						StepIndex =(int)KhaakriziStepType.Tarakom,
-						StepTypeIndex =(int)KhaakriziStepType.Tarakom,
-						SoilTypeIndex = (int)SoilType.Maaseh,
-						SoilVolume = (int)nudMaaseh.Value
-					},
-				});
+						new KhaakriziBaargiriStep
+						{
+							StepIndex =(int)KhaakriziStepType.Baargiri,
+							StepTypeIndex =(int)KhaakriziStepType.Baargiri,
+							SoilTypeIndex = (int)soilAndCheckBox.Key,
+							SoilVolume = (int)nudSangShekaste.Value
+						},
+						new KhaakriziBaarbariStep
+						{
+							StepIndex =(int)KhaakriziStepType.Baarbari,
+							StepTypeIndex =(int)KhaakriziStepType.Baarbari,
+							SoilTypeIndex = (int)soilAndCheckBox.Key,
+							SoilVolume = (int)nudSangShekaste.Value
+						},
+						new KhaakriziPakhshStep
+						{
+							StepIndex =(int)KhaakriziStepType.Pakhsh,
+							StepTypeIndex =(int)KhaakriziStepType.Pakhsh,
+							SoilTypeIndex = (int)soilAndCheckBox.Key,
+							SoilVolume = (int)nudSangShekaste.Value
+						},
+						new KhaakriziTarakomStep
+						{
+							StepIndex =(int)KhaakriziStepType.Tarakom,
+							StepTypeIndex =(int)KhaakriziStepType.Tarakom,
+							SoilTypeIndex = (int)soilAndCheckBox.Key,
+							SoilVolume = (int)nudSangShekaste.Value
+						},
+					});
+			}
 
 			try
 			{
@@ -206,6 +118,7 @@ namespace MachineCalculator.UI.Forms
 				_projectRepo.Insert(_project);
 				foreach (ProjectStep step in _project.Steps)
 				{
+					step.MachineEfficiency = (decimal)_project.ActiveHoursPerShift / (decimal)_project.HoursPerShift;
 					step.ProjectID = _project.ID;
 					_projectStepRepo.Insert(step);
 				}

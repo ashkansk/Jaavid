@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 namespace MachineCalculator.UI.Repositories
 {
 	public interface IRepository<TEntity>
-		where TEntity: class, IEntity, new()
+		where TEntity: class, IEntity
 	{
 		List<TEntity> Get(Expression<Func<TEntity, bool>> filter);
 		void Insert(TEntity entity);

@@ -12,7 +12,7 @@ namespace MachineCalculator.UI.Forms
 		private ProjectRepository _projectRepo;
 		private ProjectStepRepository _projectSiteRepo;
 		private MachineRepository _machingRepo;
-		private ucKhaakriziProjectStep[] _ucSteps;
+		private UserControl[] _ucSteps;
 		private int _lastOpenTabPageIndex;
 
 		public ucKhaakriziProject(int projectID)
@@ -31,9 +31,9 @@ namespace MachineCalculator.UI.Forms
 		private void ucKhaakriziProject_Load(object sender, EventArgs e)
 		{
 			_lastOpenTabPageIndex = 0;
-			_ucSteps = new ucKhaakriziProjectStep[]
+			_ucSteps = new UserControl[]
 			{
-				new ucKhaakriziProjectStep(_project.Steps[0].ID, "بارگیر", "فاصله حمل", "متر", null),
+				new ucKhaakriziBaargiriStep(_project.ID),
 				new ucKhaakriziProjectStep(_project.Steps[1].ID, "باربر", "فاصله حمل", "کیلومتر", null),
 				new ucKhaakriziProjectStep(_project.Steps[2].ID, "بولدوزر", "فاصله حمل", "متر", "شیب"),
 				new ucKhaakriziProjectStep(_project.Steps[3].ID, "غلطک", "تعداد پاس عبوری", "", "ضخامت لایه"),
@@ -55,7 +55,7 @@ namespace MachineCalculator.UI.Forms
 
 		private void tabCtrlSteps_Selecting(object sender, TabControlCancelEventArgs e)
 		{
-			if (_ucSteps[_lastOpenTabPageIndex].IsValid())
+			if (_ucSteps[_lastOpenTabPageIndex].Validate())
 			{
 				if(_lastOpenTabPageIndex == 0) // all steps are dependent on step 0, so when leaving step 0, we update all other steps' values
 				{

@@ -31,7 +31,7 @@ namespace MachineCalculator.UI.Forms
 		private void ucKhaakriziProjectStep_Load(object sender, EventArgs e)
 		{
 			foreach (ProjectStep step in _steps)
-				step.WorkToDo = step.SoilVolume / _project.TotalActiveHoursPerMonth;
+				step.WorkToDo = step.SoilVolume / (decimal)_project.TotalActiveHoursPerMonth;
 
 			// set rdb tags in order to be later used as datasource
 			rdbSangShekaste.Tag = _steps.FirstOrDefault(ss => ss.SoilTypeIndex == (int)SoilType.SangShekaste);

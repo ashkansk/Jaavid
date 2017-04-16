@@ -4,12 +4,14 @@ using System;
 namespace MachineCalculator.UI.Entities
 {
 	[NotifyPropertyChanged]
-	public class ProjectStep : IEntity
+	public abstract class ProjectStep : IEntity
 	{
 		public ProjectStep()
 		{
-			OperatorFactorQuof = EnvironmentFactorQuof = ExpertJudgementFactorQuof = 1;
-			FixedDuration = 0.05;
+			OperatorFactorQuof = 0.75m;
+			EnvironmentFactorQuof = 0.9m;
+			ExpertJudgementFactorQuof = 1;
+			FixedOverheadDuration = 0.05m;
 		}
 
 		public int ID { get; set; }
@@ -17,66 +19,82 @@ namespace MachineCalculator.UI.Entities
 		public int StepIndex { get; set; }
 		public int StepTypeIndex { get; set; }
 
-		public string Title { get; set; }
-
 		// machine info
-		public double MachineCapacity { get; set; }
-		public double MachinePower { get; set; }
-		public double MachineEfficiency { get; set; }
-		public double DepartureSpeed { get; set; }
-		public double ReturnSpeed { get; set; }
-		public double DepartureDuration { get; set; }
-		public double ReturnDuration { get; set; }
-		public double TotalCycleDuration { get; set; }
-		public double FixedDuration { get; set; }
-		public double JaamEfficiencyQuof { get; set; }
-		// machine info - end
-
-		// soil info
-		public int SoilTypeIndex { get; set; }
-		public double SoilVolume { get; set; }
-		public double SoilInflationQuof { get; set; }
-		public double Tilt { get; set; }
-		public double TiltQuof { get; set; }
-		// soil info - end
-
-		// quofficients
-		public double OperatorFactorQuof { get; set; }
-		public double EnvironmentFactorQuof { get; set; }
-		public double ExpertJudgementFactorQuof { get; set; }
-		// quofficients - end
-
-		// work info
-		public double TotalDistance { get; set; }
-		public double WorkToDo { get; set; }
-		public int PassCount { get; set; }
-		// work info - end
-
-		[IgnoreAutoChangeNotification]
-		public double RequiredMachineCount
+		public decimal MachineCapacity { get; set; } // C
+		public virtual decimal MachinePower
 		{
 			get
 			{
-				if (MachinePowerReal <= 0)
+				if (SoilInflationQuof * TotalCycleDuration == 0) // prevent divide by zero
 					return 0;
-				return (WorkToDo / MachinePowerReal);
+				decimal pow = (60 * MachineCapacity * MachineEfficiency * CustomParam1) / (SoilInflationQuof * TotalCycleDuration);
+				return pow;
 			}
-		}
+		} // Q
 		[IgnoreAutoChangeNotification]
-		public double MachinePowerReal
+		public decimal MachinePowerReal
 		{
 			get
 			{
 				return MachinePower * EnvironmentFactorQuof * OperatorFactorQuof * ExpertJudgementFactorQuof;
 			}
 		}
+		public decimal MachineEfficiency { get; set; } // E
+		public decimal DepartureSpeed { get; set; } // V1
+		public decimal ReturnSpeed { get; set; } // V2
+		public abstract decimal DepartureDuration { get; } // T1
+		public abstract decimal ReturnDuration { get; } // T2
+		public virtual decimal TotalCycleDuration // T
+		{
+			get
+			{
+				return DepartureDuration + ReturnDuration + FixedOverheadDuration;
+			}
+		}
+		public virtual decimal FixedOverheadDuration { get; set; } // T3
+		[IgnoreAutoChangeNotification]
+		public decimal RequiredMachineCount
+		{
+			get
+			{
+				if (MachinePowerReal <= 0) // prevent divide by zero
+					return 0;
+				return (WorkToDo / MachinePowerReal);
+			}
+		}
 
+		[IgnoreAutoChangeNotification]
 		public int RequiredMachineCountReal
 		{
 			get
 			{
-				return (int)Math.Ceiling(RequiredMachineCount);
+				return Convert.ToInt32(Math.Ceiling(RequiredMachineCount));
 			}
 		}
+		// machine info - end
+
+		// soil info
+		public int SoilTypeIndex { get; set; }
+		public decimal SoilVolume { get; set; } // 
+		public abstract decimal SoilInflationQuof { get; } // f
+		public decimal Tilt { get; set; } // S
+										 // soil info - end
+
+		// quofficients
+		public decimal OperatorFactorQuof { get; set; }
+		public decimal EnvironmentFactorQuof { get; set; }
+		public decimal ExpertJudgementFactorQuof { get; set; }
+		// quofficients - end
+
+		// work info
+		public decimal TotalDistance { get; set; }
+		public decimal WorkToDo { get; set; }
+		// work info - end
+
+		// custom params
+		public virtual decimal CustomParam1 { get; set; }
+		public virtual decimal CustomParam2 { get; set; }
+		public virtual decimal CustomParam3 { get; set; }
+		// end - custom params
 	}
 }

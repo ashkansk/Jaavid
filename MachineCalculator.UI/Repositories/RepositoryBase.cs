@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 namespace MachineCalculator.UI.Repositories
 {
 	public abstract class RepositoryBase<TEntity>
-		where TEntity : class, IEntity, new()
+		where TEntity : class, IEntity
 	{
 		private InMemoryDB _db;
 		protected InMemoryDB DB
