@@ -35,6 +35,7 @@
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.stepObjBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
@@ -55,12 +56,6 @@
 			this.label20 = new System.Windows.Forms.Label();
 			this.label29 = new System.Windows.Forms.Label();
 			this.label30 = new System.Windows.Forms.Label();
-			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label13 = new System.Windows.Forms.Label();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-			this.label15 = new System.Windows.Forms.Label();
-			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
 			this.label22 = new System.Windows.Forms.Label();
 			this.label25 = new System.Windows.Forms.Label();
 			this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
@@ -84,26 +79,31 @@
 			this.label33 = new System.Windows.Forms.Label();
 			this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
 			this.label34 = new System.Windows.Forms.Label();
+			this.label24 = new System.Windows.Forms.Label();
+			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label13 = new System.Windows.Forms.Label();
+			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+			this.label15 = new System.Windows.Forms.Label();
+			this.label26 = new System.Windows.Forms.Label();
+			this.textBox6 = new System.Windows.Forms.TextBox();
 			this.rdbMaaseh = new System.Windows.Forms.RadioButton();
 			this.rdbZaminTabiee = new System.Windows.Forms.RadioButton();
 			this.rdbRos = new System.Windows.Forms.RadioButton();
-			this.label24 = new System.Windows.Forms.Label();
-			this.label26 = new System.Windows.Forms.Label();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.stepObjBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tableLayoutPanel1.SuspendLayout();
 			this.grpContainer.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudTotalDistance)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tableLayoutPanel1
@@ -262,9 +262,13 @@
 			this.textBox5.Text = "0";
 			this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
+			// stepObjBindingSource
+			// 
+			this.stepObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStep);
+			// 
 			// textBox3
 			// 
-			this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "WorkToDo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "WorkToDoLooseSoil", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
 			this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.textBox3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.textBox3.Location = new System.Drawing.Point(547, 307);
@@ -498,96 +502,6 @@
 			this.label30.Size = new System.Drawing.Size(78, 13);
 			this.label30.TabIndex = 0;
 			this.label30.Text = "سرعت برگشت";
-			// 
-			// numericUpDown2
-			// 
-			this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.numericUpDown2.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "ExpertJudgementFactorQuof", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
-			this.numericUpDown2.DecimalPlaces = 2;
-			this.numericUpDown2.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-			this.numericUpDown2.Location = new System.Drawing.Point(157, 146);
-			this.numericUpDown2.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.numericUpDown2.Name = "numericUpDown2";
-			this.numericUpDown2.Size = new System.Drawing.Size(109, 21);
-			this.numericUpDown2.TabIndex = 19;
-			this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// label5
-			// 
-			this.label5.Location = new System.Drawing.Point(310, 143);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(91, 35);
-			this.label5.TabIndex = 0;
-			this.label5.Text = "ضریب اصلاح قضاوت مهندسی";
-			// 
-			// label13
-			// 
-			this.label13.Location = new System.Drawing.Point(272, 108);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(129, 30);
-			this.label13.TabIndex = 0;
-			this.label13.Text = "ضریب اصلاح اپراتور";
-			// 
-			// numericUpDown1
-			// 
-			this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "OperatorFactorQuof", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
-			this.numericUpDown1.DecimalPlaces = 2;
-			this.numericUpDown1.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-			this.numericUpDown1.Location = new System.Drawing.Point(157, 111);
-			this.numericUpDown1.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(109, 21);
-			this.numericUpDown1.TabIndex = 19;
-			this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// label15
-			// 
-			this.label15.Location = new System.Drawing.Point(272, 73);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(129, 30);
-			this.label15.TabIndex = 0;
-			this.label15.Text = "ضریب اصلاح شرایط جوی";
-			// 
-			// numericUpDown3
-			// 
-			this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.numericUpDown3.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "EnvironmentFactorQuof", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
-			this.numericUpDown3.DecimalPlaces = 2;
-			this.numericUpDown3.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-			this.numericUpDown3.Location = new System.Drawing.Point(157, 76);
-			this.numericUpDown3.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.numericUpDown3.Name = "numericUpDown3";
-			this.numericUpDown3.Size = new System.Drawing.Size(109, 21);
-			this.numericUpDown3.TabIndex = 2;
-			this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// label22
 			// 
@@ -863,6 +777,129 @@
 			this.label34.TabIndex = 16;
 			this.label34.Text = "دقیقه";
 			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label24.ForeColor = System.Drawing.Color.Black;
+			this.label24.Location = new System.Drawing.Point(341, 198);
+			this.label24.Name = "label24";
+			this.label24.Size = new System.Drawing.Size(60, 13);
+			this.label24.TabIndex = 0;
+			this.label24.Text = "بازده بولدوزر";
+			// 
+			// numericUpDown2
+			// 
+			this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.numericUpDown2.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "ExpertJudgementFactorQuof", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.numericUpDown2.DecimalPlaces = 2;
+			this.numericUpDown2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+			this.numericUpDown2.Location = new System.Drawing.Point(157, 146);
+			this.numericUpDown2.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.numericUpDown2.Name = "numericUpDown2";
+			this.numericUpDown2.Size = new System.Drawing.Size(109, 21);
+			this.numericUpDown2.TabIndex = 19;
+			this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// label5
+			// 
+			this.label5.Location = new System.Drawing.Point(310, 143);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(91, 35);
+			this.label5.TabIndex = 0;
+			this.label5.Text = "ضریب اصلاح قضاوت مهندسی";
+			// 
+			// label13
+			// 
+			this.label13.Location = new System.Drawing.Point(272, 108);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(129, 30);
+			this.label13.TabIndex = 0;
+			this.label13.Text = "ضریب اصلاح اپراتور";
+			// 
+			// numericUpDown1
+			// 
+			this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "OperatorFactorQuof", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.numericUpDown1.DecimalPlaces = 2;
+			this.numericUpDown1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+			this.numericUpDown1.Location = new System.Drawing.Point(157, 111);
+			this.numericUpDown1.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.numericUpDown1.Name = "numericUpDown1";
+			this.numericUpDown1.Size = new System.Drawing.Size(109, 21);
+			this.numericUpDown1.TabIndex = 19;
+			this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// numericUpDown3
+			// 
+			this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.numericUpDown3.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.stepObjBindingSource, "EnvironmentFactorQuof", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.numericUpDown3.DecimalPlaces = 2;
+			this.numericUpDown3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+			this.numericUpDown3.Location = new System.Drawing.Point(157, 76);
+			this.numericUpDown3.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.numericUpDown3.Name = "numericUpDown3";
+			this.numericUpDown3.Size = new System.Drawing.Size(109, 21);
+			this.numericUpDown3.TabIndex = 2;
+			this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// label15
+			// 
+			this.label15.Location = new System.Drawing.Point(272, 73);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(129, 30);
+			this.label15.TabIndex = 0;
+			this.label15.Text = "ضریب اصلاح شرایط جوی";
+			// 
+			// label26
+			// 
+			this.label26.AutoSize = true;
+			this.label26.Location = new System.Drawing.Point(284, 43);
+			this.label26.Name = "label26";
+			this.label26.Size = new System.Drawing.Size(117, 13);
+			this.label26.TabIndex = 0;
+			this.label26.Text = "ضریب اصلاح شیب زمین";
+			// 
+			// textBox6
+			// 
+			this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "CustomParam1", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
+			this.textBox6.Location = new System.Drawing.Point(157, 46);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.ReadOnly = true;
+			this.textBox6.Size = new System.Drawing.Size(109, 21);
+			this.textBox6.TabIndex = 17;
+			this.textBox6.Text = "0";
+			this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
 			// rdbMaaseh
 			// 
 			this.rdbMaaseh.Appearance = System.Windows.Forms.Appearance.Button;
@@ -902,43 +939,6 @@
 			this.rdbRos.UseVisualStyleBackColor = true;
 			this.rdbRos.CheckedChanged += new System.EventHandler(this.SoilTypeButton_Click);
 			// 
-			// label24
-			// 
-			this.label24.AutoSize = true;
-			this.label24.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label24.ForeColor = System.Drawing.Color.Black;
-			this.label24.Location = new System.Drawing.Point(341, 198);
-			this.label24.Name = "label24";
-			this.label24.Size = new System.Drawing.Size(60, 13);
-			this.label24.TabIndex = 0;
-			this.label24.Text = "بازده بولدوزر";
-			// 
-			// label26
-			// 
-			this.label26.AutoSize = true;
-			this.label26.Location = new System.Drawing.Point(284, 43);
-			this.label26.Name = "label26";
-			this.label26.Size = new System.Drawing.Size(117, 13);
-			this.label26.TabIndex = 0;
-			this.label26.Text = "ضریب اصلاح شیب زمین";
-			// 
-			// textBox6
-			// 
-			this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "CustomParam1", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-			this.textBox6.Location = new System.Drawing.Point(157, 46);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.ReadOnly = true;
-			this.textBox6.Size = new System.Drawing.Size(109, 21);
-			this.textBox6.TabIndex = 17;
-			this.textBox6.Text = "0";
-			this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// stepObjBindingSource
-			// 
-			this.stepObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStep);
-			// 
 			// ucKhaakriziPakhshStep
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -954,16 +954,16 @@
 			this.grpContainer.PerformLayout();
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.tableLayoutPanel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudTotalDistance)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

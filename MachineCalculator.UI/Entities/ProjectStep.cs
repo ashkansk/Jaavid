@@ -89,6 +89,23 @@ namespace MachineCalculator.UI.Entities
 		// work info
 		public decimal TotalDistance { get; set; }
 		public decimal WorkToDo { get; set; }
+		public decimal WorkToDoLooseSoil { get
+			{
+				switch ((SoilType)SoilTypeIndex)
+				{
+					case SoilType.SangShekaste:
+						return WorkToDo * 1.15m;
+					case SoilType.ZaminTabiee:
+						return WorkToDo * 1.39m;
+					case SoilType.Ros:
+						return WorkToDo * 1.41m;
+					case SoilType.Maaseh:
+						return WorkToDo * 1.18m;
+					default:
+						return 0;
+				}
+			}
+		}
 		// work info - end
 
 		// custom params

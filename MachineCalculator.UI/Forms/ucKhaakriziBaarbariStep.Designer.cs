@@ -35,7 +35,6 @@
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.stepObjBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
@@ -88,10 +87,10 @@
 			this.rdbMaaseh = new System.Windows.Forms.RadioButton();
 			this.rdbZaminTabiee = new System.Windows.Forms.RadioButton();
 			this.rdbRos = new System.Windows.Forms.RadioButton();
+			this.stepObjBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tableLayoutPanel1.SuspendLayout();
 			this.grpContainer.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudTotalDistance)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
@@ -100,6 +99,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tableLayoutPanel1
@@ -254,13 +254,9 @@
 			this.textBox5.Text = "0";
 			this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// stepObjBindingSource
-			// 
-			this.stepObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStep);
-			// 
 			// textBox3
 			// 
-			this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "WorkToDo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "WorkToDoLooseSoil", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
 			this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.textBox3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.textBox3.Location = new System.Drawing.Point(547, 297);
@@ -909,6 +905,10 @@
 			this.rdbRos.UseVisualStyleBackColor = true;
 			this.rdbRos.CheckedChanged += new System.EventHandler(this.SoilTypeButton_Click);
 			// 
+			// stepObjBindingSource
+			// 
+			this.stepObjBindingSource.DataSource = typeof(MachineCalculator.UI.Entities.ProjectStep);
+			// 
 			// ucKhaakriziBaabariStep
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -924,7 +924,6 @@
 			this.grpContainer.PerformLayout();
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.tableLayoutPanel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudTotalDistance)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
@@ -933,6 +932,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.stepObjBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

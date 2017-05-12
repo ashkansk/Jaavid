@@ -62,15 +62,15 @@
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
 			this.label15 = new System.Windows.Forms.Label();
 			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-			this.label4 = new System.Windows.Forms.Label();
-			this.txtLoaderPerformanceValue = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
 			this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtLoaderPerformanceValue = new System.Windows.Forms.TextBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
+			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.rdbMaaseh = new System.Windows.Forms.RadioButton();
 			this.rdbZaminTabiee = new System.Windows.Forms.RadioButton();
 			this.rdbRos = new System.Windows.Forms.RadioButton();
-			this.label14 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.grpContainer.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
@@ -224,7 +224,7 @@
 			// 
 			// textBox3
 			// 
-			this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "WorkToDo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "WorkToDoLooseSoil", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
 			this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.textBox3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.textBox3.Location = new System.Drawing.Point(547, 262);
@@ -549,40 +549,6 @@
 			this.numericUpDown3.TabIndex = 2;
 			this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.label4.ForeColor = System.Drawing.Color.Gray;
-			this.label4.Location = new System.Drawing.Point(74, 181);
-			this.label4.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(77, 11);
-			this.label4.TabIndex = 16;
-			this.label4.Text = "متر مکعب / ساعت";
-			// 
-			// txtLoaderPerformanceValue
-			// 
-			this.txtLoaderPerformanceValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtLoaderPerformanceValue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "MachinePower", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
-			this.txtLoaderPerformanceValue.Location = new System.Drawing.Point(157, 176);
-			this.txtLoaderPerformanceValue.Name = "txtLoaderPerformanceValue";
-			this.txtLoaderPerformanceValue.ReadOnly = true;
-			this.txtLoaderPerformanceValue.Size = new System.Drawing.Size(109, 21);
-			this.txtLoaderPerformanceValue.TabIndex = 17;
-			this.txtLoaderPerformanceValue.Text = "0";
-			this.txtLoaderPerformanceValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(343, 173);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(58, 13);
-			this.label3.TabIndex = 0;
-			this.label3.Text = "توان غلطک";
-			// 
 			// numericUpDown6
 			// 
 			this.numericUpDown6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -599,6 +565,62 @@
 			this.numericUpDown6.TabIndex = 20;
 			this.numericUpDown6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericUpDown6.ThousandsSeparator = true;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(343, 173);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(58, 13);
+			this.label3.TabIndex = 0;
+			this.label3.Text = "توان غلطک";
+			// 
+			// txtLoaderPerformanceValue
+			// 
+			this.txtLoaderPerformanceValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtLoaderPerformanceValue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "MachinePower", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.txtLoaderPerformanceValue.Location = new System.Drawing.Point(157, 176);
+			this.txtLoaderPerformanceValue.Name = "txtLoaderPerformanceValue";
+			this.txtLoaderPerformanceValue.ReadOnly = true;
+			this.txtLoaderPerformanceValue.Size = new System.Drawing.Size(109, 21);
+			this.txtLoaderPerformanceValue.TabIndex = 17;
+			this.txtLoaderPerformanceValue.Text = "0";
+			this.txtLoaderPerformanceValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.label4.ForeColor = System.Drawing.Color.Gray;
+			this.label4.Location = new System.Drawing.Point(74, 181);
+			this.label4.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(77, 11);
+			this.label4.TabIndex = 16;
+			this.label4.Text = "متر مکعب / ساعت";
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(716, 173);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(60, 13);
+			this.label14.TabIndex = 0;
+			this.label14.Text = "بازده غلطک";
+			// 
+			// textBox2
+			// 
+			this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "MachineEfficiency", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
+			this.textBox2.Location = new System.Drawing.Point(547, 176);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.ReadOnly = true;
+			this.textBox2.Size = new System.Drawing.Size(109, 21);
+			this.textBox2.TabIndex = 17;
+			this.textBox2.Text = "0";
+			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// rdbMaaseh
 			// 
@@ -638,28 +660,6 @@
 			this.rdbRos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.rdbRos.UseVisualStyleBackColor = true;
 			this.rdbRos.CheckedChanged += new System.EventHandler(this.SoilTypeButton_Click);
-			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(716, 173);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(60, 13);
-			this.label14.TabIndex = 0;
-			this.label14.Text = "بازده غلطک";
-			// 
-			// textBox2
-			// 
-			this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stepObjBindingSource, "MachineEfficiency", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N2"));
-			this.textBox2.Location = new System.Drawing.Point(547, 176);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.ReadOnly = true;
-			this.textBox2.Size = new System.Drawing.Size(109, 21);
-			this.textBox2.TabIndex = 17;
-			this.textBox2.Text = "0";
-			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// ucKhaakriziTarakomStep
 			// 
