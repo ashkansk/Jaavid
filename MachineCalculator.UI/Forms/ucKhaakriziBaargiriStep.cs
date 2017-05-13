@@ -6,12 +6,20 @@ using System.Windows.Forms;
 
 namespace MachineCalculator.UI.Forms
 {
-	public partial class ucKhaakriziBaargiriStep : UserControl
+	public partial class ucKhaakriziBaargiriStep : UserControl, IProjectStepForm
 	{
 		private ProjectRepository _projectRepo;
 		private ProjectStepRepository _projectStepRepo;
 		private Project _project;
 		private ProjectStep[] _steps;
+
+		public ProjectStep SelectedStep
+		{
+			get
+			{
+				return stepObjBindingSource.DataSource as ProjectStep;
+			}
+		}
 
 		public ucKhaakriziBaargiriStep(int projectID)
 		{
@@ -21,11 +29,6 @@ namespace MachineCalculator.UI.Forms
 			_project = _projectRepo.Get(p => p.ID == projectID).Single();
 
 			InitializeComponent();
-		}
-
-		public bool IsValid()
-		{
-			return true;
 		}
 
 		private void ucKhaakriziProjectStep_Load(object sender, EventArgs e)
@@ -57,6 +60,13 @@ namespace MachineCalculator.UI.Forms
 			{
 				f(rdb);
 			}
+		}
+
+		/* this method is for validating the step and to check if all the required inputs 
+		 * are properly filled with valid data. We don't need validation yet, maybe in near future */
+		public bool ValidateStep()
+		{
+			return true;
 		}
 	}
 }

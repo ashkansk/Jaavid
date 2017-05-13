@@ -53,6 +53,8 @@ namespace MachineCalculator.UI.Forms
 
 		private void btnOK_Click(object sender, System.EventArgs e)
 		{
+			Factory.ResetDB();
+
 			_project = new Project
 			{
 				ActiveDaysPerMonth = (int)nudActiveDaysInMonth.Value,

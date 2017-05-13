@@ -1,23 +1,32 @@
 ﻿using MachineCalculator.UI.Entities;
 using MachineCalculator.UI.Repositories;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
 namespace MachineCalculator.UI.Forms
 {
-	public partial class ucKhaakriziBaabariStep : UserControl
+	public partial class ucKhaakriziBaabariStep : UserControl, IProjectStepForm
 	{
 		private ProjectRepository _projectRepo;
 		private ProjectStepRepository _projectStepRepo;
 		private Project _project;
-		private ProjectStep[] _steps;
+		private List<ProjectStep> _steps;
+
+		public ProjectStep SelectedStep
+		{
+			get
+			{
+				return stepObjBindingSource.DataSource as ProjectStep;
+			}
+		}
 
 		public ucKhaakriziBaabariStep(int projectID)
 		{
 			_projectRepo = Factory.GetProjectRepository();
 			_projectStepRepo = Factory.GetProjectStepRepository();
-			_steps = _projectStepRepo.Get(s => s.ProjectID == projectID && s.StepTypeIndex == (int)KhaakriziStepType.Baarbari).ToArray();
+			_steps = _projectStepRepo.Get(s => s.ProjectID == projectID && s.StepTypeIndex == (int)KhaakriziStepType.Baarbari);
 			_project = _projectRepo.Get(p => p.ID == projectID).Single();
 
 			InitializeComponent();
@@ -30,9 +39,6 @@ namespace MachineCalculator.UI.Forms
 
 		private void ucKhaakriziProjectStep_Load(object sender, EventArgs e)
 		{
-			foreach (ProjectStep step in _steps)
-				step.WorkToDo = step.SoilVolume / (decimal)_project.TotalActiveHoursPerMonth;
-
 			// set rdb tags in order to be later used as datasource
 			rdbSangShekaste.Tag = _steps.FirstOrDefault(ss => ss.SoilTypeIndex == (int)SoilType.SangShekaste);
 			rdbZaminTabiee.Tag = _steps.FirstOrDefault(ss => ss.SoilTypeIndex == (int)SoilType.ZaminTabiee);
@@ -46,9 +52,12 @@ namespace MachineCalculator.UI.Forms
 		private void SoilTypeButton_Click(object sender, EventArgs e)
 		{
 			var rdb = sender as RadioButton;
-			grpContainer.Text = rdb.Text;
-			if (rdb.Tag != null)
-				stepObjBindingSource.DataSource = rdb.Tag;
+			if (rdb.Checked)
+			{
+				grpContainer.Text = rdb.Text;
+				if (rdb.Tag != null)
+					stepObjBindingSource.DataSource = rdb.Tag;
+			}
 		}
 
 		private void RunFuncOnRdb(Func<RadioButton, object> f, params RadioButton[] rdbList)
@@ -57,6 +66,13 @@ namespace MachineCalculator.UI.Forms
 			{
 				f(rdb);
 			}
+		}
+
+		/* this method is for validating the step and to check if all the required inputs 
+		 * are properly filled with valid data. We don't need validation yet, maybe in near future */
+		public bool ValidateStep()
+		{
+			return true;
 		}
 	}
 }

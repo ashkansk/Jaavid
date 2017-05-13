@@ -17,6 +17,11 @@ namespace MachineCalculator.UI
 			return _db;
 		}
 
+		internal static void ResetDB()
+		{
+			_db = new InMemoryDB();
+		}
+
 		internal static ProjectRepository GetProjectRepository()
 		{
 			if (_projectRepository == null)

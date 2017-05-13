@@ -78,7 +78,7 @@ namespace MachineCalculator.UI.Entities
 		public decimal SoilVolume { get; set; } // 
 		public abstract decimal SoilInflationQuof { get; } // f
 		public decimal Tilt { get; set; } // S
-										 // soil info - end
+										  // soil info - end
 
 		// quofficients
 		public decimal OperatorFactorQuof { get; set; }
@@ -89,7 +89,9 @@ namespace MachineCalculator.UI.Entities
 		// work info
 		public decimal TotalDistance { get; set; }
 		public decimal WorkToDo { get; set; }
-		public decimal WorkToDoLooseSoil { get
+		public decimal WorkToDoLooseSoil
+		{
+			get
 			{
 				switch ((SoilType)SoilTypeIndex)
 				{

@@ -6,12 +6,20 @@ using System.Windows.Forms;
 
 namespace MachineCalculator.UI.Forms
 {
-	public partial class ucKhaakriziTarakomStep : UserControl
+	public partial class ucKhaakriziTarakomStep : UserControl, IProjectStepForm
 	{
 		private ProjectRepository _projectRepo;
 		private ProjectStepRepository _projectStepRepo;
 		private Project _project;
 		private ProjectStep[] _steps;
+
+		public ProjectStep SelectedStep
+		{
+			get
+			{
+				return stepObjBindingSource.DataSource as ProjectStep;
+			}
+		}
 
 		public ucKhaakriziTarakomStep(int projectID)
 		{
@@ -30,9 +38,6 @@ namespace MachineCalculator.UI.Forms
 
 		private void ucKhaakriziProjectStep_Load(object sender, EventArgs e)
 		{
-			foreach (ProjectStep step in _steps)
-				step.WorkToDo = step.SoilVolume / (decimal)_project.TotalActiveHoursPerMonth;
-
 			// set rdb tags in order to be later used as datasource
 			rdbSangShekaste.Tag = _steps.FirstOrDefault(ss => ss.SoilTypeIndex == (int)SoilType.SangShekaste);
 			rdbZaminTabiee.Tag = _steps.FirstOrDefault(ss => ss.SoilTypeIndex == (int)SoilType.ZaminTabiee);
@@ -57,6 +62,14 @@ namespace MachineCalculator.UI.Forms
 			{
 				f(rdb);
 			}
+		}
+
+		/* this method is for validating the step and to check if all the required inputs 
+		 * are properly filled with valid data. We don't need validation yet, maybe in near future */
+
+		public bool ValidateStep()
+		{
+			return true;
 		}
 	}
 }

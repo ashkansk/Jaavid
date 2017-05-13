@@ -72,6 +72,7 @@
     <Compile Include="Forms\FormKhaakriziResult.Designer.cs">
       <DependentUpon>FormKhaakriziResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IProjectStepForm.cs" />
     <Compile Include="Forms\ucKhaakriziTarakomStep.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -45,26 +45,20 @@ namespace MachineCalculator.UI.Forms
 			}
 		}
 
-		private void RunFuncOnRdb(Func<RadioButton, object> f, params RadioButton[] rdbList)
-		{
-			foreach (RadioButton rdb in rdbList)
-			{
-				f(rdb);
-			}
-		}
 
 		private void tabCtrlSteps_Selecting(object sender, TabControlCancelEventArgs e)
 		{
 			if (_ucSteps[_lastOpenTabPageIndex].Validate())
 			{
-				if(_lastOpenTabPageIndex == 0) // all steps are dependent on step 0, so when leaving step 0, we update all other steps' values
+				if (_lastOpenTabPageIndex == 0) // all steps are dependent on step 0, so when leaving step 0, we update all other steps' values
 				{
-					foreach (ProjectStep step in _project.Steps)
+					for (int i = 0; i < _project.Steps.Count; i++)
 					{
+						ProjectStep step = _project.Steps[i];
 						if (step.StepTypeIndex == (int)KhaakriziStepType.Baargiri)
 							continue; // skip step one
-						// else
-						ProjectStep stepOne = _project.Steps.FirstOrDefault(s => 
+									  // else
+						ProjectStep stepOne = _project.Steps.FirstOrDefault(s =>
 							s.StepTypeIndex == (int)KhaakriziStepType.Baargiri && s.SoilTypeIndex == step.SoilTypeIndex);
 						step.WorkToDo = stepOne.RequiredMachineCountReal * stepOne.MachinePowerReal; // calculate "WorkToDo" for other step
 						if (step.StepIndex == (int)KhaakriziStepType.Baarbari)
@@ -75,6 +69,9 @@ namespace MachineCalculator.UI.Forms
 			}
 			else
 				e.Cancel = true;
+		}
+		private void tabCtrlSteps_Selected(object sender, TabControlEventArgs e)
+		{
 		}
 
 		private void btnResult_Click(object sender, EventArgs e)
